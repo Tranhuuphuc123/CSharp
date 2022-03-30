@@ -1,0 +1,9 @@
+chương trình C++ đầu tiên
+
+ #include <iostream>      //iostream thu vien chuẩn cho C++
+ using namespace std;    // khai bao hàm std cho cout.
+ int main()		    // hàm main() là hàm bắt đầu chường trình C++, còn int chỉ định hàm main() trả kết quả về là 0 or 1.
+{
+   cout<<"hello word";
+   return 0;		    // return 0; là hàm trả kết quả với 0; hàm sẽ trả kết quả một cách bình thường
+ }

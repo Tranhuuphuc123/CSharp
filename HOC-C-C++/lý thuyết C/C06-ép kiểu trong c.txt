@@ -1,0 +1,51 @@
+ Ép kiểu dữ liệu hay còn gọi là biến đổi kiểu dữ liệu Trong lập trình C 
+ thì có 02 kiểu ép kiểu thường gặp:
+
+ 01/ Ép kiểu nới rộng (hay gọi ép kiểu ngầm định widening):
+ Là ép kiểu làm tròn dữ liệu từ kiểu vùng dữ liểu nhỏn hơn sáng vùng kiểu dữ liệu lớn hơn và không làm mất thông tiny
+  vd: int sang float, int < giá trị vung dư liệu float.
+       int a = 10;
+       int b = 20;
+
+   ép kiểu float cho biến a, b 
+
+       float c = a;
+       float d = b;  
+
+02/ ép kiểu thu hẹp ( hay ép kiểu tường minh narrowing): nó ngược lại với kiểu ngầm định, do chuyển từ kiểu dữ liệu lơn sáng nhỏ 
+nên dữ liệu có thể mất nên phải khai báo rõ ràng
+
+    vidu: float a = 10.3;
+          float b = 20.3;
+
+           ép kiểu sang kiểu nhỏ hơn
+
+        int c = (int)a;
+        int d = (int)b; // phai khai báo rõ ràng
+
+
+
+*****ví dụ code :
+
+
+                #include<stdio.h>
+                int main() {
+                    int a, b;
+                    // nhập liệu giá trị a, b kiểu tường ngầm định
+                    printf("nhap vao gia tr a: ");
+                    scanf_s("%d", &a);
+                    printf("nhap vao gia tri b: ");
+                    scanf_s("%d", &b);
+
+                    printf("\n\n");
+                    printf("------bien doi ep kieu sang float: dun cach nao cung dc-------\n");
+
+                    float tongSo = a / b;
+                    printf("\n");
+
+                    printf("ket qua ep kieu float: %d/%d = %.2f", a, b, tongSo);
+                    return 0;
+
+                    // nhap liệu kiểu tường minh thì ngược lại từ cao xuống thấp
+
+                }

@@ -1,0 +1,38 @@
+Các toán tử so sánh trong C bao gồm:
+01/ ==: phép bằng
+02/ >: lớn hơn
+03/ <: bé hơn
+04/ !=: so sánh khác #
+05/ >=: lớn hơn hoặc bằng
+06/ <=: bé hơn hoặc bằng
+
+----> các kết quả so sánh sẽ ra kết quả nếu đúng : true tương ứng 1
+      các kết quả so sánh sẽ ra kết quả nếu sai : false tương ứng 0
+
+
+
+ 
+
+vi du: 
+
+  #include<stdio.h>
+  int main() {
+	int a, b;
+
+	printf("nhap vao gia tri a: ");
+	scanf_s("%d", &a);
+	printf("nhap vao gia tri b: ");
+	scanf_s("%d", &b);
+
+	printf("\n\n");
+	printf("------------------------");
+
+	printf("\n so sanh %d==%d kq la %d", a, b, a == b);
+	printf("\n so sanh %d > %d kq la %d", a, b, a > b);
+	printf("\n so sanh %d < %d kq la %d", a, b, a < b);
+	printf("\n so sanh %d # %d kq la %d", a, b, a != b);
+	printf("\n so sanh %d >= %d kq la %d", a, b, a >= b);
+	printf("\n so sanh %d <= %d kq la %d", a, b, a <= b);
+
+	return 0;
+     }

@@ -1,0 +1,3 @@
+﻿  epkieudulieu.c
+G:\WorkSpace IT\LAP TRINH C-C++\C\C-CANBAN\C04-epkieudulieu\epkieudulieu.c(13,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  C04-epkieudulieu.vcxproj -> G:\WorkSpace IT\LAP TRINH C-C++\C\C-CANBAN\x64\Debug\C05-epkieudulieu.exe
