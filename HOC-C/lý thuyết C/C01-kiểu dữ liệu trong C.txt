@@ -1,0 +1,57 @@
+kiểu dữ liệu trong lập trình C tương tự như trong java, c#..
+
+các kiểu dữ liệu thông dụng là:
+ 1/ void: kiểu dữ liệu không có gì
+ 2/ int, long, short: số nguyên
+    + unsignedint, unsignedshort, unsignedlong: kiểu số nguyên không âm
+ 3/ char: ký tự
+ 4/ float, double: kiểu số thực có dấu
+ 5/ char*: chuỗi
+
+
+
+Định dạng	       Kiểu dữ liệu	      Ý nghĩa
+%c	          char	        ký tự
+%s	          char *	    chuỗi ký tự
+%d	        int, short	    Số nguyên dạng thập phân
+%f	          float	    Số thực
+%lf	         double	    Số thực chính xác gấp đôi
+
+
+** cách khai báo biến:
+   type(kiểu dữ liệu) + varialname(tên biến) = value(giá trị);
+
+vd: int kH =100;
+     string tenHo ="tran huu phuc";
+
+*** chương trình C căn bản:
+
+
+               #include<stdio.h>
+               int main() {
+                  int x;
+                  float y;
+                  char c;
+                  printf("nhap vao 1 chu cai: ");
+                  scanf("%c", &c);
+
+                  printf("nhap vao gia tri x: ");
+                  scanf("%d", &x);
+                  
+                  printf("nhap vao so: ");
+                  scanf("%f", &y);
+
+                  printf("gia tri x :%d\n diemso y:%.2f\n chu cai: %c", x, y, c);
+
+                  // nhập nhiều giá trị trên 1 hàng
+
+                  int x1, x2,x3;
+                  printf("nhap vào giá trị x, x2, x3 lan luot la:");
+                  scanf("%d%d%d",&x1,&x2,&x3);
+
+                  printf("xuat ra: x1=%d, x2=%d, x=%d", x1, x2, x3);
+
+                  return 0;
+               }
+// có thể thay thế hàm Scanf  bằng scanf_s, vì trong Visual studio hàm scanf không gáng
+được giá trị.

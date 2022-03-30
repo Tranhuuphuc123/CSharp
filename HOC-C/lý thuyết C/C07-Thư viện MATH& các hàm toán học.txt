@@ -1,0 +1,14 @@
+thư viện math.h, là thư viện khai báo để học các hàm toán học trong lập trình C:
+
+*** CÁC HÀM TOÁN HỌC TRONG LẬP TRÌNH C:
+ 01/ Hàm ceil(number): làm tròn lên một số đã cho, hàm này trả về kết quả số nguyên lớn hơn hoặc bàng số đã cho
+ 02/ floor(Number): làm tròn xuống một số đã cho, hàm này trả về kết quả số nguyên nhỏ hơn hoặc bằng số đã cho 
+ 03/ sqrt(number): căn bậc 2 trong toán học
+ 04/ pow(base(số ban đầu), exponent( số mũ)): trả về số mũ đã cho
+    vd 5^3 viết là: pow(5,3);
+ 05/ abs(number): || giá trị tuyệt đối
+
+... còn rất nhiều hàm khjacs sẽ được học sau tk trang web học: https://www.titv.vn/p/lap-trinh-c.html
+
+ ******ví dụ code:
+   
