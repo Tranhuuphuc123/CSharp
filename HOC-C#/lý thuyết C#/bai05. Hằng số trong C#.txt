@@ -1,0 +1,95 @@
+*********************************TIỀM HIỂU VỀ HẰNG SỐ TRONG C#*******************************
+>>>> Khái niệm:
+ - Là một biến tuy nhiên giá trị không đổi trong suốt quá trình.
+ - Bắt buộc phải khởi tạo giá trị khai báo cố định.
+
+>>>> Mục đích của hằng số:
+- để ngăn chặn việc gán giá trị khác vào biến.
+- Hằng giúp chtrinh dễ nâng cấp, dễ sữa chữa hơn.
+- Hằng giúp cho việc tránh lỗi dễ dàng hơn. Nếu bạn vô ý gán giá trị cho một biến hằng ở đâu
+thì trình biên dịch sẽ báo lỗi ngay lập tức.
+
+>>> Phân loại hằng số:
+ - trong C# hằng được chia làm 3 loại:
+   + giá trị hằng.
+       vd x =10, giá trị cố định 10 khong đc thay đổi
+   + Biểu tượng hằng.
+       khai báo với const
+   + Kiểu liệt kê.
+       Enum
+
+    ======> Tổng kết để xây dựng một hằng số trong C#:
+     >> Cấu trúc:
+
+              const<kiểu dữ liệu><tên biến> = <giá trị hằng>;
+              vd:
+                   const float PI = 3.14;   
+
+--------------------------------------------------------------------------------------
+>>>> Chi tiết hơn về kiểu liệt kê Enum trong hằng số:
+ >> Khái niệm Enum:
+  - là từ khóa dùng để khai báo một kiểu liệt kê(Enumeration). Kiểu liệt kê là tập hợp các hằng số 
+  do người dùng tự định nghĩa, nói cách khác Enum là cách mà C# hỗ trợ người dùng gom nhóm các Hằng
+  số lại với nhau và có chung một tên gọi.
+
+ >> Đặc điểm:
+  - Là một kiểu dữ liệu tham trị 
+  - Enum không được kế thùa.
+
+ >> Khai báo và cách sử dụng
+  > Khai báo:
+   - cú pháp:
+
+            enum <tên enum>{
+                //danh sách 
+            } 
+
+                ++ vd: 
+
+               public enum color {
+                    red,
+                    blue,
+                    yellow
+                }
+                    ==> như vậy red, blue, yellow nếu không liệt kê có thể khai báo hằng bt như sau cũng đc:
+                public const int red =0;....1,2
+
+
+
+    > Sử dụng:
+            enum Color
+            {
+                RED,
+                BLUE,
+                YELLOW
+            }
+
+
+
+            int Choose = int.Parse(Console.ReadLine());
+            if (Choose == Color.RED) //-> lỗi vì không thể so sánh trực tiếp 1 enum với 1 số nguyên
+            {
+
+                 Console.WriteLine("Ban vua chon mau do");
+            }
+
+      ==> để không xảy ra lỗi ta có thể ép kiểu:
+             if (Choose == Color.RED) 
+            {
+                 Console.WriteLine("Ban vua chon mau do");
+            }
+            <=> nên viết 
+            if (Choose == (int)Color.RED) 
+            {
+                 Console.WriteLine("Ban vua chon mau do");
+            }
+                  
+
+ ======> Chính vì được sử dụng với mục đích gom nhóm các hằng có liên quan với nhau thành 1 
+ tên duy nhất nên khi sử dụng bạn không cần phải nhớ chính xác tên hằng mà chỉ cần nhớ tên
+  enum chứa nó là đủ việc còn lại đã có visual studio hỗ trợ.          
+ ======> Bạn thấy đấy chỉ cần gõ tên enum và dấu “.” Visual studio đã liệt kê sẵn danh sách 
+ các biểu tượng hằng bên trong nó. Điều này giúp cho việc lập trình dễ dàng hơn nhiều.    
+ ======>  Hơn thế nữa visual studio còn hỗ trợ giúp bạn tìm ra tên enum phù hợp với biến đang
+  cần gán giá trị (các bài học sau sẽ minh hoạ rõ điều này)   
+                     

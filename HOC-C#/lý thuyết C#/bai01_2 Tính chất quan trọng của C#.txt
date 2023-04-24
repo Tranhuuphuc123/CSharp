@@ -1,0 +1,230 @@
+******************CÁC TÍNH CHẤT QUAN TRỌNG CỦA C#************************
+- 4 tính chất quan trọng của lập trình C#.
+>>>>>1/ TÍNH ĐÓNG GÓI (ENCAPSULATION):
+   >>Khái niệm:
+    -  được định nghĩa là "tiến trình đóng gói một hoặc nhiều mục bên trong một gói logic hoặc vật lý". Tính đóng gói, trong phương 
+    pháp lập trình hướng đối tượng, ngăn cản việc truy cập tới chi tiết của trình triển khai (Implementation Detail).
+ 
+      ++ ví dụ:
+         
+        class Customer
+        {
+            private string name;
+            private int age;
+
+            public string Name
+            {
+                get { return name; }
+                set { name = value; }
+            }
+
+            public int Age
+            {
+                get { return age; }
+                set { age = value; }
+            }
+            }
+
+            class Program
+            {
+            static void Main(string[] args)
+            {
+                Customer customer = new Customer();
+                customer.Name = "John Smith";
+                customer.Age = 30;
+
+                Console.WriteLine("Name: " + customer.Name);
+                Console.WriteLine("Age: " + customer.Age);
+            }
+        }
+
+        ===> trong ví dụ này bạn thấy đấy các thuộc tính khai báo đều đc bảo mật đóng gói lại với từ khóa private.Và chỉ duy nhất
+        các phương thức công khai public như Name, Age.. hay các method với public mới có thể truy cập và thay 
+        đổi thông tin này. Điều này giúp bảo mật và tránh việc truy cập trực tiếp vào các thuộc tính này từ bên ngoài.
+
+  ---> Nó được thể hiển qua các access modifier, trong c# có 5 kiểu access modifiers:       
+   >>5 Kiểu ACCESS MODIFIER:
+     - PRIVATE: 
+         cho phép một lớp ẩn các biến thành viên và các hàm thành viên của nó với các hàm và đối tượng khác. Chỉ có các hàm
+      trong cùng lớp đó có thể truy cập tới các thành viên private. Ngay cả khi một Instance của một lớp cũng không thể truy cập các
+      thành viên private của nó.
+
+     - PROTECTED:
+         cho phép một lớp con truy cập các biến thành viên và các hàm thành viên của lớp cơ sở của nó. Cách này giúp triển khai tính
+       kế thừa.
+
+     - INTERNAL: 
+           cho phép một lớp trưng bày các biến thành viên và các hàm thành viên của nó tới các hàm và đối tượng khác trong Assembly 
+         hiện tại. Nói cách khác, bất kỳ thành viên nào với Internal trong C# có thể được truy cập từ bất kỳ lớp hoặc phương thức 
+         được định nghĩa bên trong ứng dụng mà thành viên đó được định nghĩa.
+       -----> Bạn có thể test phạm vi sử dụng của nó bằng cách sau:
+          + Tạo 1 project với loại Library Class
+          + Tạo class có chưa internal
+          + Build project để tạo file .dll
+          + Tạo 1 project mới với dạng bất ký như console, asp.net,...
+          + add file dll vừa tạo vào dự án này và bạn có thể thấy các method loại internal sẽ không thể truy cập ở đây.
+                  
+     - PROTECTED INTERNAL:
+         cho phép một lớp ẩn các biến thành viên và các hàm thành viên của nó với các hàm và đối tượng khác, ngoại trừ một
+      lớp con bên trong cùng ứng dụng đó. Điều này cũng được sử dụng trong khi triển khai tính kế thừa trong C#.
+         Truy cập bị giới hạn trong phạm vi Assembly hiện tại và trong class định nghĩa hoặc các class con, nó đơn giản chỉ 
+      là sự kết hợp của protected và internal
+
+     - PUBLIC:
+         Không có bất kỳ giới hạn nào khi truy cập vào các thành viên công khai (public)
+
+
+>>>>>>2/ TÍNH TRỪU TƯỢNG (ABSTRACTION):
+  -Khái niệm: Tính trừu tượng là một tiến trình ẩn các chi tiết trình triển khai và chỉ hiển thị tính năng tới người dùng. Tính trừu tượng 
+  cho phép bạn loại bỏ tính chất phức tạp của đối tượng bằng cách chỉ đưa ra các thuộc tính và phương thức cần thiết của đối tượng trong lập trình.
+   ---> Trong c# tính trừu tượng thường để thể hiện qua từ khóa abstract và interface
+
+      + ví dụ code:
+                  public abstract class Animal
+                  {
+                    public abstract void MakeSound();
+                  }
+
+                  public class Cat : Animal
+                  {
+                    public override void MakeSound()
+                    {
+                        Console.WriteLine("Meow");
+                    }
+                  }
+
+                  public class Dog : Animal
+                  {
+                    public override void MakeSound()
+                    {
+                        Console.WriteLine("Woof");
+                    }
+                  }
+
+                  public class Program
+                  {
+                    static void Main(string[] args)
+                    {
+                        Animal animal1 = new Cat();
+                        Animal animal2 = new Dog();
+                        animal1.MakeSound(); // Output: "Meow"
+                        animal2.MakeSound(); // Output: "Woof"
+                    }
+                  }
+
+ ===> Trong ví dụ trên, lớp Animal là một lớp trừu tượng, không có triển khai cụ thể cho phương thức MakeSound. Thay vào đó, 
+ hai lớp kế thừa từ Animal là Cat và Dog cần phải cung cấp triển khai cho phương thức MakeSound. Sử dụng tính trừu tượng cho 
+ phép ta tách biệt đối tượng Animal ra khỏi các triển khai cụ thể và chỉ quan tâm đến đặc tính quan trọng của một đối tượng 
+ Animal là có thể phát ra âm thanh.
+
+
+
+>>>>>TÍNH KẾ THỪA (INHERITANCE):
+   - Khái niệm:
+      + Tính kế thừa (Inheritance) cho phép chúng ta định nghĩa một lớp trong điều kiện một lớp khác, mà làm cho nó dễ dàng hơn để 
+    tạo và duy trì một ứng dụng. Điều này cũng cung cấp một cơ hội để tái sử dụng tính năng code và thời gian thực thi nhanh hơn.
+      + Thừa kế trong c# được sử dụng với dấu :
+      + Khi tạo một lớp, thay vì viết toàn bộ các thành viên dữ liệu và các hàm thành viên mới, lập trình viên có thể nên kế thừa
+     các thành viên của một lớp đang tồn tại. Lớp đang tồn tại này được gọi là Base Class - lớp cơ sở, và lớp mới được xem như là
+      Derived Class – lớp thừa kế.
+
+
+         ++ ví dụ code:
+                        public class Animal
+                        {
+                          public string Name { get; set; }
+                          public int Age { get; set; }
+                          public virtual void MakeSound()
+                          {
+                              Console.WriteLine("The animal makes a sound");
+                          }
+                        }
+
+                        public class Dog : Animal
+                        {
+                          public override void MakeSound()
+                          {
+                              Console.WriteLine("The dog barks");
+                          }
+                        }
+
+                        public class Program
+                        {
+                          static void Main(string[] args)
+                          {
+                              Animal animal1 = new Animal();
+                              animal1.Name = "Tiger";
+                              animal1.Age = 10;
+                              animal1.MakeSound(); // Output: "The animal makes a sound"
+
+                              Dog dog1 = new Dog();
+                              dog1.Name = "Rex";
+                              dog1.Age = 5;
+                              dog1.MakeSound(); // Output: "The dog barks"
+                          }
+                        }
+
+              ===> Trong ví dụ trên, lớp Dog được kế thừa từ lớp Animal, nó sẽ có những thuộc tính Name và Age như lớp cha, nhưng 
+              lại có một phương thức MakeSound khác. Phương thức MakeSound của lớp con Dog ghi đè phương thức của lớp cha Animal và 
+              thay đổi nó thành phương thức bark của chó. Khi tạo ra một đối tượng Dog, ta có thể sử dụng các thuộc tính kế thừa từ 
+              lớp cha như Name và Age, và cũng có thể sử dụng phương thức mới MakeSound của lớp con Dog.          
+
+
+
+>>>>>TÍNH ĐA HÌNH (POLYMORPHISM)
+  - Khái niệm:
+       Từ polymorphism (tính đa hình) nghĩa là có nhiều hình thái. Trong lập trình hướng đối tượng, tính đa hình thường được diễn đạt 
+    như là "một Interface, nhiều hàm". Trong c#, tính đa hình chia làm 2 loại là đa hình static và đa hình dynamic (2 từ khóa 
+    overloading và overide).
+
+
+         ++ vid dụ code: 
+                            public class Shape
+                              {
+                                public virtual void Draw()
+                                {
+                                    Console.WriteLine("Drawing a shape");
+                                }
+                              }
+
+                              public class Circle : Shape
+                              {
+                                public override void Draw()
+                                {
+                                    Console.WriteLine("Drawing a circle");
+                                }
+                              }
+
+                              public class Rectangle : Shape
+                              {
+                                public override void Draw()
+                                {
+                                    Console.WriteLine("Drawing a rectangle");
+                                }
+                              }
+
+                              public class Program
+                              {
+                                static void Main(string[] args)
+                                {
+                                    Shape shape1 = new Circle();
+                                    shape1.Draw(); // Output: "Drawing a circle"
+
+                                    Shape shape2 = new Rectangle();
+                                    shape2.Draw(); // Output: "Drawing a rectangle"
+                                }
+                              }
+
+
+           ====> Trong ví dụ trên, lớp Circle và lớp Rectangle kế thừa từ lớp Shape và ghi đè phương thức Draw của lớp cha. Khi tạo 
+           ra một đối tượng Shape, ta có thể sử dụng đối tượng đó để vẽ một hình tròn hoặc hình chữ nhật. Điều này cho thấy tính đa
+            hình trong lập trình hướng đối tượng, vì đối tượng của lớp cơ bản (Shape) có thể được sử dụng để thực hiện một số hành 
+            động khác nhau   
+           ====> ngoài kế thừa thì tính đa hình còn thể hiện tronng việc Overloading, overiding..... 
+
+  >>ĐA HÌNH STATIC:?
+    
+  >>ĐA HÌNH DYNAMIC: 
+   - C# cho phép bạn tạo các lớp abstract (trừu tượng) mà được sử dụng để cung cấp trình triển khai cục bộ lớp của một Interface. 
+   Trình triển khai (Implementation) được hoàn thành khi một lớp kế thừa kế thừa từ nó. Các lớp Abstract chứa các phương thức abstract,
+    mà được triển khai bởi lớp kế thừa. Lớp kế thừa này có tính năng chuyên dụng hơn. 

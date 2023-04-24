@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Baitapcanban.cs" />
+    <Compile Remove="Chuongtrinhdautien.cs" />
+    <Compile Remove="class_Method.cs" />
+    <Compile Remove="Kiemtraboiso.cs" />
+    <Compile Remove="Kiemtrasonguyento.cs" />
+    <Compile Remove="Menu.cs" />
+    <Compile Remove="Timthangnam.cs" />
+    <Compile Remove="vonglap.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Baitapcanban.cs" />
+    <None Include="Chuongtrinhdautien.cs" />
+    <None Include="class_Method.cs" />
+    <None Include="Kiemtraboiso.cs" />
+    <None Include="Kiemtrasonguyento.cs" />
+    <None Include="Menu.cs" />
+    <None Include="Timthangnam.cs" />
+    <None Include="vonglap.cs" />
+  </ItemGroup>
+
+</Project>

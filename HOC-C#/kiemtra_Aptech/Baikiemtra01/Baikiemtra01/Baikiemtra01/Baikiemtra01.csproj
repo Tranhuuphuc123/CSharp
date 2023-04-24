@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bai01.cs" />
+    <Compile Remove="bai03.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bai01.cs" />
+    <None Include="bai03.cs" />
+  </ItemGroup>
+
+</Project>

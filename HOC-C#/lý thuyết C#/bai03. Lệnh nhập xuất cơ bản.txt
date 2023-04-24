@@ -1,0 +1,19 @@
+****************************LỆNH NHẬP XUẤT CƠ BẢN***********************************
+>>>>Các Lệnh Nhập Xuất cơ bản:
+ >>Console.Write():
+  - in ra màn hình Console, giá trị có thể là một ký tự, 1 chuỗi.. nhưng không xuống dòng.
+
+ >> Console.WriteLine():
+  - tương tự Console.Write, in ra ký tự hay chuôi, dãy số... nhưng có xuống dòng.
+
+ >> Console.Read():
+  - Đọc 1 ký tự từ bàn phím và trả về kiểu số nguyên.
+
+    ex:
+       Console.WriteLine(Console.Read()); // đọc 1 ký tự từ bàn phím bằng lệnh Console.Read() sau đó in ra ký tự vừa đọc được.
+
+ >> Console.ReadLine():
+  -  Đọc dữ liệu từ bàn phím cho đến khi gặp ký tự xuống dòng thì dừng (Nói cách khác là đọc cho đến khi mình nhấn enter thì dừng) và giá trị đọc được luôn là một chuỗi.
+
+ >> Console.ReadKey();
+  - dừng màn hình để  xem chương trình tránh tắt console chương trình đột ngột
