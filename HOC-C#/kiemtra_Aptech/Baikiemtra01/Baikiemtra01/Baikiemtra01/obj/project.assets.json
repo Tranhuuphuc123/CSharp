@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\PRATICE_CODE\\CSharp\\HOC-C#\\Aptech\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01.csproj",
+      "projectUniqueName": "G:\\PRATICE_CODE\\CSharp\\HOC-C#\\kiemtra_Aptech\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01.csproj",
       "projectName": "Baikiemtra01",
-      "projectPath": "G:\\PRATICE_CODE\\CSharp\\HOC-C#\\Aptech\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01.csproj",
+      "projectPath": "G:\\PRATICE_CODE\\CSharp\\HOC-C#\\kiemtra_Aptech\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01.csproj",
       "packagesPath": "C:\\Users\\Tran Huu Phuc\\.nuget\\packages\\",
-      "outputPath": "G:\\PRATICE_CODE\\CSharp\\HOC-C#\\Aptech\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01\\obj\\",
+      "outputPath": "G:\\PRATICE_CODE\\CSharp\\HOC-C#\\kiemtra_Aptech\\Baikiemtra01\\Baikiemtra01\\Baikiemtra01\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

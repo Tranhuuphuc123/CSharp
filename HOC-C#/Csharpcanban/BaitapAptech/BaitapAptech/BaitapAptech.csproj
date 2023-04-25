@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Compile Remove="Baitapcanban.cs" />
+    <Compile Remove="baitapOOP.cs" />
     <Compile Remove="Chuongtrinhdautien.cs" />
     <Compile Remove="class_Method.cs" />
     <Compile Remove="Kiemtraboiso.cs" />
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <None Include="Baitapcanban.cs" />
+    <None Include="baitapOOP.cs" />
     <None Include="Chuongtrinhdautien.cs" />
     <None Include="class_Method.cs" />
     <None Include="Kiemtraboiso.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 namespace Baikiemtra01
 {
   /*class Animal*/
-    class Animal
+
+    public abstract class Animal
     {
         private String _Name;
         private int _Age;
@@ -30,6 +32,8 @@ namespace Baikiemtra01
                     Name = Console.ReadLine();
                 }
             }
+
+
         }
 
         public int Age
@@ -59,18 +63,11 @@ namespace Baikiemtra01
         }
 
         //method Sound
-        public virtual void Sound()
-        {
-            Console.WriteLine("mo ta tieng cua dong vat");
-        }
-
-        //method display
-        public virtual void Display()
-        {
-            Console.WriteLine("ten dong vat: " + this.Name);
-            Console.WriteLine("tuoi dong vat: " + this.Age);       
-        }
+        public abstract void Sound();
+        
     }
+
+
 
 
 
@@ -123,6 +120,11 @@ namespace Baikiemtra01
             this.WaterKind = waterkind;
         }
 
+        public override void Sound()
+        {
+            Console.WriteLine("am thanh dong vat duoi nuoc");
+        }
+
     }
     
 
@@ -149,6 +151,10 @@ namespace Baikiemtra01
                 this.Residence = Residence;
         }
 
+        public override void Sound()
+        {
+            Console.WriteLine("mo ta tieng keu cua dong vat");
+        }
     }
 
 
@@ -164,12 +170,6 @@ namespace Baikiemtra01
         public override void Sound()
         {
             Console.WriteLine("Tiger gam vang ca nui rung");
-        }
-
-        public override void Display()
-        {
-            base.Display();
-            Console.WriteLine("noi o cua ho la: " + this.Residence);
         }
     }
 
@@ -203,7 +203,17 @@ namespace Baikiemtra01
             tiger.Residence = Console.ReadLine();
 
             Console.WriteLine("========thong tin cua " + tiger.Name + "============");
-            tiger.Display();
+            ArrayList list = new ArrayList();
+            list.Add(tiger);
+
+            //xuất hông tin
+            foreach(Tiger item in list)
+            {
+                Console.WriteLine("Ten dong vat: " + item.Name);
+                Console.WriteLine("Tuoi dong vat: " + item.Age);
+                Console.WriteLine("Noi hoat dong: " + item.Residence);
+            }
+            
             tiger.Sound();
 
         }
