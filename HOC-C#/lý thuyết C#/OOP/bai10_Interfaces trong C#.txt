@@ -1,0 +1,202 @@
+***********************TIỀM HIỂU VỀ INTERFACES TRONG C#*********************
+>>>> KHÁI NIỆM:
+ - Interface là lớp giao diện là một tập hợp ccacs thành phần chỉ có khai báo mà không có phần định nghĩa
+ (giống phườn thức thuần ảo đã trình bài ở bài abstract class)
+ - các thành phần có thể có là:
+  + Phương thức: lưu ý method không có thân hàm, không cần thực thi để class con tự ghi đè và bổ sung
+  + tiềm hiểu thêm về Properties-events-Indexers...
+
+  ==> một Interface được hiểu là một khuôn mẫu mà mọi lớp thực thi nó đều phải tuân theo. Interface sẽ định nghĩa phần "làm gì 
+  tiếp theo", và những lớp thực thi Interface này sẽ định nghĩa phần "làm nhứ thế nào tiếp theo"(định nghĩa nội dung) tương ứng.
+
+  >>>> ĐẶC ĐIỂM MỘT INTERFACES:
+   - Chỉ chứa khai báo không chứa hần định nghĩa, thân hàm, mặc định method đã là một abstract method rồi.
+   - việc ghi đè 1 thành phần  trong Interface không cần dùng từ override.
+   - không thể khai báo phạm vi truy cập cho các thành phần bên trong Interface, các thành phần này mặc định làm
+   "public".
+   - Interface không có constructor cũng không có destructor( hủy contructor, được khai báo với kiểu: ~ contructor tức là hủy xóa bỏ đi contructor).
+   - các lớp có thể thực thi nhiều Interface cùng 1 lúc, có thể đa kế thừa với Interface.
+
+
+>>>>>> MỤC ĐÍCH(PURPPOSE):
+ - Vì C# không hỗ trợ đa kế thừa nên Interface ra đời như một giải pháp
+ - Trong hệ thống việc trao đổi thông tin giữa các thành phần cần được đồng bộ và có những thống nhất chung. Vì thế dùng Interface
+ sẽ giúp đữa ra những quy tắc chung mà bắt buộc các thành phần trong hệ thống này phải làm theo mới có 
+ thể trao đỏi với nhau được.
+
+
+ ==================================================
+ >>>>>> Khai báo:
+  - Syntax:
+
+        interface <tên interface>
+        {
+
+            // Khai báo các thành phần bên trong interface
+
+        }
+
+
+   - kế thừa interface trong C# khác với java không dùn Implement mà chỉ cần : như với lớp trừu tượng Abstract.
+      vd class A: <interface_Name>   
+
+   - lưu ý khi ghi đè override method trong Implement thì không cần ghi override chỉ cần ghi lại method bt, và method cha cho ghi đè cũng
+   không cần có virtual   
+
+  ===========================================================
+  >>>>> So sánh Interface với Abstract:
+
+   |------------------------------------------------------------------------------------------------------------------|
+                        Interface                       |                  Abstract
+   |------------------------------------------------------------------------------------------------------------------|
+      Chỉ có thể kế thừa nhiều Interface khác           |   Chỉ có thể kê từ 1 lớp và nhiều thì Interface
+   |------------------------------------------------------------------------------------------------------------------|
+     Chỉ chứa các khai báo và không có phần nội dung    |   Có thể chứa cá thuộc tính (biến) và các phương thức bình 
+    không chứa biến                                     |thường bên trong.
+   |------------------------------------------------------------------------------------------------------------------|
+        Không cần dùng từ kháo override để ghi đè       |   Sử dụng từ khóa override khi ghi đè
+   |------------------------------------------------------------------------------------------------------------------|
+        Không có contructor và cũng không có destructor |   Có thể khai báo phạm vị truy cập và cotructor
+     (~ hàm hủy contructor)                             | 
+   |------------------------------------------------------------------------------------------------------------------|
+        Dùng để định nghĩa 1 khuôn mẫu hoặc quy tắc chug|   Dùng để định nghĩa cốt lỗi của clas, thành phần chugn của 
+                                                        | class và sử dụng cho nhiều đối tượng cùng kiểu.
+   |------------------------------------------------------------------------------------------------------------------|
+        Cần thời gian để tìm method thực tế tương ứng   |    Nhanh hơn so với Interface
+     với lớp dẫn đến thới gian chậm hơn                 |    
+   |------------------------------------------------------------------------------------------------------------------|
+        Khi ta thêm mới 1 khai báo. Ta phải tìm hết tất |    Đối với abstract class, khi định nghĩa 1 method mới ta hoàn 
+     cả những lớp có thực thi Interface này để định     |hoàn toàn có thể định nghĩa nội dung method là rỗng hoặc những thực
+     nghĩa nội dung cho method mới                      |thi mặc định nào đó. Vì thế toàn bộ hệ thống vẫn chạy bình thường.
+   |------------------------------------------------------------------------------------------------------------------|
+     
+
+
+
+
+ ++ ví dụ code:
+
+                        using System;
+                        using System.Collections.Generic;
+                        using System.Linq;
+                        using System.Text;
+                        using System.Threading.Tasks;
+
+                        namespace BaitapAptech
+                        {
+                            interface IAnimal
+                            {
+                                void eat();
+                                void run();
+                            }
+
+                            interface IBirth
+                            {
+                                void eat();
+                                void fly();
+                            }
+
+                            class Bear : IAnimal
+                            {
+                                String name;
+
+                                //contructor
+                                public Bear(String  name){
+                                    this.name = name;
+                                    Console.WriteLine();
+                                    Console.WriteLine("Bear name is: " + name);
+                                } 
+
+                                public  void eat()
+                                {
+                                    Console.WriteLine("Bear eat honey");
+                                }
+
+                                public void run()
+                                {
+                                    Console.WriteLine("Bear eun is fat with 60km/h");
+                                }
+                            }
+
+
+                            class Eagle : IBirth
+                            {
+
+                                String name;
+                                //contructor
+                                public Eagle(String name)
+                                {
+                                    this.name = name;
+                                    Console.WriteLine();
+                                    Console.WriteLine("Eagle name is: " + name);
+                                }
+                                public void eat()
+                                {
+                                    Console.WriteLine("Eagle eat grass");
+                                }
+
+                                public void fly()
+                                {
+                                    Console.WriteLine("Eagle fly ont the sky");
+                                }
+                            }
+
+
+                            class Bat : IAnimal, IBirth
+                            {
+                                String name;
+
+                                //contructor
+                                public Bat(string name)
+                                {
+                                    this.name = name;
+                                    Console.WriteLine();
+                                    Console.WriteLine("Bat name is: " + name);
+                                }
+
+                                public void run()
+                                {
+                                    Console.WriteLine("Bat can run as animal");
+                                }
+
+                                public void fly()
+                                {
+                                    Console.WriteLine("Bat can fly as Birth ");
+                                }
+
+                                //tới thừa kế hai method Interface là eat, tuy nhiên để phân biêt là eat() của IAnimal hay IBirth
+                                //-> ta làm như sau:
+                                void IAnimal.eat(){
+                                    Console.WriteLine("Bat eat mosquito");    
+                                }
+                                void IBirth.eat()
+                                {
+                                    Console.WriteLine("Bat eat fruit");
+                                }
+                                
+
+                            }
+
+                            class Demo
+                            {
+                            static void Main(String[] args)
+                                {
+                                    Bear bear = new Bear("Loco");
+                                    bear.run();
+                                    bear.eat();
+
+                                    Eagle eagle = new Eagle("hana");
+                                    eagle.eat();
+                                    eagle.fly();
+
+
+                                    // lớp Bat vừa là động vật vừa là chim nó sẽ gặp trở ngại và triển khai method eat() như thế nào để không bị nhầm
+                                    Bat bat = new Bat("gogo");
+                                    bat.run();
+                                    bat.fly();
+                                    //hai thuộc tính trên dễ dàng phân biệt cho các lớp interfcae nhưng với eat()thì cần khai báo cụ thể nếu không sẽ lỗi
+                                    ((IAnimal)bat).eat();
+                                    ((IBirth)bat).eat();
+                                }
+                            }
+                        }

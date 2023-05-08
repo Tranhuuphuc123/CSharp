@@ -1,0 +1,58 @@
+******************ABSTRACT CLASS LỚP TRỪU TUOWNGJT RONG C#***************
+>>> kHÁI NIỆM:
+ - Abstract là từ khóa dùng để khai báo 1 lớp trừu tượng hoặc một phương thức thuần ảo.
+ - Trừu tượng hóa là thuộc tính mà ở đó chỉ những chi tiêt thiết yếu mới được hiển thị cho người dùng. Trừu tượng cũng đc định nghĩa
+  là quá trình xá định các đặc điểm cần thiết của đối tượng bỏ qua các chi tiết không liên quan hay ít cần thiết.
+  --> ví dụ: một người lái xe thì không cần chuyên moon cao về vật lý, hay động cơ học cái a ta có thể làm là biết lái xe, phanh, hay tắng tốc
+mà không cần quá hiểu biết về chuyên môn, nguyên tác vật lý, hay cấu tạo xe nhưng vẫn đk xe đc.. đó đc gọi là trừu tượng.
+
+
+>>>> Lớp trừu tượng và method của nó:
+ - một lớp class trừu tượng là một lớp đc khai báo với từ khóa abstract.
+ - method trong class abstract là một phương thức được khai báo mà hông cần có thân hàm, không cần thực thi.
+
+    vd: 
+        public abstract class Animal;
+        public abstract double tinhdientich();
+
+ - một lớp  abstract đc xây dựng phải đc định nghĩa lại tức Overriding lại trong class chile(lớp con). việc ghi đè trở thành bắt buộc để
+ đạt được tính trừu tượng hóa.
+
+   ++ ví dụ code:
+
+                            abstract class Animal
+                            {
+                                public abstract string Name { get; }
+                                public abstract void MakeSound();
+                            }
+
+                            class Dog : Animal
+                            {
+                                public override string Name => "Dog";
+
+                                // ghi đè override llaij method abstract
+                                public override void MakeSound(){
+                                    Console.WriteLine("Woof!");
+                                } 
+                            }
+
+                            class Cat : Animal
+                            {
+                                public override string Name => "Cat";
+
+                                // ghi đè override lại method từ class abstract
+                                public override void MakeSound(){
+                                    Console.WriteLine("Meow!");
+                                } 
+                            }
+                                
+
+
+ >>>> ƯU ĐIỂM CỦA ABSTRACT:
+    - 1/ Nó làm giảm sự phức tạp của việc xem mọi thứ.
+    - 2/ tránh trùng lặp mã và tăng khả năng sử dụng lại.
+    - 3/ hiểu tăng tính bảo mật của ứng dụng hoặc chương trình vì những chi tiết đc cung cấp cho người dùng.
+    - 4/ cải thiện khả năng bảo trì.
+    - 5/ cải thiện tính moodun của ứng dụng.
+    - 6/ tính đa hình cao. 
+    - 7/ tính bảo mật cao.

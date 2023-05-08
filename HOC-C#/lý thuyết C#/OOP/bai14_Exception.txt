@@ -1,0 +1,193 @@
+**********************EXCEPTION TRONG C#*******************
+>>> Khái niệm:
+ - Xử lý ngoại lệ trong C#, tức là xử lý các lỗi có thể xảy ra, giúp chương trình không bị gián đoạn. Một Exception trong  C# là một phản hồi về tình huống ngoại lệ phát xin lỗi trong một chương trình đang chạy cần đước bắt lỗi chẩn đoán xử lý.
+ - Exception trong C# xây dựng trên 4 từ khóa: try, catch, finally, throw
+  + try: Một khối try nhận diện một khối code mà ở đó các exception cụ thể được kích hoạt. Nó được theo sau bởi một hoặc nhiều khối catch. 
+
+  + catch:Từ khóa catch trong C# chỉ dẫn việc bắt một exception.
+
+  + finally: Một khối finally được sử dụng để thực thi một tập hợp lệnh đã cho, khối lệnh finally luôn luôn được thực thi dù có hay không một exception đươc ném hoặc không được ném.
+
+  + throw: Một chương trình ném một exception khi có một vấn đề xuất hiện. Điều này được thực hiện bởi sử dụng từ khóa throw trong C#. 
+
+
+===============================================================================
+>>>> SYNTAX EXCEPTION TRONG C#
+ - Syntax:
+
+          try
+          {
+             // các lệnh có thể gây ra ngoại lệ (exception)
+          }
+          catch( tên_ngoại_lệ e1 )
+          {
+             // phần code để xử lý lỗi
+          }
+          catch( tên_ngoại_lệ e2 )
+          {
+             // phần code để xử lý lỗi
+          }
+          catch( tên_ngoại_lệ eN )
+          {
+             // phần code để xử lý lỗi
+          }
+          finally
+          {
+             // các lệnh được thực thi
+          }
+
+
+
+===========================================================================
+>>>>>LỚP EXCEPTION TRONG C#
+ - các Exception trong C# được biểu diễn bởi các lớp;
+ - bảng cung cấp một số Exception tiền định nghĩa được kế thừa từ lớp:
+
+         |-----------------------------------------------------------------------------|
+             Lớp Exception                  |      Mô tả
+         |-----------------------------------------------------------------------------|
+            System.IO.IOException           |   Xử lý các I/O error
+         |-----------------------------------------------------------------------------|
+          System.IndexOutOfRangeException   | Xử lý các lỗi được tạo khi một phương thức                                     
+                                            | tham chiếu tới một chỉ mục bên ngoài dãy
+                                            |  mảng  
+         |-----------------------------------------------------------------------------|
+           System.ArrayTypeMismatchException|Xử lý các lỗi được tạo khi kiểu là không 
+                                            |phù hợp với kiểu mảng  
+         |-----------------------------------------------------------------------------|
+           System.NullReferenceException    |Xử lý các lỗi được tạo từ việc tham chiếu 
+                                            |một đối tượng null 
+         |-----------------------------------------------------------------------------|
+           System.DivideByZeroException     |Xử lý các lỗi được tạo khi chia cho số 0 
+         |-----------------------------------------------------------------------------|
+           System.InvalidCastException      |Xử lý lỗi được tạo trong khi ép kiểu 
+         |-----------------------------------------------------------------------------|
+           System.OutOfMemoryException      | Xử lý lỗi được tạo từ việc thiếu bộ nhớ rỗi|
+         |-----------------------------------------------------------------------------|
+            System.StackOverflowException   |Xử lý lỗi được tạo từ việc tràn ngăn xếp (stack) 
+         |-----------------------------------------------------------------------------|
+
+         |-----------------------------------------------------------------------------|
+    
+
+======================================================================
+>>>> XỬ LÝ NGOẠI LỆ(EXCEPTION HANDLING) TRONG C#:
+ ## try, catch, finnaly:
+   ++ ví dụ code:
+       using System;
+         
+        namespace VietTutsCsharp
+        {
+            class TestCsharp
+            {
+                int result;
+                TestCsharp()
+                {
+                    result = 0;
+                }
+                public void phepChia(int num1, int num2)
+                {
+                    try
+                    {
+                        result = num1 / num2;
+                    }
+                    catch (DivideByZeroException e)
+                    {
+                        Console.WriteLine("Bat Exception: {0}", e);
+                    }
+                    finally
+                    {
+                        Console.WriteLine("Ket qua: {0}", result);
+                    }
+                }
+                 
+                static void Main(string[] args)
+                {
+                    Console.WriteLine("Vi du minh hoa Exception trong C#");
+                    Console.WriteLine("---------------------------------");
+                    TestCsharp d = new TestCsharp();
+                    d.phepChia(25, 0);
+                    Console.ReadKey();
+                }
+            }
+        } 
+        
+
+
+ >>>> User-Defined Exception trong C#:
+  - với kiểu Exception tự định nghĩa thì cũng tương tự java:
+   + khi khai báo Exception tự định nghĩa thì cần ké thừa lớp ApplicationException
+    + trong contructor của Exception tự định nghĩa thì cũng kế thừa: base giống super() bên java
+    + sử dụng gọi cái Exception tự định nghĩa thì dùng throw để ném nó ra(lưu ý đi chung với new để khổi tạo giá trị).
+
+    ++ ví dụ code:
+      ++tự tạo myException:
+
+          using System;
+   
+          namespace VietTutsCsharp
+          {
+              class MyException : ApplicationException
+              {
+                  public MyException(string message)
+                      : base(message)
+                  {
+                  }
+              }
+          }
+
+
+
+          ++class Text:
+
+          using System;
+         
+          namespace VietTutsCsharp
+          {
+              class Temperature
+              {
+                  int temperature = 0;
+                  public void showTemp()
+                  {
+                      if (temperature == 0)
+                      {
+                          throw (new MyException("Muc nhiet do 0!"));
+                      }
+                      else
+                      {
+                          Console.WriteLine("Nhiet do: {0}", temperature);
+                      }
+                  }
+              }
+          }
+
+
+          ++ thực thi bên Main:
+            
+             using System;
+   
+              namespace VietTutsCsharp
+              {
+                  class TestCsharp
+                  {
+                      static void Main(string[] args)
+                      {
+                          Console.WriteLine("Vi du minh hoa Xu ly ngoai le trong C#");
+                          Console.WriteLine("---------------------------------");
+                          Temperature temp = new Temperature();
+                          try
+                          {
+                              temp.showTemp();
+                          }
+                          catch (MyException e)
+                          {
+                              Console.WriteLine("Loi: {0}", e.Message);
+                          }
+                          Console.ReadKey();
+                      }
+                  }
+              }    
+              
+
+          => cần luyện tập thêm bài tập để hiểu cốt lỗi
+

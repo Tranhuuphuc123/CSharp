@@ -1,0 +1,49 @@
+************************TIỀM HIỂU VỀ SEALED CLASS TRONG C#**********************
+>>> KHÁI NIỆM:
+ - Tronng C#,'Sealed class' là một lớp mà không thể kế thừa bởi lớp con (sub-class). Nói cách khác
+ , 'Sealed clas' ngăn cản sự mở rộng, hay ghi đè Override của một lớp khác
+ 
+ - Có thể khai báo một class niêm phong 'Sealed class' bằng cách đặt trước từ khóa class bằng từ khóa 'Sealed'
+===> lớp 'Sealed class'  ngăn không cho một lớp khác có thể kế thừa và ghi đè, do đó nó không thể là lớp cơ sở
+vì nó không thể được thừa kế vởi bất kỳ lớp nào khác, nếu vẫn mún kế thừa trình biên dịch c# sẽ báo lỗi ngay.
+===> 
+
+
+>>>> Đặc điểm của Sealed Class:
+  - Không thể kế thừa
+  - Không thể ghi đè phương thức, thuộc tính hặc sự kiện của class
+  - Có thể kế thừa từ một lớp trừ tượng (abstract class).
+
+
+     ví dụ code:
+
+              sealed class MySealedClass
+                {
+                    public int X { get; set; }
+                    public int Y { get; set; }
+
+                    public int Sum() => X + Y;
+                }
+
+                class SubClass // không thể kế thừa từ MySealedClass nếu kế thừa sẽ bị lỗi biên dịch
+                {
+                }
+
+                abstract class MyAbstractClass : MyAbstractClass // có thể kế thừa từ MySealedClass
+                {
+                    public abstract void MyAbstractMethod();
+                }
+
+
+
+
+>>>> Implement Sealed class: triển khai Sealed Class như thế nào?
+- Syntax:
+      <Sealed> <className>
+               <methodName>
+               ......
+
+
+
+     
+         

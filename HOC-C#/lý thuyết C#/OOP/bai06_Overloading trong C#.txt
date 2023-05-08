@@ -1,0 +1,74 @@
+**********************TIỀM HIỂU VỀ OVERLOADING************************
+>>>> KHÁI NIỆM:
+ - Overloading(hay còn gọi nạp chồng phương thức hay phương thức quá tải) là công việc tạo ra nhiều phương thức trong một class
+ có chung tên nhưng khác tham số truyền vào(# nhau bởi tham số đầu vào hoặc loại tham số dầu vào hoặc cả 2).
+ - lý do dùng đến Overloading: tăng tính sử dụng cho các phương thức bên trong một lớp, nạp chồng phương thức Overloading so với đối số
+cha, thì dối số con sẽ được ưu tiên cao nhất
+
+===========================================================================================
+>>>>>>>>>CÁCH THỨC NẠP TRỒNG PHƯỜN THỨC TRONG C#.
+ ## 1/ THAY DỔI SỐ LƯỢNG THAM SỐ:
+  - method Overloading có thể đạt được thông qua thay đổi ố lượng tham số trong khi chuyên sáng method khác.
+
+    + vi dụ:
+
+                                pulic class a{
+                                    // method góc
+                                    public int sum(int a, int b){
+                                        return a+b;
+                                    }
+
+
+                                    // thêm method 2 trùng tên sum với số lượng tham số nhiều hơn 
+                                    public  int sum(inta, int b, int c){
+                                        return a+b+c;
+                                    }
+                                }
+
+
+
+### 2/ Thay đổi kiểu dữ liệu của các đối số:
+ - ta có thể thay đổi type trả về cho cùng tên của một phương thức.
+
+   ++ ví dụ: 
+                                  class Calculator
+                                    {
+                                        public int Add(int num1, int num2)
+                                        {
+                                            return num1 + num2;
+                                        }
+
+                                        public double Add(double num1, double num2)
+                                        {
+                                            return num1 + num2;
+                                        }
+                                    }
+
+                 
+
+
+### 3/ Thay đổi thứ tự tham số của các phương thức:
+ - Overloading method cuãng có thể được thực hiện bằng cách sắp xếp lại các tham số của hai hoặc nhiều phương thức.
+ ----> ví dụ: nếu các tham số của method 1 là (String name int stt) và method con lại sẽ là (int stt, String name), cả 2 đều có chung tên 
+ hpuwong thức nên đc coi là Overloading.
+
+       ++ ví dụ:
+                                        public class a{
+                                        // method góc
+                                        public int sum(Strig name a, int stt){
+                                           Console.WriteLine("name: " + name + "stt: " + stt);
+                                        }
+
+
+                                        // thêm method 2 trùng tên sum với các thức thay đối thứ tự tham số
+                                        public  double sum(int stt, String name){
+                                            Console.WriteLine("stt: " + stt + "name: " + name);
+                                        }
+                                    }
+
+                        
+      
+
+
+
+      

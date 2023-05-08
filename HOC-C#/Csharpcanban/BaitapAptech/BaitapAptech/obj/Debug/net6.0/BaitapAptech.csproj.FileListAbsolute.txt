@@ -1,15 +1,5 @@
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\bin\Debug\net6.0\BaitapAptech.exe
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\bin\Debug\net6.0\BaitapAptech.deps.json
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\bin\Debug\net6.0\BaitapAptech.runtimeconfig.json
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\bin\Debug\net6.0\BaitapAptech.dll
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\bin\Debug\net6.0\BaitapAptech.pdb
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.csproj.AssemblyReference.cache
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.GeneratedMSBuildEditorConfig.editorconfig
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.AssemblyInfoInputs.cache
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.AssemblyInfo.cs
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.csproj.CoreCompileInputs.cache
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.dll
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\refint\BaitapAptech.dll
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.pdb
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\BaitapAptech.genruntimeconfig.cache
-G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\BaitapAptech\obj\Debug\net6.0\ref\BaitapAptech.dll

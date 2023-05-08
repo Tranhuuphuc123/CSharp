@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bai02_Delegrate.cs" />
+    <Compile Remove="bai04_ArrayList.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bai02_Delegrate.cs" />
+    <None Include="bai04_ArrayList.cs" />
+  </ItemGroup>
+
+</Project>

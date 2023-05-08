@@ -1,0 +1,217 @@
+*************************TIỀM HIỂU VỀ KẾ THUẦ TRONG C#*********************
+>>> Khái niệm:
+ - Trong thực tế kế thừa là việc thừa hưởng lại những gì mà người khác đẻ lại, trong lập trình cũng dậy,
+ ké thừa trong lập trình là cách mà 1 lớp con có thể thừa hưởng lại những thuộc tính, phương thức từ 1 lớp khác
+ và sử dụng là của bản thân mình.
+
+ ==> định nghĩa chuẩn hơn thì kế thừa là mọt đặc điểm của ngôn ngữ OOP trong C# để biểu hiện mối quan hệ đặc biệt 
+ hóa - tổng quát hóa giữa các lớp (class).
+
+ - ưu điểm của kế thừa:
+  + Cho phép xây dựng một class mới(sub-class) từ class đã có (parent-class).
+  + Cho phép chia sẻ các thông tin chung nhằm tái sử dụng và đồng thời giúp ta dễ
+  dàng nâng cấp, dễ dàng bảo trì.
+  + Định nghĩa sự tương thích giữa các class, nhờ đó có thể chuyển kiểu tự động.
+
+
+
+>>>>> Implement inheritance: 
+ - triển khai tính kế thừa như thế nào?
+  + syntax:
+      class <tên lớp con> : <tên lớp cha>{}
+      ==> trong đóa trong C# kế thừa dùng dấu ":", khác với java extends
+
+>>>> base keywword: từ kháo kế thừa base.
+ - Khái niệm:
+    từ khóa base cho phép bạn truy cập các biến và phương thức của lớp cơ sở từ lớp dẫn xuất.
+ Khi bạn kế thừa một lớp, các phương thức và biến được định nghĩa trong lớp cơ sở có thể được khai
+ báo lại trong lớp dẫn xuất. 
+ - khi kế thừa từ mọt class nào đó, khi khai báo contructor hay kế thừa đem các method hay 
+ thuộc tính có sẵn qua sub-class, thì ta dùng từ khóa base. nó cũng tương tự như từ khóa super()
+ trong java.
+
+
+    ++ ví dụ code thông qua bài tập sau:
+    xây dựng class cha: Person, class thừa kế Employee
+    -> sử dụng tính kế thừa và in ra các thoogn tin tương ứng
+    -> xem code và chạy chtrinh bên phần thực hành.
+
+
+
+                                using System;
+                                using System.Collections.Generic;
+                                using System.Linq;
+                                using System.Text;
+                                using System.Text.RegularExpressions;
+                                using System.Threading.Tasks;
+
+                                namespace BaitapAptech
+                                {
+                                    //class Person
+                                    class Person
+                                    {
+                                        private String _FullName;
+                                        private DateTime _Birthday;
+
+
+
+                                        //get and set
+                                        public String FullName
+                                        {
+                                            get { return _FullName; }
+                                            set
+                                            {
+                                                //$ la dai dien khoang trang
+                                                //Regex ham kiem tra dau vao cua chuoi ky tu
+                                                Regex re = new Regex("^[A-Za-z ]+$");
+                                                if (re.IsMatch(value))
+                                                {
+                                                    _FullName = value;
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("vui long nhap lai ten: ");
+                                                    _FullName = Console.ReadLine();
+                                                }
+                                            }
+                                        }
+
+                                        public DateTime Birthday
+                                        {
+                                            get { return _Birthday; }
+                                            set
+                                            {
+                                                if (value.Year <= DateTime.Now.Year)
+                                                {
+                                                    _Birthday = value;
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("vui long nhap lai ngay sinh");
+                                                    String mahoa = Console.ReadLine();
+                                                    _Birthday = DateTime.ParseExact(mahoa, "dd/MM/yyyy", null);
+                                                }
+                                            }
+                                        }
+
+                                        //contructor
+                                        public Person() { }
+                                        public Person(String fullname, DateTime birthday)
+                                        {
+                                            this.FullName = fullname;
+                                            this.Birthday = birthday;
+                                        }
+
+                                        //method getAge
+                                        public int getAge()
+                                        {
+                                            int age = DateTime.Now.Year - this.Birthday.Year;
+                                            if (age > 0)
+                                            {
+                                                return age;
+                                            }
+                                            else
+                                            {
+                                                return 1;
+                                            }
+
+                                        }
+
+                                        //method Display
+                                        public virtual void Display()
+                                        {
+                                            Console.WriteLine("ten cua ban la: " + this.FullName);
+                                            Console.WriteLine("tuoi cua ban la: " + this.getAge());
+                                        }
+
+                                    }
+
+
+
+                                    //class Employee
+                                    class Employee : Person // class employee đang kế thừa class Person
+                                    {
+                                        DateTime _JoinDate;
+                                        private int i;
+
+                                        //get and set
+                                        public DateTime JoinDate
+                                        {
+                                            get { return _JoinDate; }
+                                            set
+                                            {
+                                                if (value.Year <= DateTime.Now.Year)
+                                                {
+                                                    _JoinDate = value;
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("vui long nhap lai ten: ");
+                                                    String mahoa = Console.ReadLine();
+                                                    JoinDate = DateTime.ParseExact(mahoa, "dd/MM/yyyy", null);
+                                                }
+                                            }
+                                        }
+
+                                        //contrucotr
+                                        public Employee() { }
+                                        public Employee(String fullname, DateTime birthday, DateTime joindate) : base(fullname, birthday)
+                                        {
+                                            this.JoinDate = joindate;
+                                        }
+
+                                        //method
+                                        public int getWorkingYear()
+                                        {
+                                            int sonamlamviec = DateTime.Now.Year - this.JoinDate.Year;
+                                            if (sonamlamviec == 0)
+                                            {
+                                                return 1;
+                                            }
+                                            else
+                                            {
+                                                return sonamlamviec;
+                                            }
+                                        }
+
+                                        //method Override Display
+                                        int salary = 0;
+                                        public override void Display()
+                                        {
+                                            base.Display();
+                                            Console.WriteLine("so ngay tham gia lam viec: " + this.JoinDate.ToShortDateString());
+                                            for (int i = 0; i < this.getWorkingYear(); i += 3)
+                                            {
+                                                salary++;
+                                            }
+                                            Console.WriteLine("Salary level: " + salary);
+                                        }
+                                    }
+
+
+                                    //class demo chứa hàm main chạy thực thi chương trình chính
+                                    class Demo
+                                    {
+                                        static void Main(String[] args)
+                                        {
+                                            Employee emp = new Employee();
+
+                                            Console.WriteLine("nhap ten cua ban: ");
+                                            emp.FullName = Console.ReadLine();
+
+                                            Console.WriteLine("vui long nhap ngay thang nam sinh: ");
+                                            String input = Console.ReadLine();
+                                            emp.Birthday = DateTime.ParseExact(input, "dd/MM/yyyy", null);
+
+                                            Console.WriteLine("vui long nhap ngay lam viec: ");
+                                            String input2 = Console.ReadLine();
+                                            emp.JoinDate = DateTime.ParseExact(input2, "dd/MM/yyyy", null);
+
+                                            emp.Display();
+
+                                            Console.ReadKey();
+                                        }
+                                    }
+                                }
+                                    
+

@@ -1,0 +1,119 @@
+********************************TỪ KHÓA STATIC TRONG C#*****************************
+>>> khie niệm:
+ - ta sẽ tiềm hiểu về cách thức khai báo của từ khóa static:
+  + trong C# thì từ khóa 'static' là một biến và hàm hay phương thức được xác định của một lớp(class) chứ không phải của một Object đối
+  tượng cụ thể
+  + cac thành phần được tạo và khai báo với static sẽ có giá trj cho toàn bộ class, chứ không dành riêng cho đối tượng nào
+  ====> cách thức truy cập của nó là dùng tên class.Object(đối tượng) hay tên class.method hay hàm. mà không cần khởi tạo đối tượng theo
+  kiểu:
+       gọi class và gáng tên đối tượng: class tên_đối tượng = new class();
+
+
+   ========>>>> Tóm lại từ khóa static là cách xây dựng biến và method cho một class, nó dùng cho các trường hợp tạo ra một biến
+   hoặc phương thức chung cho tất cả các đối tượng của lớp, hoặc muốn tạo ra một khối mã chỉ được thực thi một lần.  
+
+
+
+  >>>>>Biến với static:
+   - Syntax:
+         <phạm vi truy cập> static <kiểu dữ liệu> <tên biến> = <giá trị khởi tạo>; ;
+
+         Ví dụ code:
+
+
+                            class Cat
+                            {
+                                private int weight;
+                                /*
+                                    Khai báo property tương ứng với thuộc tính.
+                                    Mặc dù trong bài này mình không sử dụng tới nhưng mình vẫn khai báo để nhắc các bạn nhớ tuân thủ tính đóng gói.
+                                */
+                                public int Weight
+                                {
+                                    get { return weight; }
+                                    set { weight = value; }
+                                }
+                                private int height;
+                                public int Height
+                                {
+                                    get { return height; }
+                                    set { height = value; }
+                                }
+
+                                /*
+                                    Khai báo 1 biến static tên Count để chứa số lượng mèo hiện tại.
+                                    Mỗi lần có 1 đối tượng được tạo ra thì ta sẽ tăng Count lên.
+                                */
+
+                                public static int Count = 0;
+                            
+                                public Cat()
+                                {
+                                    weight = 20;
+                                    height = 500;
+                                    /* Vì constructor chỉ được gọi khi có đối tượng được tạo ra nên ta sẽ tăng Count ở đây */
+                                    Count++;
+                                }
+                            }
+
+
+>>>>  Method với static:
+- syntax:
+
+            <phạm vi truy cập> static <kiểu trả về> <tên phương thức>
+
+            {
+
+                // nội dung phương thức
+
+            }
+
+
+
+     ++ vd code:
+                    class TienIch
+                        {
+                            /*
+                                Khai báo và định nghĩa 1 phương thức tính luỹ thừa 2 số nguyên
+                            */
+
+                            public static long LuyThua(int CoSo, int SoMu)
+                            {
+                                long KetQua = 1;
+                                for (int i = 0; i < SoMu; i++)
+                                {
+                                    KetQua *= CoSo;
+                                }
+
+                                return KetQua;
+                            }
+                        }
+
+                      ==> trong ham main nếu muốn sử dụng đến class và method có static thì chỉ cần gọi tên class.method 
+                      mà không cần khởi tạo giá trị
+                      vd:
+                        main(){
+                            //không cần khởi tạo để gọi class ra
+                               /*
+                                Gọi phương thức thông qua tên lớp và không cần khởi tạo đối tượng.
+                                */
+                                Console.WriteLine(TienIch.LuyThua(3, 3));
+                        }  
+            
+
+
+
+>>>> Class với static:
+ - Syntax:
+             static <tên lớp>()
+
+            {
+
+            // nội dung của constructor
+
+            }    
+
+            ===> lưu ý khi khai báo class vơi static thiif contructor không gọi theo cách thông thường
+            mà phải khai báo static contrucor luôn.
+             
+    

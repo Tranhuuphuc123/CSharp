@@ -1,0 +1,95 @@
+*******************************************INDEXER TRONG C#***********************************
+>>>>>> khái niệm:
+ - Indexer trong C# là một tính năng cho phép các đối tượng được truy cập như một mảng bằng cách sử dụng các chỉ mục.
+ Indexer cho phép truy cập các thành phần của một đối tượng giống như truy cập các phần tử của một mảng
+ - Indexer tương ứng về mặt cú pháp với Property(nghĩa là cũng có get an set..), nhưng khác ở chỗ nó chấp nhận một hoặc nhiều 
+ tham số cùng lúc.
+
+ ## Mục đích của Indexer được tạo ra là gì:
+    - ví dụ:
+
+                        using System;
+
+                        class MyClass
+                        {
+                            // khai báo mảng
+                            private int[] data = new int[10];
+
+                            // this[int index] chính là cách khai báo chỉ mục lấy dl ở mảng data ở trên
+                            public int this[int index]
+                            {
+                                get
+                                {
+                                    return data[index];
+                                }
+                                set
+                                {
+                                    data[index] = value;
+                                }
+                            }
+                        }
+
+                        class Program
+                        {
+                            static void Main(string[] args)
+                            {
+                                MyClass obj = new MyClass();
+
+                                obj[0] = 1;
+                                obj[1] = 2;
+                                obj[2] = 3;
+
+                                Console.WriteLine(obj[0]); // Output: 1
+                                Console.WriteLine(obj[1]); // Output: 2
+                                Console.WriteLine(obj[2]); // Output: 3
+                            }
+                        }
+                        ==> đây à cách dùng chỉ mục Indexer để truy cập các phần tử của một mảng dâta
+
+  ==>Lợi ích của Indexer:
+   - Indexer giúp Truy cập các phần tử trong đối tượng: 
+      + truy cập các phàn tử trong đối tượng bằng chỉ số-> truy cập bên trong đối tượng dễ dàng và thuận tiện.
+   - dễ dàng sử dụng trong mã: 
+      + Indexer cho phép sử dụng cú pháp tương tự mảng Array
+   - Linh hoạt:
+     + xây dựng đối tượng dễ dàng linh hoạt
+     + cho phép các đối tượng lưu trữ các phần tử bên trong linh hoạt -> giúp sử dụng Indexer một cách hiệu quả dễ dàng cho nhều mục đich khác nhau.
+   - thích hợp các đối tượng động: Indexer cho phép truy cập các phần tử bên trong đối tượng một cách động.
+   Điều này rất hữu ích khi các phần tử bên trong đối tượng thay đổi và không biết trc số lượng.
+   ==> tiềm hiểu qua thực nghiệm bài tập sau.
+
+
+================================================================================
+>>>>> KHAI BÁO (DECLARATION) INDEXERS:
+ - Kiểu trả về cảu Indexer sử dụng từ khóa this[]..
+ - ký hiệu []: bao gồm dữ liệu và ã định danh của Indexer.
+  
+    ## Syntax:
+      <Access Modifier><return type> this[<parameter>]{
+        get{}
+        set{}
+      }
+
+
+       vd:  
+                class MyClass
+                {
+                    // khai báo mảng
+                    private int[] data = new int[10];
+
+                    // this[int index] chính là cách khai báo chỉ mục lấy dl ở mảng data ở trên
+                    public int this[int index]
+                    {
+                        get
+                        {
+                            return data[index];
+                        }
+                        set
+                        {
+                            data[index] = value;
+                        }
+                    }
+                }
+
+=========================================================================            
+>>>>>> Thực hành trải nghiệm code-> kinh nghiệm đổi lấy kiến thức      

@@ -1,0 +1,145 @@
+**************************TIỀ HIỂU VỀ CLASS***************************************
+ >>>>>>>> Cách xây dựng class:
+   - syntax:
+                    class <class_Name>{
+                       // class member
+                       //metod
+                       //<Phạm vi truy cập> <Các thành phần của lớp>;
+                    }
+
+
+
+>>>>> Quy tắc đặt tên class:
+ - Phải bắt đầu bằng một từ
+ - không được trùng ký tự với ký tự của C#
+ - Không bắt đầu tên bằng chữ số
+ - có thể bắt đầu bằng dấu gạch dưới _, nếu trùng ký tự có sẵn của C# thì dùng trc câu phải thêm @.
+
+
+>>>>>>Khởi tạo:
+ khi muốn sử dụng class trong phương thức chính, thì cần khởi tạo đối tượng
+ - syntax:
+     <class_name> <tên đại diện> = new <class_name>;
+     => muốn gọi đến method cần sử dụng trong class đó thì lấy tên đại diện . tới method tương ứng
+     <tên đại diện>.method();
+
+
+        vd:
+            
+            classA a = new classA();
+            a.tinhtong();
+
+
+
+
+
+
+   ++ ví dụ code:
+                    using System;
+                    using System.Collections.Generic;
+                    using System.Linq;
+                    using System.Text;
+                    using System.Threading.Tasks;
+
+                    namespace BaitapAptech
+                    {
+                        /*xay dung class rieng*/
+                            class Rectangle{
+                                public float chieudai;
+                                public float chieurong;
+
+                                //contructor
+                                public Rectangle(){
+                                    this.chieudai = 1;
+                                    this.chieurong = 1;
+                                }
+
+                                //contructor co doi so
+                                public Rectangle(float x, float y){
+                                    this.chieudai = x;
+                                    this.chieurong = y;
+                                }
+
+                                //xay dung method
+                                public float getArea(){
+                                    return (this.chieudai * this.chieurong);
+                                }
+
+
+                                //method isSquare
+                                public bool isSQuare(){
+                                    if (this.chieudai == this.chieurong){
+                                        return true;
+                                    }
+                                    else{
+                                        return false;
+                                    }
+
+                                }
+
+                                //kiem tra methof isRectangle
+                                public bool isRectangle(){
+                                    if (this.chieudai > this.chieurong){
+                                        return true;
+                                    }
+                                    else{
+                                        return false;
+                                    }
+                                }
+
+                                //ham huy contructor
+                                /*    ~Rectangle()
+                                    {
+                                        Console.WriteLine("day la ham huy contructor");
+                                    }*/
+
+                                //method toString
+                                public override String ToString(){
+                                    return ("dien tich Area: " + this.chieudai + " * " + this.chieurong + " = " + (this.chieurong * this.chieurong));
+                                }
+
+                            }
+
+
+                            class Demo
+                            {
+                                /*ham main*/
+                                static void Main(String[] args)
+                                {
+                                    float a, b;
+                                    Console.WriteLine("nhap so a: ");
+                                    a = float.Parse(Console.ReadLine());
+                                    Console.WriteLine("nhap so b: ");
+                                    b = float.Parse(Console.ReadLine());
+
+                                    Rectangle rec = new Rectangle(a, b);
+                                    Console.WriteLine("dien tich Area: " + rec.ToString());
+
+                                    //kiem tra co phai hinh vuong
+                                    if (rec.isSQuare())
+                                    {
+                                        Console.WriteLine("ket qua cac canh ban nhap la hinh vuong");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ket qua cac canh ban nhap khong phai la hinh vuong");
+                                    }
+
+                                    // kiem tra cos phai hinh chu nhat
+                                    if (rec.isRectangle())
+                                    {
+                                        Console.WriteLine("day la hinh chu nhat");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("day khog phai la hinh chu nhat");
+                                    }
+
+                                }
+                            }
+                    
+                    
+                    }
+                    
+
+

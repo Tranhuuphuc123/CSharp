@@ -1,0 +1,104 @@
+************************************LOOP VÒNG LẶP TRONG C#**********************************
+>>>> Vòng lặp For:
+ - Vòng lặp for là một vòng lặp có thể biết trước đc số lần lặp và đk kết thúc vòng lặp.
+ - Vòng lặp for Java cung cấp một cách ngắn gọn để viết cấu trúc vòng lặp. Câu lệnh for sử dụng quá trình
+ khởi tạo, điều kiện và tăng / giảm trong một dòng, do đó cung cấp cấu trúc vòng lặp ngắn hơn, dễ gỡ lỗi.
+
+  ## Câu trúc vòng lặp for:
+     
+      for(expr khởi tạo; test expr; update exp)
+        {
+            // nội dung của vòng lặp
+            // câu lệnh chúng ta muốn thực thi
+        }
+
+    + ví dụ:
+
+       for(int i=0;i<=100;i++){
+         // nội dung
+       }
+
+        ** trong đó:
+          ++ int i: gia trị khởi tạo điểm bắt đầu vòng lặp, mặc định là 0.
+          ++ i<100: đây là đk xét true false cho vòng lặp, đúng sẽ thực thi sai kết thúc vòng lặp.
+          ++ i++/i--: giúp vòng lặp tăng giảm một đơn vị hay nhiều đơn vị: i+=2, i-=2....
+
+
+
+
+
+>>>> vòng lặp while(hay while() do):
+ - vòng lặp while hay while(){} do là một vòng lặp kiểm tra dk ban đầu trước theo giá trị boolean(true/false).
+ - Vòng lặp while được coi như một câu lệnh if lặp lại. Nếu số lần lặp không cố định thì nên sử dụng vòng lặp
+  while.
+
+  ## Cấu trúc vòng lặp WHile() do.
+
+     while(điều kiện){
+        // câu lệnh 1
+        update_expression;
+     }
+
+      * trong đó:
+         + update_expression;: giá trị tăng giảm, vd: i++, i--....
+
+
+        ++ ví dụ code:
+           
+
+
+>>>> Vòng lặp do while:
+  - được sử dụng khi chúng ta cần thực thi lặp đi lặp lại một khối câu lệnh. Vòng lặp do-while trong Java là 
+  một vòng lặp điều khiển Thoát . Do đó, không giống như vòng lặp for hoặc while , do-while kiểm tra điều kiện
+   sau khi thực hiện các câu lệnh của thân vòng lặp.
+ - Đối với do while thì nó sẽ thực thi câu lệnh trc rồi mới kiểm tra điều kiện. 
+
+  ## Cấu trúc:
+     do{
+
+        // cau lệnh thực thin 1
+     }while(điều kiện);
+
+
+
+
+
+
+
+
+
+>>>>>> Vòng lặp for-each:
+ - For-each là một kỹ thuật duyệt mảng khác như vòng lặp for, vòng lặp while, vòng lặp do-while được giới thiệu trong Java5. 
+ 
+     +  Nó bắt đầu với từ khóa for giống như một vòng lặp for thông thường.
+     + Thay vì khai báo và khởi tạo một biến bộ đếm vòng lặp, bạn khai báo một biến cùng kiểu với kiểu cơ sở của mảng, theo sau là dấu hai chấm, 
+     sau đó là tên mảng.
+     + Trong thân vòng lặp, bạn có thể sử dụng biến vòng lặp mà bạn đã tạo thay vì sử dụng phần tử mảng được lập chỉ mục. 
+      
+     + Nó thường được sử dụng để lặp qua một mảng hoặc một lớp Bộ sưu tập (ví dụ: ArrayList)
+
+
+
+
+   ### Cấu trúc for-each"
+     
+                           for (type variableName in arrayName) {
+                               // nội dung câu lệnh
+                         }
+
+                         ++ trong đó;
+                           > type: tên kiểu dữ liệu
+                           > variableName: tên biến
+                           > arrayName: tên mảng
+
+
+   ### ví dụ đoạn code:
+                           // tạo ra mảng cars với kiểu String
+                           String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+                           // sử dụng for-each để xuất tt
+                           for (String item in cars) {
+                              System.out.println(item);
+                            }
+                            ---> kw: xuất ra các giá trị value của mảng cars
+                                       

@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaitapAptech
 {
-    public class class_Method{
-
-        /*xay dung class rieng*/
+     /*xay dung class rieng*/
         class Rectangle{
             public float chieudai;
             public float chieurong;
@@ -66,36 +64,42 @@ namespace BaitapAptech
         }
 
 
-    /*ham main*/
-        static void Main(String[] args){
-            float a, b;
-            Console.WriteLine("nhap so a: ");
-            a = float.Parse(Console.ReadLine());
-            Console.WriteLine("nhap so b: ");
-            b = float.Parse(Console.ReadLine());
+        class Demo
+        {
+            /*ham main*/
+            static void Main(String[] args)
+            {
+                float a, b;
+                Console.WriteLine("nhap so a: ");
+                a = float.Parse(Console.ReadLine());
+                Console.WriteLine("nhap so b: ");
+                b = float.Parse(Console.ReadLine());
 
-            Rectangle rec = new Rectangle(a,b);
-            Console.WriteLine("dien tich Area: " + rec.ToString());
+                Rectangle rec = new Rectangle(a, b);
+                Console.WriteLine("dien tich Area: " + rec.ToString());
 
-            //kiem tra co phai hinh vuong
-            if(rec.isSQuare()){
-                Console.WriteLine("ket qua cac canh ban nhap la hinh vuong");
-            }
-            else{
-                Console.WriteLine("ket qua cac canh ban nhap khong phai la hinh vuong");
-            }
+                //kiem tra co phai hinh vuong
+                if (rec.isSQuare())
+                {
+                    Console.WriteLine("ket qua cac canh ban nhap la hinh vuong");
+                }
+                else
+                {
+                    Console.WriteLine("ket qua cac canh ban nhap khong phai la hinh vuong");
+                }
 
-            // kiem tra cos phai hinh chu nhat
-            if (rec.isRectangle()){
-                Console.WriteLine("day la hinh chu nhat");
+                // kiem tra cos phai hinh chu nhat
+                if (rec.isRectangle())
+                {
+                    Console.WriteLine("day la hinh chu nhat");
+                }
+                else
+                {
+                    Console.WriteLine("day khog phai la hinh chu nhat");
+                }
+
             }
-            else{
-                Console.WriteLine("day khog phai la hinh chu nhat");
-            }
-            
         }
-    }
-
-
+ 
    
 }

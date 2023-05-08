@@ -1,0 +1,169 @@
+************************TIỀM HIỂU VỀ THUỘC TÍNH PROPERTIES- INDEXERS-RECORDS TRONG C#****************************
+>>>> PROPERTIES:
+ - Khái niệm: các Access Modifiers: Public, private,protected và Internal được sử dụng để kiểm soát khả năng truy cập
+ của các trường và phương thức trong C#. Các trường công khai public có thể được truy cập bởi các lớp khác, nhưng các 
+ trường field private chỉ có thể truy cập bởi lớp mà chúng được khai báo. C# sử dụng một tính năng đựợc gọi là property
+ (thuộc tính) để cho phép bạn đặt và truy xuất giá trị của các trường được khai báo với bất kỳ công cụ sữa đổi truy cập nào 
+ theo cách bảo mật. 
+
+ ví dụ: chúng ta có một lớp với tên Student, với các Private Field cho age, name, và code. Chúng ta không thể trực tiếp truy cập 
+ các Field này từ bên ngoài phạm vi lớp đó, nhưng chúng ta có thể có các thuộc tính để truy cập các Private Field này.
+
+>>>> Fields:
+- Khái niệm:
+  + Trnng C# field (trường ) là một biến trong mọt class, tương đương các datamember đc khởi tạo của một class trong java
+  được sử dụng để lưu trữ dữ liệu.
+  + field là một thành phần của class và được khai báo trong phạm vi của lớp
+  + một filed có thể được truy cập và thau dổi trực tiếp bên trong lớp đó.
+
+
+      vd:
+                        class Person
+                            {
+                                private string name; // Field
+
+                                public void SetName(string name)
+                                {
+                                    this.name = name;
+                                }
+
+                                public string GetName()
+                                {
+                                    return name;
+                                }
+                            }
+
+                            ===> các name.. các đối tượng khai báo khởi tạo một class là một trường field..
+
+>>> so sánh filed và property
+
+   |------------------------------------------------------------------------------------------------------------|
+                    Properties                                      |                   Field
+   |------------------------------------------------------------------------------------------------------------|
+        property là cách truy cập và thay đổi dữ liệu của 1 đối     |   Field là một biến trong một lớp, sử dụng để 
+     có thể cung cấp kiểm soát hơn về các dl đc truy cập            | lưu trữ dữ liệu trực tiếp.     
+   |------------------------------------------------------------------------------------------------------------|
+        thường được dử dụng để truy cập và thay đỏi giá trị phức tạp|   dử dụng để lưu trữ các giá trị đơn giản
+   |------------------------------------------------------------------------------------------------------------|
+        truy cập thông qua phương thức get, set Accessor            |   Có thể truy cập trực tiếp bên trong lớp đó
+   |------------------------------------------------------------------------------------------------------------|
+        Lưu trữ các giá trị phức tạp                                | Lưu trữ giá trị đơn giản           
+   |------------------------------------------------------------------------------------------------------------|
+
+   |------------------------------------------------------------------------------------------------------------|
+ 
+ 
+>>>>> GET AND SET Accessor:
+- trong C#, Accessor là một thuộc tính chứa các lệnh có thể thực thi, mà giúp đỡ trong việc lấy, hay trả về giá trị(get) hoặc thiết 
+lập(set) thuộc tính.
+===> hiểu nôm na đây là phương thức getter and setter của C# giống java vậy
+
+  - Syntax:
+         <Access Modifiers> <return type><property_Name>{
+            get{
+                return value;
+            }
+            set{
+                //set value
+            }
+         }
+
+      ví dụ:
+             / khai báo một thuộc tính Code có kiểu dữ liệu string:
+                public string Code
+                {
+                    get
+                    {
+                        return code;
+                    }
+                    set
+                    {
+                        code = value;
+                    }
+                }
+
+          
+
+   #### Categories of Properties:
+     ##Read-Only:
+     - Read-Only thuôc tính cho phép chỉ nhận giá trị trường private. Nó khởi tạo chỉ giá trị đọc hay nhận trả về, nên được 
+     định nghĩa vói Accessor là get.
+     ==> nghĩa là khi khai báo thuộc tính Read-Only thì chỉ cần phương thức get thui.
+     - Syntax:
+                    <Access Modifiers> <return type><property_Name>{
+                        get{
+                            return value;
+                        }
+                    }
+
+     ## Write-Only: 
+     - Write-Only thuôc tính cho phép chỉ nhận giá trị trường private. Nó khởi tạo chỉ giá trị đọc hay nhận trả về, nên được 
+     định nghĩa vói Accessor là set.
+     ==> nghĩa là khi khai báo thuộc tính Write-Only thì chỉ cần phương thức set thui.
+     - Syntax:
+                        <Access Modifiers> <return type><property_Name>{
+                                set
+                                {
+                                    //asign(chỉ định)
+                                }
+                            }
+
+      ## Read-Write property:
+       - Read-Write thuộc tính cho phép thiết lập và nhận giá trị của trường private. Khởi taooj thuộc tính Read-Write
+       , ta nên dùng cả phương thức set and get Accessor.
+       ==> tóm lại đầy là trạng thái đầy dủ dùng cả set and get
+       -Syntax:
+                        public string Code
+                        {
+                            get
+                            {
+                                return code;
+                            }
+                            set
+                            {
+                                code = value;
+                            }
+                        }
+
+>>>>> THUỘC TÍNH ABSTRACTS TRONG C#:
+    - thuộc tính này chỉ nằm trong lớp trừu tượng
+    - thuộc tính này chỉ đc sử dụng trong lớp abstract và interface thui.
+    - nó chỉ định nghĩa tên, kiểu dữ liệu và method truy cập mà hông định nghĩa thân hàm
+    - thuộc tính tt khi khai báo chỉ có thể lf set or get mà khong trả về cái gì hết, hayb truyên gì vào cả, không có thân hàm.
+
+
+
+  # mục đích sử dụng:
+    + tăng tính trừu tượng.. để lớp con có thể tự thay đổi dựa vào method ở lớp cha từ tính trừu tượng.
+    + có 2 dạng : thuộc tính chỉ có set hoặc get không có set và get đi chung 1 lượt
+    
+   # Syntax:
+    -  ví dụ:
+
+                            using System;
+                                namespace VietTutsCsharp
+                                {
+                                    public abstract class Person
+                                    {
+                                        public abstract string Name
+                                        {
+                                            get;
+                                            set;
+                                        }
+                                        public abstract int Age
+                                        {
+                                            get;
+                                            set;
+                                        }
+                                    }
+                                }
+
+
+
+>>>>>>>Boolean Properties:
+  - kiểu thuộc tính trả về true or false
+  - chỉ đc thiết lập get thui ngoài ra không có set hay vừa get-set (lưu ý get nhưng vẫn không có thân hàm chỉ khai báo get;).
+
+   ++ code ví dụ bài tập:
+     -->các dạng bài tập về sau đều có OOP nên sẽ đều sử dụng get and set Properties.
+     

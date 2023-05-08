@@ -1,0 +1,75 @@
+**************************NAMESPACE TRONG C#*********************
+>> Khái niệm:
+ - Một Namespace trong C# được thiết kế để cung cấp một cách để giữa một tập hợp các tên được phân biệt riêng rẽ với nhau: vd như Tên class...
+ --> các tên Class được khai  báo trong một namespace không xung đột với cùng tên class như thế khi được khai báo trong một namespace khác..
+
+ - Syntax: Một định nghĩa Namespace trong C# bắt đầu với từ khóa namespace:
+     namespace <tên namespace>{
+        // các class....
+        ...
+     }
+
+=================================================================================
+ >> Từ khóa USING trong C#
+  - Từ khóa using biểu diễn rằng ctrinh đang sử dụng các namespace cụ thể nào đó.
+  - chẳng hạn với cẩu:
+     Console.WriteLine("// nội dung");
+     -> chúng ta có thể viết đầy đủ:
+     System.console.WriteLine("// nội dung ");
+     ===> Với việc khai báo namespace: using System, chỉ thị này nói cho compiler rằng phần code tiếp theo đang sử dụng các tên namespace System đã được xác định nên ta có thể tối giản không cần thêm System. ,,, nó cũng tượng tự với các namespace khác khi được khai báo rõ ràng.
+
+
+>>>> Nested Namespace:
+ - là khái niệm namespace lồng trong một namespace khác-> nó vẫn hoạt động bt(nghĩa là vẫn gọi và thực thi các class trong các namespace đó dễ dàng)
+ - cần khai báo với using các namespace nested bằng dot(.)
+
+   ++ ví dụ:
+          using System;
+          using first_namespace;
+          using first_namespace.second_namespace;
+           namespace trong C#
+Vi du minh hoa cach su dung cua namespace
+------------------------------------------
+Ben trong namespace thu nhat!
+Ben trong namespace thu hai!
+          namespace first_namespace
+          {
+              class abc
+              {
+                  public void func()
+                  {
+                      Console.WriteLine("Ben trong namespace thu nhat!");
+                  }
+              }
+              namespace second_namespace
+              {
+                  class efg
+                  {
+                      public void func()
+                      {
+                          Console.WriteLine("Ben trong namespace thu hai!");
+                      }
+                  }
+              }
+          }class TestCsharp
+          {
+              static void Main(string[] args)
+              {
+                  Console.WriteLine("namespace trong C#");
+                  Console.WriteLine("Vi du minh hoa cach su dung cua namespace");
+                  Console.WriteLine("------------------------------------------");        
+                  abc fc = new abc();
+                  efg sc = new efg();
+                  fc.func();
+                  sc.func();
+                  Console.ReadKey();
+              }
+          }
+                 
+
+    ===> kww: nó vẫn in ra đc các method bt
+
+>>>> Bài tập xem bên phần baitapAptech/lab07/7_1.
+
+
+

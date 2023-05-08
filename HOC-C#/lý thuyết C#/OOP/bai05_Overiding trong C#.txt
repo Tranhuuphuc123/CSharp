@@ -1,0 +1,59 @@
+*****************************TIỀM HIỂU VỀ OVERRIDING*****************
+>>> KhÁI NIỆM:
+- Override là từ khóa dùng đế đánh dấu phương thức ghi đè lên phương thức lớp cha.
+- một lớp cha có thể có nhiều lớp con kế thừa các thuộc tính, phương thức của mình. nhưng không 
+phải phương thức kế thừa nào từ lớp cha cũng phù hợp với lớp con. Chính vì vậy lớp con đó
+cần ghi đè hay định nghĩa lại phương thức thừa kế đó cho phù hợp hơn.
+
+==> trong C# thì khi một method hay thuộc tính có tính chất Override thì khác với java là khi
+muốn ghi đè lại method từ lớp cha thì ta sẽ @Override, tuy nhiên trong C# thi ta dùng
+virtual, virtual là từ khóa dùng để khai báo 1 phưng thức ảo (phương thức ảo co thể ghi đè được).
+===> ý tôi là method ở lớp cha mún đc ghi đè ở class con thì cần phải có virtual, thì class con mới
+có thể ghi đè đc.
+
+ ##Lưu ý:
+  + Chỉ có thể ghi đè lên method có khai báo virtual hoặc abstract.
+
+
+ >>>Triển khai:
+  - khi mún ghi đè Override lại method có khai báo virtual ở class cha thì trong C# khác java  nhưu sau:
+  - Syntax:
+
+          class cha:
+             public virtual void method1(){}
+        class con muốn ghi đè:
+             public override void method1(){}
+
+
+
+ >>> cosd minh họa:
+
+
+                            class Animal
+                                {
+                                    public virtual void Speak()
+                                    {
+                                        Console.WriteLine(" Animal is speaking. . .");
+                                    }
+                                }
+
+
+
+                                class Cat : Animal
+                                {
+                                    public override void Speak()
+                                    {
+                                        Console.WriteLine(" Cat is speaking. . .");
+                                    }
+                                }
+
+
+                                class Dog : Animal
+                                {
+                                    public override void Speak()
+                                    {
+                                        Console.WriteLine(" Dog is speaking. . .");
+                                    }
+                                }               
+
+===> đó là cách xây dưng method có virtual ở method class cha, và cách ghi đè method ở C# như thế nào.

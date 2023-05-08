@@ -1,0 +1,91 @@
+*****************ÉP KIỂU TRONG C#**********************
+>>>>>> Khái niệm:
+ - Ep kiểu là biến đổi kiểu dữ liệu thuộc kiểu dữ liệu này thành kiểu dư liệu khác.
+ --> tại sao phải ép kiểu:
+   + Để chuyển dũ liệu mong muốn phục vụ thao tác xử lý.
+   + Đưa dữ liệu về định dạng mà mình mong muốn
+
+>>>>>>Phân loại ép kiểu:
+ - có 4 loại
+ ## Chuyển đổi kiểu ngầm định (Implicit): ngầm định là ép kiểu ban đầu nhỏ thành kiểu lớn hơn, 
+   như vầy từ kiểu nhỏ thành giá trị kiểu dữ liệu lớn hơn sẽ không bị tràn bộ nhớ 
+      vd:
+          int a = 5;
+          float b = a;
+          ==> lúc này giá trị b= a =5.0 vì vùng nhớ của a bé hơn float nên ngầm định hiểu như vầy là đang ép sáng kiểu float
+          do vùng nhớ nhỏ nên nó không bị tràn bộ nhớ
+
+  ## Chuyển đổi kiểu tường minh (Explicit):
+   - tức phải khai báo rõ ràng do kiểu gốc có vùng nhớ thấp hơn kiểu dl sắp chuyển nếu không khai báo rõ ràng  sẽ dễ
+   dẫn đến lỗi tràn bộ nhớ, mất giá trị
+
+        vd:
+           float a = 5.2;
+           int b = (int) a
+           ==> biến giá trị 5.2 thành 5
+
+
+   ## Sử dụng phương thức, lớp hỗ trợ sẵn:
+     + Dùng phương thức Parse(), TryParse().
+     + Dùng lớp hỗ trợ Convert
+
+            vd:
+              float a;
+              int b;
+              Console.WriteLine("nhap vao so a: ");
+              a = float.Parse(Console.ReadLine());
+              Console.WriteLine("nhap vao so b: ");
+              b = int.Parse(Console.ReadLine());
+
+   ## Người dùng tự định nghĩa kiểu chuyển đổi.   
+   ---> bổ sung sau?
+   ========================================================================
+   ============================Các dạng phương thức hỗ trợ ép kiểu===========================================
+   >>> Parse():
+    - khái niệm: Phương thức Parse là phương thức được sử dụng khá phổ biến khi chúng ta muốn chuyển đổi một chuỗi sang một kiểu dữ 
+    liệu tương ứng.
+    ---> Mỗi kiểu dữ liệu cơ bản trong C# đều có phương thức Parse để chuyển đổi sang kiểu dữ liệu đó. Ta có:
+       + Boolean.Parse dùng để chuyển về kiểu Boolean.
+       + Int32.Parse dùng để chuyển về kiểu Int 32
+       + Double.Parse dùng để chuyển chuỗi về kiểu Double .v.v…
+       
+         vd:
+             int n;
+             Console.WriteLine("nhap so n: ");
+             n = int.Parse(Console.ReadLine());
+
+
+
+  >>> Try Parse():
+   - Khái niệm: Giống như Parse, TryParse cũng là phương thức được tích hợp sẵn trong các lớp kiểu dữ liệu cơ bản của C#. Tuy nhiên, 
+   cú pháp của TryParse có phần khác với Parse. Cụ thể, tham số thứ nhất của TryParse là chuỗi cần chuyển đổi và tham số thứ hai là 
+   biến sẽ chứa giá trị đã được chuyển đổi, biến thứ hai này phải được đánh dấu là out (để cho biết biến khai báo sẽ được truyền tham chiếu).
+
+        vd:      
+                int length;
+                Console.Write("Nhap do dai canh cua tam giac: ");
+                while (!int.TryParse(Console.ReadLine(), out length))
+                {
+                    Console.Write("Vui long nhap mot so nguyen duong: ");
+                } 
+          ---> kiểm tra biến nhập vào có giá trị âm không?
+
+
+  >>> Convert():
+   - Khái niệm: Lớp Convert là một lớp tiện ích trong C# cung cấp cho chúng ta rất nhiều phương thức tĩnh khác nhau để chuyển đổi từ 
+   một kiểu dữ liệu này sang kiểu dữ liệu khác. Tham số mà các phương thức trong Convert nhận không nhất thiết phải là chuỗi mà có 
+   thể ở nhiều kiểu dữ liệu khác nhau (int, bool, double…).        
+
+        vd:
+            int a = Convert.ToInt32("123"); //chuyển chuỗi 123 sang số nguyên
+            bool b = Convert.ToBoolean(27); //chuyển số 27 sang kiểu bool
+
+
+   - Các phương thức trong lớp Convert sẽ trả về giá trị mặc định nếu như tham số truyền vào là null. Còn trong các trường hợp sai định
+    dạng hoặc vượt quá giới hạn thì các phương thức đó sẽ ném ra các ngoại lệ tương tự như phương thức Parse.     
+
+      ==> vd:
+             
+              bool a = Convert.ToBoolean("hello"); //FormatException
+              int b = Convert.ToInt32("123456787654"); //OverflowException
+              double d = Convert.ToDouble(null); //trả về giá trị mặc định

@@ -1,0 +1,107 @@
+*******************************TIỀM HIỂU VỀ KIỂU DỮ LIỆU CĂN BẢN OBJECT, VAR, UNBOXING**************************
+>>>>>>KIỂU DỮ LIỆU OBJECT:
+ ## Khái niệm:
+  -  Là một kiểu dữ liệu cơ bản của tất cả các kiểu dữ liệu trong .NET.
+  -  Mọi kiểu dữ liệu đều được kế thừa từ System.Object
+  -  Thuộc kiểu dữ liệu tham chiếu: kiểu dữ liệu tham chiếu là một kiểu dữ liệu mà biến của nó lưu trữ địa chỉ bộ nhớ của đối 
+  tượng trong vùng nhớ heap, chứ không phải giá trị của đối tượng đó. 
+
+ ==> Kiểu dữ liệu object cung cấp một số phương thức ảo cho phép mình overload để sử dụng.
+
+ ## Một số phương thức tiêu biểu của OBject:
+   |--------------------------------------------------------------------------------------------------------------------------------|
+                    method                                   |                              ý nghĩa
+   |--------------------------------------------------------------------------------------------------------------------------------|
+            ToString()                                       |  trả về kiểu chuỗi thông tin
+   |--------------------------------------------------------------------------------------------------------------------------------|
+            GetHashCode()                                    | Mã băm   
+   |--------------------------------------------------------------------------------------------------------------------------------|
+            Equals()                                         | so sánh 2 đối tượng bằng hay không trả về kết quả true false.
+   |--------------------------------------------------------------------------------------------------------------------------------|
+            GetType()                                        |  trả về kiểu dữ liệu chính xác của đối tượng là gì
+   |--------------------------------------------------------------------------------------------------------------------------------|
+
+
+=============================================================================================================================
+
+   >>>>>> Boxing và Unboxxing:
+    - Boxing là quá trình chuyển dữ liệu từ kiểu dữ liệu giá trị sang kiểu dữ liệu tham chiếu.
+
+      + Quá trình boxing:
+            ++ Khởi tạo một đối tượng trong vùng nhớ Heap.
+            ++ Copy giá trị của biến có kiểu dữ liệu giá trị vào đối tượng này.
+
+                            ví dụ:
+
+                                // Khởi tạo biến Value kiểu int (kiểu dữ liệu giá trị)
+                                int Value = 109; 
+
+                                /* thực hiện boxing bằng cách:
+                                * Khởi tạo đối tượng ObjectValue kiểu object 
+                                * Gán giá trị của biến Value vào ObjectValue */
+                                object ObjectValue = Value; 
+
+
+    -  Unboxing: là quá trình ngược lại với boxing, tức là đưa dữ liệu từ kiểu dữ liệu tham chiếu về kiểu dữ liệu giá trị.
+
+        + Unboxing được thực hiện tường minh và thông qua cách ép kiểu tường minh.
+        + Phải chắc chắn rằng đối tượng cần boxing thuộc đúng kiểu dữ liệu đưa ra. Nếu không việc unboxing sẽ báo lỗi chương trình.
+        + Quá trình unboxing:
+            ++ Kiểm tra xem đối tượng cần un-boxing có thuộc đúng kiểu dữ liệu đưa ra hay không.
+            ++ Nếu đúng thì thực hiện copy giá trị của đối tượng sang biến dữ liệu kiểu giá trị. Ngược lại thì thông báo lỗi.   
+
+
+
+               vi dụ:
+
+                                   int Value = 109; 
+
+                                    // Boxing
+                                    object ObjectValue = Value;
+
+                                    /* thực hiện unboxing bằng cách: 
+                                    * Kiểm tra dữ liệu biến ObjectValue thấy thuộc đúng kiểu int. 
+                                    * Gán giá trị của biến ObjectValue vào biến NewValue bằng cách ép kiểu tường minh. 
+                                    * Biến NewValue sẽ mang giá trị là 109*/
+                                    int NewValue = (int)ObjectValue; 
+
+                  
+============================================================================================================================
+>>>> TỪ KHÓA VAR TRONG C#:
+ ## khái niệm:
+    - var là từ khóa hỗ trợ khai báo biến mà không cần kiểu dữ liệu, kiểu dữ liệu sẽ được xác định khi gán giá trị cho biến, 
+    lúc đó chương trình sẽ tự ép kiểu cho biến.
+    - Lưu ý khi khai báo biến với var:
+      + Lỗi vì chưa khởi tạo giá trị cho biến varInt.
+            vd;
+              var varInt;
+
+       + Lỗi vì không được khởi tạo giá trị null cho biến varString.
+            vd:
+              var varString = null;
+
+       + Lỗi vì phải khởi tạo giá trị ngay khi khai báo
+           vd:
+               var varLong;
+               varLong = 109;
+
+       **** Khai báo đúng!
+            vd:
+               var varBool = true;
+
+
+   =============>
+             vidu code minh họa:
+
+                            /* Vì biến StringVariable được khởi tạo giá trị kiểu chuỗi 
+                            * nên trình biên dịch sẽ hiểu biến này như là biến kiểu string.
+                            */
+                            var varString = "HowKteam";
+                            // Khai báo tường minh biến kiểu string
+                            string Content = "HowKteam";
+                            
+                            // In giá trị của biến StringVariable và biến Content
+                            Console.WriteLine(varString);
+                            Console.WriteLine(Content); 
+
+                            ===> kw: đều chạy ra HowKteam

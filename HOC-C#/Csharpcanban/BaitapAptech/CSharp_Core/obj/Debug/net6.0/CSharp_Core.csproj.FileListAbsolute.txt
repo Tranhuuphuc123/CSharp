@@ -1,0 +1,5 @@
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.csproj.AssemblyReference.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.AssemblyInfoInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.AssemblyInfo.cs
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.csproj.CoreCompileInputs.cache

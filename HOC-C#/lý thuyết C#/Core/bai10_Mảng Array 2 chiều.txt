@@ -1,0 +1,130 @@
+***************************MẢNG ARRAY 2 CHIỀU***************************
+>>>>> Khái niệm:
+ - Mảng 2 chiều được hình dung như một bảng có m dòng và n cột với một số đặc trưng sau:
+   + Mảng 2 chiều mang những đặc trưng cơ bản của một mảng bình thường (đặc trưng về mảng đã trình bày trong bài MẢNG 
+1 CHIỀU TRONG C#)
+   + Các phần tử trong mảng 2 chiều được truy xuất thông qua 2 chỉ số phần tử (tạm gọi là chỉ số dòng và chỉ số cột)
+
+>>>> Cú pháp:
+ - Syntax:
+
+                <kiểu dữ liệu> [ , ] <tên mảng>;
+
+                + trong đó:
+                  ++ [ , ]: là ký hiệu cho khai báo mảng 2 chiều: số dòng, số cột.     
+
+                  vd:
+                      String[ , ] mang = new Stirng[2,3];
+                      //khai báo mảng có 2 dòng và 3 cột
+
+
+>>>> Khởi tạo giá trị:
+  - syntax:
+       
+             <kiểu dữ liệu>[,] <tên mảng> = new <kiểu dữ liệu>[]         
+
+        {
+
+                    { <giá trị dòng 1 cột 1>, …, <giá trị dòng 1 cột n> },
+
+                    …
+
+                   { <giá trị dòng m cột 1>, …, <giá trị dòng m cột n> }
+
+        };
+
+         <>or có thể ghi vắng tắt:
+
+         
+             <kiểu dữ liệu>[,] <tên mảng> =         
+
+        {
+
+                    { <giá trị dòng 1 cột 1>, …, <giá trị dòng 1 cột n> },
+
+                    …
+
+                   { <giá trị dòng m cột 1>, …, <giá trị dòng m cột n> }
+
+        };
+
+
+
+
+        vd:
+             int [ , ] mang = new mang[]{
+                    {1,2},
+                    {2,3},
+                    {5,5}
+             }          
+             ==> in ra mang: 1,2
+                             2,3
+                             5,5
+             ==> có 3 dòng 2 cột với các giá trị tương ứng.
+
+
+         or
+
+         int [,]mang ={
+            {1,2},
+            {2,3},
+            {5,5}
+         }
+
+   >>>>>> Các phương thức có thểm xem xét bên mảng 1 chiều(tương tự bảng mảng 1 chiều):
+    - bổ sung thêm
+
+    |---------------------------------------------------------------------------------------------------|
+           Tên thuộc tính           |     ý nghĩa 
+    |---------------------------------------------------------------------------------------------------|
+     rank                           | Thuộc tính tra về số nguyên int là số chiều của mảng
+    |---------------------------------------------------------------------------------------------------|
+     clone()                        | Thực hiện  copy giá trị của mảng ra một vùng nhớ mới
+    |---------------------------------------------------------------------------------------------------|
+
+
+
+
+>>>>> vi du code:
+  
+                           using System;
+
+                            namespace VietJackCsharp
+                            {
+                                class TestCsharp
+                                {
+                                    public static void Main()
+                                    {
+
+                                        int i, j;
+                                        int[,] arr1 = new int[3, 3];
+
+                                        Console.Write("\nDoc va in mang hai chieu trong C#:\n");
+                                        Console.Write("-----------------------------------\n");
+
+
+                                        /* nhap cac phan tu vao trong mang*/
+                                        Console.Write("Nhap cac phan tu vao trong mang hai chieu:\n");
+                                        for (i = 0; i < 3; i++)
+                                        {
+                                            for (j = 0; j < 3; j++)
+                                            {
+                                                Console.Write("Phan tu - [{0},{1}]: ", i, j);
+                                                arr1[i, j] = Convert.ToInt32(Console.ReadLine());
+                                            }
+                                        }
+
+                                        Console.Write("\nIn mang hai chieu: \n");
+                                        for (i = 0; i < 3; i++)
+                                        {
+                                            Console.Write("\n");
+                                            for (j = 0; j < 3; j++)
+                                                Console.Write("{0}\t", arr1[i, j]);
+                                        }
+                                        Console.Write("\n\n");       
+
+                                        Console.ReadKey();
+                                    } 
+                                }
+                            }
+                            
