@@ -1,0 +1,15 @@
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\bin\Debug\net6.0\Lab09.exe
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\bin\Debug\net6.0\Lab09.deps.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\bin\Debug\net6.0\Lab09.runtimeconfig.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\bin\Debug\net6.0\Lab09.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\bin\Debug\net6.0\Lab09.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.csproj.AssemblyReference.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.GeneratedMSBuildEditorConfig.editorconfig
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.AssemblyInfoInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.AssemblyInfo.cs
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.csproj.CoreCompileInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\refint\Lab09.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\Lab09.genruntimeconfig.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab09\obj\Debug\net6.0\ref\Lab09.dll

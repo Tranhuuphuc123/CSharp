@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab07", "Lab07\Lab07.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_Core", "CSharp_Core\CSharp_Core.csproj", "{1EA59D8E-2E3C-4C88-BF86-C08A8FC22658}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab08", "Lab08\Lab08.csproj", "{ED1A6F5A-730D-4175-84F9-60CE7307766B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab08_Delegate_ArrayList", "Lab08\Lab08_Delegate_ArrayList.csproj", "{ED1A6F5A-730D-4175-84F9-60CE7307766B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generic", "Generic\Generic.csproj", "{3F349CD6-C269-4433-9E1C-2312295E8C7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab09_Generic_Iterator", "Lab09\Lab09_Generic_Iterator.csproj", "{50492646-03B1-4993-9FB7-687AFE1FFC99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab10_Anonymous", "Lab10\Lab10_Anonymous.csproj", "{D179A617-3D51-46C6-8E21-C62F650F5001}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{ED1A6F5A-730D-4175-84F9-60CE7307766B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED1A6F5A-730D-4175-84F9-60CE7307766B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED1A6F5A-730D-4175-84F9-60CE7307766B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F349CD6-C269-4433-9E1C-2312295E8C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F349CD6-C269-4433-9E1C-2312295E8C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F349CD6-C269-4433-9E1C-2312295E8C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F349CD6-C269-4433-9E1C-2312295E8C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50492646-03B1-4993-9FB7-687AFE1FFC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50492646-03B1-4993-9FB7-687AFE1FFC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50492646-03B1-4993-9FB7-687AFE1FFC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50492646-03B1-4993-9FB7-687AFE1FFC99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D179A617-3D51-46C6-8E21-C62F650F5001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D179A617-3D51-46C6-8E21-C62F650F5001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D179A617-3D51-46C6-8E21-C62F650F5001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D179A617-3D51-46C6-8E21-C62F650F5001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

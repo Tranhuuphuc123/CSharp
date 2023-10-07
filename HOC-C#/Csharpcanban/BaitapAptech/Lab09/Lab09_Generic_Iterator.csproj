@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="generic_Student.cs" />
+    <Compile Remove="INumeral.cs" />
+    <Compile Remove="Iterator_Odd_Eventnum.cs" />
+    <Compile Remove="Maths.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="generic_Student.cs" />
+    <None Include="INumeral.cs" />
+    <None Include="Iterator_Odd_Eventnum.cs" />
+    <None Include="Maths.cs" />
+  </ItemGroup>
+
+</Project>

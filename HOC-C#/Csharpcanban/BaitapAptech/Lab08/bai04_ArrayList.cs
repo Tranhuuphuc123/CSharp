@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 
 //*Học cách sử dụng ArayList*/
-namespace Lab08
+namespace Lab08_Delegate_ArrayList
 {
    class bai04_ArrayList
     {
@@ -28,7 +28,7 @@ namespace Lab08
                 Console.WriteLine(list + " ");
             }
 
-            //thêm phần tử mới ở vijtris Possition chỉ định
+            //thêm phần tử mới ở vị trí Possition chỉ định
             int x, p;
             Console.WriteLine("nhap vao phan moi: ");
             x = int.Parse(Console.ReadLine());
@@ -63,7 +63,7 @@ namespace Lab08
                 Console.WriteLine(list + " ");
             }
 
-
+           
             Console.ReadKey();
         }
     }

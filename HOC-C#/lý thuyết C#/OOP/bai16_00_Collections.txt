@@ -1,0 +1,87 @@
+****************TIỀM HIỂU VỀ COLLECTIONS TRONG C#************************
+>>>>> KHÁI NIỆM:
+ - Collections là các lớp hỗ trợ lưu trữ, quản lý và thao tác với các đối tượng một cách có thứ tự
+ - đc khai báo với gói namespace System.Collections.
+ - Collections cung cấp sự hỗ trợ cho Stack, Queue, List và Hash Table....Đa số các lớp Collections triển
+ khai các lớp cùng Interface
+
+>>>> Mục đích sử dụng:
+ - Trong C# các lớp Collections phục vụ các mục đích đa dạng, chẳng hạn như cấp phát bộ nhớ động cho
+ các phần tử và truy cập một danh sách các item dựa trên một chỉ mục...
+
+ >>>> SO sánh giữa Collections và Mảng Array:
+
+         |--------------------------------------------------------------------------|
+                  Collections                   |             Array
+         |--------------------------------------------------------------------------| 
+           - Có nhiều lớp đa dạng hỗ trợ nhiều  | - Mảng thỉ chỉ có thể truy xuất phần
+           mục đích khác nhau                   |tử thông qua chỉ số 
+           - Truy xuất thông qua chỉ số hoặc    |
+           thông qua key                        |
+         |--------------------------------------------------------------------------|
+          - Hỗ trợ tiềm kiếm nhanh hơn mảng     |  - Array tiềm kiếm dánh ách chậm hơn
+           (tiềm hiểu nó thông qua Hashtable)   |
+         |--------------------------------------------------------------------------|
+           - Hỗ trợ việc thay đổi số lượng phần |  - hạn chế hơn
+           tử liên tục trong ArrayList (thêm    |
+           or xóa)                              |
+         |--------------------------------------------------------------------------|
+            - Collection có sự hõ trợ sẵn của   | - Không có hỗ trợ sẵn
+            STACK and QUEUE                     |
+         |--------------------------------------------------------------------------|
+          _ Collections cung cấp linh hoạt vê   | - Mảng Array thì làm về một số lượng
+          các đối tượng tập hợp, tăng giảm số   |cố định (Strongly-Typed).
+          số lượng phần tử tự động, hỗ trợ lưu  |
+          trữ key-value(Hashtable)
+         |--------------------------------------------------------------------------|
+
+
+
+
+
+
+
+
+
+==============================================================================
+**************MỘT SỐ COLLECTIONS THÔNG DỤNG**********************
+>>> Bảng liệt kê:
+
+        |============================================================================|
+              Lớp         |                              Mô tả
+        |============================================================================|
+          ArrayList       | - Lưu trữ các phần tử giống mảng, tuy nhiên  không giống 
+                          | mảng, ta có thể thêm hoặc xóa phàn tử một cách linh hoạt
+                          |và có thể tự điều chỉnh kích cỡ một cách tự động
+                          | - Nó có thể cấp phát bộ nhớ động, thêm, tiềm kiếm và sắp
+                          | xếp các item trong List
+        |============================================================================|
+          Hashtable       | - Nó sử dụng các key-value, Khi đó ta sẽ truy xuất các
+                          | phần tử trong danh sách này thông qua key (thay vì thông 
+                          | chỉ số phần tử mảng bình thường)
+        |============================================================================|
+          SortedList      | - Là sự kết hợp giữa ArrayList bà Hashtable. Tức là dũ 
+                          |liệu sẽ lưu dưới dạng key-value
+                          | - Ta có thể truy xuất các phần tử trong danh sách thông
+                          | key hoặc thông qua chỉ số phần tử
+                          | - Đặc biệt là các phần tử trong danh sách này luôn được 
+                          | sắp xếp theo giá trị của Key
+        |============================================================================|
+          Stack           | - Lớp cho phép lưu và thao tác dữ liệu theo cấu trúc LIFO
+                          |(Last in First Out).
+                          |==> LIFO: phần tử thêm vào cúi cùng sẽ được truy cập đầu
+                          | tiên. Trong thuật ngữ ngăn xếp thêm đc gọi là Pushing còn                   
+                          | gỡ bỏ được gọi là Poping
+        |============================================================================|
+          Queue           | - Lớp cho phép lưu trữ và thao tác dl theo cấu truc FIFO
+                          |==> FIFO: nhập trước xuất trước, thêm một item được gọi là 
+                          |enqueue và gỡ xóa gọi là deque.
+        |============================================================================|
+          BitArray        | - Lớp cho phép lưu trữ và quản lý một danh sách các bit
+                          |giống mảng và các phần tử kiểu bool với true biểu thị cho
+                          | bit 1 và false biểu thị cho bit 0
+                          | - Ngoài ra BitArray còn hỗ trợ phương thức tính toán trên  bit
+        |============================================================================|
+
+        |============================================================================|
+

@@ -1,0 +1,87 @@
+***********************HƯỚNG DẪN CODE C# TRÊN VSCODE*******************************
+>>>>>>>HƯỚNG DẪN<<<<<<<<<<<
+=> Để code đc C# trên môi trường Vs code ta thiết lặp như sau
+
+## Bước 01:   Download .Net:
+  -> truy cập trang: 
+    "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-7.0.401-windows-x64-installer"
+
+    + và tiến hành download .Net
+    + cần có .Net mới chạy đc C#
+
+## Bước 02: Tiến hành setup dot Net vừa tải
+## Bước 03: cài các Extension cho Vscode support c# dot Net
+ => cài các extension C#:
+  + C#
+  + C# Extension
+  + Auto-Using for C#: giúp tự động import các lib
+  + code runner: thiết lặp chạy c#
+
+
+
+## Bước 04: Thiết lặp tạo project C#(giống như tạo project với visual studio vậy đó)
+ =>Truy cập trang:
+    "https://dotnet.microsoft.com/en-us/learn/dotnet/hello-world-tutorial/create"
+    --> để xem hg dẫn chi tiết hơn
+
+ >> Thiết lặp tạo App - Project dot net:
+  => Gõ tao project dotnet:
+     
+         dotnet new console -o MyApp -f net7.0
+
+
+  => truy cập đến project đó
+     + Gõ: 
+      
+         cd <Project_name>
+
+
+
+
+## Bước 05: Thiết lặp Run Project dotnet(Run code chạy code ấy)
+ ==> Khi lần đầu chạy project sẽ lỗi
+    -> Lỗi gặp sẽ là: 
+    'scriptcs' is not recognized as an internal or external command,
+        operable program or batch file."
+
+
+ ==> nên cần thiết lặp lại mục setting.json của dotnet
+  + đầu tiên vào mục setting của vscode
+  + tiếp ta gõ code runner.ex: 
+    -> mở lên mục code-runner: Executer Map(có link vào setting.json)
+
+  + truy cập vào đg link: Edit the setting.json
+  + tiến hành thiết lặp trện file setting.json
+       -> do code dotnet 7.0 yêu cầu chạy bằng lệnh dotnet
+       -> nên ta sữa phần thiết lặp chạy code trong setting.json
+       từ scripts -> dotnet run
+
+       ->truy cập file setting.json và sữa:
+         ....
+           "csharp": "dotnet run",
+         ....
+
+        
+
+  ==> tiến hành khởi chạy project dotnet trên vs code
+   + Mở terminal, truy cập project và Gõ:
+
+       dotnet run     // là chạy ok lun
+
+   + thật ra khi thiết lặp mục csharp = 'dotnet run' trong setting.json
+   là ta đã đưa nó về chế độ chạy bình thường không cần phải gõ dotnet run 
+   mới chạy đc
+   ==> lúc này chỉ cần gõ ctrl+Alt+N => ở chế độ build run code là nó chạy ok lun rồi
+
+****TÓM LẠI***
+ + có thể chạy Run project với
+  -> gõ: dotnet run
+  -> hoặc gõ: ctrl + Alt + N
+
+  ===> vì sau khi thiết lặp csharp="dotnet run" trong setting.json là đã fix đc lỗi không chạy
+  đc project rồi
+
+  
+  
+
+

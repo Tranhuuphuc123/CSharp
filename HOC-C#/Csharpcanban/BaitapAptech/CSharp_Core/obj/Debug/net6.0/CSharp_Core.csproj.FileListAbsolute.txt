@@ -3,3 +3,13 @@ G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\ne
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.AssemblyInfoInputs.cache
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.AssemblyInfo.cs
 G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.csproj.CoreCompileInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\bin\Debug\net6.0\CSharp_Core.exe
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\bin\Debug\net6.0\CSharp_Core.deps.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\bin\Debug\net6.0\CSharp_Core.runtimeconfig.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\bin\Debug\net6.0\CSharp_Core.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\bin\Debug\net6.0\CSharp_Core.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\refint\CSharp_Core.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\CSharp_Core.genruntimeconfig.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\CSharp_Core\obj\Debug\net6.0\ref\CSharp_Core.dll

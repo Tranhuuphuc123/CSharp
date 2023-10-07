@@ -53,7 +53,8 @@
       + Indexer cho phép sử dụng cú pháp tương tự mảng Array
    - Linh hoạt:
      + xây dựng đối tượng dễ dàng linh hoạt
-     + cho phép các đối tượng lưu trữ các phần tử bên trong linh hoạt -> giúp sử dụng Indexer một cách hiệu quả dễ dàng cho nhều mục đich khác nhau.
+     + cho phép các đối tượng lưu trữ các phần tử bên trong linh hoạt -> giúp sử dụng Indexer một cách hiệu quả 
+     dễ dàng cho nhều mục đich khác nhau.
    - thích hợp các đối tượng động: Indexer cho phép truy cập các phần tử bên trong đối tượng một cách động.
    Điều này rất hữu ích khi các phần tử bên trong đối tượng thay đổi và không biết trc số lượng.
    ==> tiềm hiểu qua thực nghiệm bài tập sau.

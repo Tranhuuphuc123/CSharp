@@ -1,0 +1,15 @@
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.csproj.AssemblyReference.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.GeneratedMSBuildEditorConfig.editorconfig
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.AssemblyInfoInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.AssemblyInfo.cs
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.csproj.CoreCompileInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\bin\Debug\net6.0\Lab10_Anonymous.exe
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\bin\Debug\net6.0\Lab10_Anonymous.deps.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\bin\Debug\net6.0\Lab10_Anonymous.runtimeconfig.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\bin\Debug\net6.0\Lab10_Anonymous.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\bin\Debug\net6.0\Lab10_Anonymous.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\refint\Lab10_Anonymous.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\Lab10_Anonymous.genruntimeconfig.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab10\obj\Debug\net6.0\ref\Lab10_Anonymous.dll

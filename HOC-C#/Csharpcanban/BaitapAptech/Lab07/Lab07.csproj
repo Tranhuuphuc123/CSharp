@@ -9,10 +9,12 @@
 
   <ItemGroup>
     <Compile Remove="NameSpaces.cs" />
+    <Compile Remove="Ngoaile_Exception.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="NameSpaces.cs" />
+    <None Include="Ngoaile_Exception.cs" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,15 @@
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\bin\Debug\net6.0\Baithigiuaky.exe
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\bin\Debug\net6.0\Baithigiuaky.deps.json
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\bin\Debug\net6.0\Baithigiuaky.runtimeconfig.json
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\bin\Debug\net6.0\Baithigiuaky.dll
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\bin\Debug\net6.0\Baithigiuaky.pdb
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.csproj.AssemblyReference.cache
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.GeneratedMSBuildEditorConfig.editorconfig
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.AssemblyInfoInputs.cache
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.AssemblyInfo.cs
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.csproj.CoreCompileInputs.cache
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.dll
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\refint\Baithigiuaky.dll
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.pdb
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\Baithigiuaky.genruntimeconfig.cache
+D:\baithi_C#\Baithigiuaky\Baithigiuaky\obj\Debug\net6.0\ref\Baithigiuaky.dll

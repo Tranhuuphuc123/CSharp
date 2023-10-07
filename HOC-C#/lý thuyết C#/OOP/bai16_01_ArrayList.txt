@@ -1,0 +1,74 @@
+**************************TIỀM HIỂU VỀ COLLECTION-ARRAYLIST*************************
+>>>> KHÁI NIỆM:
+ - ArrayList là một Collection giúp lưu trữ và quản lý một danh sách các đối tượng theo kiểu mảng
+ - Rất giống mảng các Object những có thể thêm hoặc xóa các phần tử một cách linh hoạt và có thể tự 
+ điều chỉnh kích cở một cách tự động
+ ===> để sử dụng các Collection trong .net ta dùng lib: Using System.Collection;
+
+ >>>>>> KHỞI TẠO:
+ -SYNTAX:
+      
+       ArrayList <name> =  new ArrayList();
+         ++ trong đó: trong dấu (): có thể truyền dung tích n phần tử trc
+                                    hoặc có theer truyền một collection # vào
+
+ 
+
+ >>>>>>> MỘT SỐ THUỘC TÍNH VÀ PHƯƠNG THỨC HỖ TRỢ SẴN CỦA ARAYLIST:
+
+      |--------------------------------------------------------------------------------|
+                TÊN PHƯƠNG THỨC       |                   Ý NGHĨA
+      |--------------------------------------------------------------------------------|
+                Count                 | - Trả về 1 số nguyên là số phần tử hiện có trong AL
+      |--------------------------------------------------------------------------------|
+                Capicity              | - Trả về 1 số nguyên cho biết sức chứa chứa ArrayList
+                                      |có thể chứa đc bao niêu, bếu vượt sức chứa hệ thống
+                                      |hệ thống tự động tăng lên
+      |--------------------------------------------------------------------------------|
+                Add(object value)     | - Thêm đối tượng Value vào cuối ArrayList       
+      |--------------------------------------------------------------------------------|
+         AddRange(ICollection ListObj)| - Thêm danh sách phần tử ListObj vào cuối AL
+      |--------------------------------------------------------------------------------|
+          BinarySearch(obj Value)     | - Tìm kiếm đối tượng value trong ArrayList theo
+                                      |thuật toán tìm kiếm nhị phân.
+      |--------------------------------------------------------------------------------|
+                  Clear()             | - Xóa tất cả các phần tử trong ArrayList
+      |--------------------------------------------------------------------------------|
+                  Clone()             | - Tạo một abnr sao từ ArrayList hiện tại
+      |--------------------------------------------------------------------------------|
+             Contains(Obj value)      | - Kiểm tra đối tượng value có tồn tại trong                                         
+                                      | trong ArrayList hay không
+      |--------------------------------------------------------------------------------|
+          GetRange(int StartIndex,    | - Trả về 1 ArrayList bao gồm các phần tử bắt đầu
+          int EndIndex)               |từ vị trí chỉ định: startIndex -> EndIndex
+      |--------------------------------------------------------------------------------|
+          IndexOf(Obj Value)          | - Trả về vị trí đấu tiên xuất hiện của Obj value
+                                      | trong ArrayList, nếu khoogn tìm thấy sẽ trả về -1
+      |--------------------------------------------------------------------------------|
+          Insert(int Index,obj Value) | - Chèn đối tượng value ở vị trí index trong AL
+      |--------------------------------------------------------------------------------|
+          LastIndexOf(obj Value)      | - Trả về vị trí xuất hiện cuối cùng của đối tượng
+                                      | value trong ArrayList. Nếu không thấy thì tv -1
+      |--------------------------------------------------------------------------------|
+               Remove()               | - Đảo ngược tất cả phần tử trong ArrayList
+      |--------------------------------------------------------------------------------|
+                Sort()                | - Sắp xếp các phần tử trong ArrayList theo thứ
+                                      |tự tăng dần
+      |--------------------------------------------------------------------------------|
+              ToArray()               | - Trả về 1 mảng các Obj chứa các phần tử được
+                                      |sao chép từ ArrayList
+      |--------------------------------------------------------------------------------|
+          Sort(IComparater comparer)  | - Cho phép người dùng tự định nghĩa sắp xếp theo
+            ????                      |ý mình.
+                                      | - Tham số truyền vào là một lớp kế thừa từ interface
+                                      |IComparer
+                                      | - interface IComparer chứa 1 phương thức duy nhất 
+      |--------------------------------------------------------------------------------|
+
+====> Lưu ý:IComparer. Giao diện Interface sẵn có này được sử dụng để so sánh các đối tượng trong một tập hợp và 
+xác định thứ tự sắp xếp của chúng. 
+
+
+>>>> ví dụ code:
+
+       

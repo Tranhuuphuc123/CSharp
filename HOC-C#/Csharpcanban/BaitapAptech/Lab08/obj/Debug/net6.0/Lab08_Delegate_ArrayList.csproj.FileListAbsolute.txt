@@ -1,0 +1,15 @@
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\bin\Debug\net6.0\Lab08_Delegate_ArrayList.exe
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\bin\Debug\net6.0\Lab08_Delegate_ArrayList.deps.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\bin\Debug\net6.0\Lab08_Delegate_ArrayList.runtimeconfig.json
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\bin\Debug\net6.0\Lab08_Delegate_ArrayList.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\bin\Debug\net6.0\Lab08_Delegate_ArrayList.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.csproj.AssemblyReference.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.GeneratedMSBuildEditorConfig.editorconfig
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.AssemblyInfoInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.AssemblyInfo.cs
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.csproj.CoreCompileInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\refint\Lab08_Delegate_ArrayList.dll
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\Lab08_Delegate_ArrayList.genruntimeconfig.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\Csharpcanban\BaitapAptech\Lab08\obj\Debug\net6.0\ref\Lab08_Delegate_ArrayList.dll

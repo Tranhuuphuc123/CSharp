@@ -1,6 +1,6 @@
 ***********************TIỀM HIỂU VỀ INTERFACES TRONG C#*********************
 >>>> KHÁI NIỆM:
- - Interface là lớp giao diện là một tập hợp ccacs thành phần chỉ có khai báo mà không có phần định nghĩa
+ - Interface là lớp giao diện là một tập hợp các thành phần chỉ có khai báo mà không có phần định nghĩa
  (giống phườn thức thuần ảo đã trình bài ở bài abstract class)
  - các thành phần có thể có là:
   + Phương thức: lưu ý method không có thân hàm, không cần thực thi để class con tự ghi đè và bổ sung

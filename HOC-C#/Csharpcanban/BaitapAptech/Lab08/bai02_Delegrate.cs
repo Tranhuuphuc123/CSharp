@@ -4,8 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 /*tiềm hiểu về Delegrate*/
-namespace Lab08
+namespace Lab08_Delegate_ArrayList
 {
+
+    // method Delegrate? tiềm hiệu lại sao
+   public  delegate void Show();
+
     class Phuc
     {
         public void ShowOdd() {
@@ -24,8 +28,7 @@ namespace Lab08
         }
     }
 
-    // method Delegrate? tiềm hiệu lại sao
-    public delegate void Show();
+  
 
     class bai02_Delegrate
     {
@@ -33,13 +36,14 @@ namespace Lab08
         {
 
             // thực thi Delegate
-            Phuc a = new Phuc();
-            Show show = new Show(a.ShowOdd);
+            Console.WriteLine("thực thi delegate");
+            Phuc p = new Phuc();
+            Show show = new Show(p.ShowOdd);
             show();
+    
             Console.WriteLine("\n\n");
-            show = new Show(a.ShowEven);
+            show = new Show(p.ShowEven);
             show();
-
             Console.ReadKey();
         }    
 

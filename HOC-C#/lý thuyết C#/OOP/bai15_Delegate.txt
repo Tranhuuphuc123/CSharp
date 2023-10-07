@@ -1,0 +1,129 @@
+*****************TIỀM HIỂU VỀ DELEGATE TRONG C#**********************
+>>>> Khái niệm:
+ - Deleate trong C# tương tự như con trỏ trong C/C++.
+ - Delegate là một biến kiểu tham chiếu(references) chứa tham chiếu tới
+ một phương thức.
+ - Delegate thường được dùng để triển khai các phươung thức hoặc sự kiện call-back.
+ ==> Bạn cứ hiểu Delegate là một biến bình thường, biến này chứa hàm mà bạn cần gọi. Sau này lôi ra
+ sài như bình thường. Giá trị của biến Delegate lúc này là tham chiếu đến hàm, có thể thay đổi runtime
+ khi chương trình đang chạy. Delegate được dẫn cuất từ lớp System Delegate trong C#.
+
+ >>>>>>> Khai báo Delegate:
+  - Syntax  delegate:
+     <Access Modifier> delegate <return type> <tên Delegate>(<tham số truyền vào nếu có>);
+
+      vd:
+         public delegate int MyDelegate();
+            or
+         public delegate int MyDelegate(int x, int y);
+
+      
+ >>>> Khởi tạo và sử dụng Delegate trong c#:
+  - Khi kiểu delegate được khai báo thì đối tượng Delegate phải được khởi tạo bởi từ khóa new và được tham chiếu 
+  đến một phương thức cụ thể(Lưu ý phương thức này phải cùng kiểu trả về và tham số đầu vào với delegate đã tạo)
+ 
+     vd: đoạn code sau:
+        using System;
+        delegate int NumberChanger(int n);
+        namespace VietTutsCsharp
+        {
+            class TestCsharp
+            {
+                static int num = 10;
+                public static int AddNum(int p)
+                {
+                    num += p;
+                    return num;
+                }
+                public static int MultNum(int q)
+                {
+                    num *= q;
+                    return num;
+                }
+                public static int getNum()
+                {
+                    return num;
+                }
+                static void Main(string[] args)
+                {
+                    Console.WriteLine("Vi du minh hoa Delegate trong C#");
+                    Console.WriteLine("----------------------------------");
+                    //tao cac doi tuong delegate
+                    NumberChanger nc1 = new NumberChanger(AddNum);
+                    NumberChanger nc2 = new NumberChanger(MultNum);
+                    //goi cac phuong thuc boi su dung cac doi tuong delegate
+                    nc1(20);
+                    Console.WriteLine("Gia tri cua num la: {0}", getNum());
+                    nc2(15);
+                    Console.WriteLine("Gia tri cua num la: {0}", getNum());
+                    Console.ReadKey();
+                }
+            }
+        } 
+
+        ===> kw:
+                 -> truyền 20 của AddNum: 10+20=30
+                 -> truyền 15 của MulNum: 30*15=450
+                 -----------------------
+                 gia tri cua num la: 30
+                 gia tri cua num la: 450
+
+
+ ======================================
+ >>>>> THUỘC TÍNH MULTICAST MỘT DELEGATE TRONG C#:
+ - Khái niệm: Thuộc tính Multicast của delegate là có thể được hiểu là cách gộp hai nối các delegate lại với nhau: 
+   vd tôi khai báo một delegate, trong main tôi khởi delegate tên del , del1, del2(cùng 1 delegate nha), mỗi del1 và
+    del2 chứa một mehtod  và tham số riêng
+ --> tôi muốn kết hợp lại bằng cạch gộp lại del=del1; del+=del2 là xong.
+ ===> đây là ví dụ về thuộc tinhsmulticast trong delegate
+ - Lưu ý: các đối tượng delegate có thể hợp thành bởi sử dụng toán tử '+'
+ - Lưu ý: toán tử '-' có thể được sử dụng để gỡ bỏ một dlegate thành phần từ một delegate được hợp thành trc đó.
+ - Lưu ý: dlegate cũng có thể triển khai toán tử * /..... (Phần này cần thực hành nhiều hơn).
+    
+        vd:
+          using System;
+          // khai báo delegate
+          delegate int NumberChanger(int n);
+          namespace VietTutsCsharp
+          {
+            class TestCsharp
+            {
+                static int num = 10;
+                public static int AddNum(int p)
+                {
+                    num += p;
+                    return num;
+                }        public static int MultNum(int q)
+                {
+                    num *= q;
+                    return num;
+                }        public static int getNum()
+                {
+                    return num;
+                }        static void Main(string[] args)
+                {
+                    Console.WriteLine("Vi du minh hoa Delegate trong C#");
+                    Console.WriteLine("----------------------------------");
+                    //tao cac doi tuong delegate
+                    NumberChanger nc;
+                    NumberChanger nc1 = new NumberChanger(AddNum);
+                    NumberChanger nc2 = new NumberChanger(MultNum);
+                    nc = nc1;
+                    nc += nc2;
+                    //goi multicast
+                    nc(15);
+                    Console.WriteLine("Gia tri cua num la: {0}", getNum());
+                    Console.ReadKey();
+                }
+            }
+          } 
+
+
+          ==> kww: truyền 15 cho delegate:
+            -> nc = nc1: 10+15=25
+            -> nc += nc2: 25*15=375
+            -----------------------
+            Gia tri cua num la: 375
+
+
+      =====. thực hành thêm để hiểu rõ về delegate hơn      

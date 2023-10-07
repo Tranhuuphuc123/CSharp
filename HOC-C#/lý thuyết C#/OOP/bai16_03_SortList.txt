@@ -1,0 +1,68 @@
+*********************************TIỀM HIỂU VỀ COLLECTION_SORTLIST********************************
+>>>> KHÁI NIỆM:
+ - SortedList cũng là một Collections lưu trử dữ liệu dưới dạng cặp key-value.
+  ++ key: đại diện cho 1 khóa giống như chỉ số phàn tử của mảng
+  ++ value: chính là gí trị tướng ứng của khóa đó.
+  ---> SortedList thật chức là một hashtable những các giá trị đc sắp xếp theo key.
+  ---> SortedList được thwucj hiện sắp xếp một cách tự động.
+  ---> Có thể truy xuất các phần tử SortedList thông qua key
+  ---> SortedList là sự kết hợp giữa Hashtable và  ArrayList.
+
+  ===> thư viện sử dụng: using System.Collection;
+
+
+>>>> KHỞI TẠO SORTEDLIST:
+ - Syntax:
+    
+        SortedList <name> = new SortedList;
+         ++ trong đó (): có thể truyền sl phần tử n, hoặc collections #
+
+
+ >>>> MỘT SỐ THUỘC TÍNH:
+
+         |------------------------------------------------------------------------------------|
+                  TÊN THUỘC TÍNH          |                      Ý NGHĨA
+         |------------------------------------------------------------------------------------|
+                   Count()                | - Trả về 1 số nguyên là số phần tử hiện có 
+         |------------------------------------------------------------------------------------|
+                  Keys()                  | - Trả về danh sách chứa các Key trong SortedList
+         |------------------------------------------------------------------------------------|
+                  Values()                | - Trả về danh sách chứa các Value trong SortedList
+         |------------------------------------------------------------------------------------|
+              Add(obj Key,obj Value)      | - thêm một cặp Key-Value vào SortedList    
+         |------------------------------------------------------------------------------------|
+                    Clear()               | - Xóa tất cả các phần tử trong SortedList
+         |------------------------------------------------------------------------------------|
+                    Clone()               | - Tạo 1 bản sao từ Hashtable hiện tại
+         |------------------------------------------------------------------------------------|
+              ContainsValue(obj Value)    | - kiểm tra đối tượng Value có tồn tại trong SortedList hay không 
+         |------------------------------------------------------------------------------------|
+              ContainsKey(obj Key)        | - kiểm tra đối tượng Key có tồn tại trong H. hay không
+         |------------------------------------------------------------------------------------|
+           CopyTo(Array array, int index) | - Thực hiện sao chép tất cả phần tử trong SortedList
+                                          | sang mảng một chiều array từ vị trí index
+         |------------------------------------------------------------------------------------|
+              Remove(obj Key)             | - Xóa đối tượng có key xuất hiện đầu tiên trong SortedList.
+         |------------------------------------------------------------------------------------|
+              Remove(int index)           | - Xóa đối tượng tại vị trí index trong SortedList
+         |------------------------------------------------------------------------------------|
+             GetByIndex(int index)        | - trả về giá trị value tại vị trí trong SL
+         |------------------------------------------------------------------------------------|
+             GetKey(int Index)            | - Trả về giá trị key tại vị trí index trong SortedList
+         |------------------------------------------------------------------------------------|
+             GetKeyList()                 | - Trả về 1 List các key trong SortedList
+         |------------------------------------------------------------------------------------|
+              GetValueList()              | - Trả về 1 List các value trong SortedList
+         |------------------------------------------------------------------------------------|
+              IndexOfKey(obj Key)         | - trả về 1 số nguyên là chỉ số phần tử 1 Key trong SortedList
+         |------------------------------------------------------------------------------------|
+          SetByIndex(int Index, obj Value)| - Gán giá trị value mới tại vị trí index trong SortedList
+         |------------------------------------------------------------------------------------|
+
+
+>>>>> Code ví dụ:
+ 
+
+
+
+
