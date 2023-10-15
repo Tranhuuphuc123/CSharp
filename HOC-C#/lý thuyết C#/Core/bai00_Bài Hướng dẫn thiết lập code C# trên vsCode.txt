@@ -81,6 +81,53 @@
   ===> vì sau khi thiết lặp csharp="dotnet run" trong setting.json là đã fix đc lỗi không chạy
   đc project rồi
 
+
+
+ *********************************************************************************************
+
+
+
+
+ *********************************************************************************************
+ >>>>>>>>>>HƯỚNG DẪN THIẾT LẬP C3 ĐỂ CHẠY PROJECT GAME UNITY<<<<<<<<<<
+ ==> sau khi đã thiết lặp thành công Code và build run đc c# dot net trên Vs code thì ta
+ cần thiết lặp thêm một số mục để chạy đc project game với Unity Engine
+  ## Bước 01: 
+   -> truy cập setting
+   -> mở và search
+      + Gõ: omnisharp modern
+      + mở ra đc phần: omnisharp: Use Modern Net, và bỏ tick trong mục đó
+
+  ## Bước 02:
+   -> Tuy code Unity Game trên Vs code nhưng cần cài cài .Net for tool trên Visual studio installer
+   -> truy cập Visual studio Installer để thiết lặp cái dotnet for tool
+
+  ## Bước 03: 
+  -> thiết lặp Unity trình mặc định mở source Code là Visual studio code
+  -> vào Unity
+  -> vào Edit/ Preferences
+  -> chọn mục Externals tools
+  -> tiếp tục tick chọn Visual studio code
+
+  <=> nếu như mà trong mục External tools không có Visual studio code sẵn thì không nên
+  chọn brow tải giao diện trên desktop mà cần vào mục sau để tải trình duyệt đó cho unity
+
+   + vào mục windown
+   + chọn packages manager
+   + trên mục trên cùng: packages: chọn Unity Registry
+   + nhập mục search: visual studio code
+   + tiến hành install
+   --> sau đó trở ra vào mục edit...external tools để chọn lại trình duyệt mặc định
+ 
+ ====> lúc này khi mở code mặc nhiên nó sẽ mở toàn bộ project lên trên vs code(đầy đủ)
+        
+   
+  ## Bước 04: tải thêm một số Extension phụ trợ Unity code trên Vs code
+   + Unity tools
+   + Debuger for Unity
+   + Unity code snippets
+
+
   
   
 

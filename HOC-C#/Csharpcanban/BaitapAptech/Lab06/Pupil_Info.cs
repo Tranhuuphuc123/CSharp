@@ -126,7 +126,7 @@ namespace Lab06
     // class demo
     class Demo
     {
-        static void Main(String[] args)
+        public static void Main(String[] args)
         {
             Pupil pupil = new Pupil();
             pupil.PupilCode = "M001";
@@ -137,9 +137,5 @@ namespace Lab06
 
             Console.ReadKey();
         }
-    }
-
-    
-
-    
+    }   
 }

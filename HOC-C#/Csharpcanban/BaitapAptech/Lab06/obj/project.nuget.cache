@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "erCbQmoPF7XCtoN3fACDZuaWxr/0kiPws9IXL5+7dewoVBpqanaJfLgU6j2iCQQzNasV7iKg0kb+TiTgK9YGag==",
+  "dgSpecHash": "3+OB1WcSdtrohj9vow4C3mQj4MTbxIKnMrsdSk+SkkOlq6NWqp/b7U0HKCelm44TdPSanfQxiSFOD6LxJlwxJg==",
   "success": true,
   "projectFilePath": "G:\\PRATICE_CODE\\CSharp\\HOC-C#\\Csharpcanban\\BaitapAptech\\Lab06\\Lab06.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Tran Huu Phuc\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\Tran Huu Phuc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\Tran Huu Phuc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\Tran Huu Phuc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.22\\microsoft.netcore.app.host.win-x64.6.0.22.nupkg.sha512"
+  ],
   "logs": []
 }

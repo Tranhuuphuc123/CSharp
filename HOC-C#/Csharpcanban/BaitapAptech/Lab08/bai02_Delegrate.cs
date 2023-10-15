@@ -38,6 +38,7 @@ namespace Lab08_Delegate_ArrayList
             // thực thi Delegate
             Console.WriteLine("thực thi delegate");
             Phuc p = new Phuc();
+            // gọi khưởi tạo delegate
             Show show = new Show(p.ShowOdd);
             show();
     

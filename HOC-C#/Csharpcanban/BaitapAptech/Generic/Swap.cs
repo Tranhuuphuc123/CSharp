@@ -8,6 +8,10 @@ namespace Generic
 {
     class Generic
     {
+      /*ref là từ khóa dùng để truyền tham số theo tham chiếu (by reference)
+        => khi bạn truyền một tham số theo tham chiếu, bạn đang truyền tham chiếu tới biến gốc,
+        không phải là một bản sao của giá trị. Điều này có nghĩa là bất kỳ thay đổi nào đối với 
+        tham số trong phương thức cũng sẽ ảnh hưởng đến biến gốc:*/
         public void Swap<T>(ref T value1, ref T value2)
         {
             // hàm chuyển đổi

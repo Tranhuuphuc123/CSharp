@@ -1,3 +1,262 @@
 *************************KIỂU STRING TRONG C#*************************
 >>>> Khái niệm:
- - 
+ - Chuỗi (string) trong C# được sử dụng để lưu trữ văn bản.
+ - Một biến string chứa một tập hợp các ký tự được bao quanh bởi dấu ngoặc kép "..."
+   + Ví dụ: 
+    => Tạo một biến kiểu stringvà gán cho nó một giá trị:   
+         string str1 = "Hello";
+
+
+==================================================
+>>>>> CÁC THUỘC TÍNH          
+## 01/ Chiều dài chuỗi
+ -> Một chuỗi trong C# là một đối tượng, chứa các thuộc tính và phương thức có thể thực hiện 
+ các hoạt động nhất định trên chuỗi.
+ -> Thuộc tính Length được sử dụng để tính độ dài của một chuỗi.
+
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi1
+            {
+                static void Main(string[] args)
+                {
+                    string str1 = "Hello C#";
+                    Console.WriteLine("Do dai cua chuoi str1 la: "
+                        + str1.Length);
+                }
+            }
+        }
+
+   =====> Kết quả: Do dai cua chuoi str1 la: 8
+
+
+==========================
+## 02/Nối chuỗi trong C#
+ -> Toán tử + có thể được sử dụng giữa các chuỗi để nối chúng với nhau, ví dụ:
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi2
+            {
+                static void Main(string[] args)
+                {
+                    string firstName = "Tran";
+                    string lastName = "Hao Phong";
+                    string name = firstName + " " + lastName;
+                    Console.WriteLine(name);
+                }
+            }
+        }
+
+  ===> Kết quả: Tran Hao Phong
+
+
+<==> hoặc có thể dùng concat()  
+
+ ## Bạn cũng có thể sử dụng phương thức string.Concat() để nối hai chuỗi:
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi3
+            {
+                static void Main(string[] args)
+                {
+                    string firstName = "Tran ";
+                    string lastName = "Hao Phong";
+                    string name = string.Concat(firstName, lastName);
+                    Console.WriteLine(name);
+                }
+            }
+        }
+   
+    ===> Kết quả: Tran Hao Phong
+
+
+===========================
+## 03/ Nội suy chuỗi: (sử dụng ký hiệu đô la ( $) khi sử dụng phương pháp nội suy chuỗi)
+ - Một tùy chọn khác của nối chuỗi, là nội suy chuỗi ($), thay thế các giá trị của các biến 
+ trong một chuỗi,
+  + ví dụ:
+
+        using System;
+        using System.Linq;
+         
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi4
+            {
+                static void Main(string[] args)
+                {
+                    string firstName = "Tran ";
+                    string lastName = "Hao Phong";
+                    string name = $"Full name: {firstName} {lastName}";
+                    Console.WriteLine(name);
+                }
+            }
+        }
+
+   + Kết quả: Full name: Tran  Hao Phong
+
+
+===================================
+## 04/ Truy cập chuỗi trong C#
+ - Bạn có thể truy cập các ký tự trong một chuỗi bằng cách sử dụng số chỉ mục
+ của nó trong dấu ngoặc vuông [].
+
+  + Ví dụ này in ký tự đầu tiên trong myString :
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi5
+            {
+                static void Main(string[] args)
+                {
+                    string myString = "Hello";
+                    Console.WriteLine(myString[0]);
+                }
+            }
+        }
+
+    ==> Kết quả: H
+
+
+================================
+## 05/Phương thức ToUpper()
+ - Phương thức ToUpper() trả về một chuỗi chữ hoa từ chuỗi đã cho.
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi6
+            {
+                static void Main(string[] args)
+                {
+                    string str1 = "Hello World!";
+                    Console.WriteLine(str1.ToUpper());
+                }
+            }
+        }
+
+     ===> Kết quả: HELLO WORLD!
+
+
+
+===============================
+## 06/Phương thức ToLower()
+ - Phương thức ToLower() trả về một chuỗi chữ hoa từ chuỗi đã cho.
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi6
+            {
+                static void Main(string[] args)
+                {
+                    string str1 = "Hello World!";
+                    Console.WriteLine(str1.ToLower());
+                }
+            }
+        }
+    ==> Kết quả: hello world!     
+
+
+================================
+## 07/Phương thức IndexOf()
+ - Phương thức IndexOf() trả về chỉ số của ký tự được tìm thấy đầu tiên trong chuỗi.
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi6
+            {
+                static void Main(string[] args)
+                {
+                    string str1 = "Hello World!";
+                    Console.WriteLine(str1.IndexOf('l'));
+                }
+            }
+        }
+
+    ==> Kết quả: 2
+
+
+===================================
+## 08/Phương thức Substring()
+ - Phương thức Substring() trả về chuỗi con từ chuỗi đã cho.
+
+  + Ví dụ lấy ra chuỗi con có 3 ký tự từ vị trí số 6 của chuỗi str1:
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi6
+            {
+                static void Main(string[] args)
+                {
+                    string str1 = "Hello World!";
+                    Console.WriteLine(str1.Substring(6, 3));
+                }
+            }
+        }
+
+     ===> Kết quả: Wor    
+
+
+
+
+============================================
+## 09/Ký tự đặc biệt trong C#
+ - Làm thế nào để bạn in ra màn hình ký tự nháy kép? Vấn đề ở đây là chuỗi phải 
+ được viết trong dấu ngoặc kép, C# sẽ hiểu nhầm chuỗi này và tạo ra lỗi:
+
+       string str1 = "Su dung dau ngoac kep "..." trong mot chuoi."; // error
+
+ => Giải pháp để tránh vấn đề này, là sử dụng ký tự dấu gạch chéo ngược \.
+
+ => Ký tự thoát dấu gạch chéo ngược \ biến các ký tự đặc biệt thành các ký tự chuỗi.
+
+ => Dưới đây là danh sách ký tự đặc biệt trong C#:
+
+*************Ký tự đặc biệt***********
+ >> Ý nghĩa: 
+  \a	Báo thức hoặc tiếng bíp
+  \b	Dấu Backspace
+  \f	Form Feed
+  \n	Xuống dòng mới (LF)
+  \r	Xuống dòng (CR)
+  \t	Dấu Tab ngang
+  \\	Dấu ngạch chéo ngược
+  \'	Dấu nháy đơn
+  \"	Dấu nháy kép
+  \0	Null
+
+  ++ Ví dụ ký tự đặc biệt trong C#
+
+        using System; 
+        namespace VietTutsCsharp
+        {
+            class ViDuChuoi7
+            {
+                static void Main(string[] args)
+                {
+                    string str1 = "Ban Dang\nHoc Lap Trinh\n\'C#\'\n\"Chuc Ban Hoc Vui Ve!\"\a";
+                    Console.WriteLine(str1);
+                }
+            }
+        }
+
+    ===> Kết quả:
+            Ban Dang
+            Hoc Lap Trinh
+            'C#'
+            "Chuc Ban Hoc Vui Ve!"
+
+
+            ..............Ngoài ra còn rất nhiều tính năng khác(nó hoạt động gần tường đương các
+            ngôn ngữ lập trình khác như java, ts, js.....);
+     
