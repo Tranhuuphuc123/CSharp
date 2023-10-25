@@ -89,7 +89,7 @@
 
 
  *********************************************************************************************
- >>>>>>>>>>HƯỚNG DẪN THIẾT LẬP C3 ĐỂ CHẠY PROJECT GAME UNITY<<<<<<<<<<
+ >>>>>>>>>>HƯỚNG DẪN THIẾT LẬP C# ĐỂ CHẠY PROJECT GAME UNITY<<<<<<<<<<
  ==> sau khi đã thiết lặp thành công Code và build run đc c# dot net trên Vs code thì ta
  cần thiết lặp thêm một số mục để chạy đc project game với Unity Engine
   ## Bước 01: 
