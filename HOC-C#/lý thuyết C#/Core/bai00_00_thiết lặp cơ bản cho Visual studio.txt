@@ -1,0 +1,7 @@
+******************************NHỮNG THIẾT LĂP CƠ BẢN CHO VISUAL STUDIO******************************
+>>>>>Bật tắt tính năng mini map xem code cho Visual studio<<<<<
+ #b01: vào mục Tool > Options
+ #b02: chọn vào mục text Editor > All languagues > chọn mục Scroll bars
+ #b03: tick vào các ô show Scrollbar Horizontal...
+  => tùy chỉnh này bật chức năng scoll cho mục mini map giúp ta theo doi code
+  thuận tiện như  extension visual studio code vậy

@@ -82,7 +82,7 @@
 
    ### Cấu trúc for-each"
      
-                           for (type variableName in arrayName) {
+                           foreach (type variableName in arrayName) {
                                // nội dung câu lệnh
                          }
 
@@ -97,7 +97,7 @@
                            String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 
                            // sử dụng for-each để xuất tt
-                           for (String item in cars) {
+                           foreach (String item in cars) {
                               System.out.println(item);
                             }
                             ---> kw: xuất ra các giá trị value của mảng cars

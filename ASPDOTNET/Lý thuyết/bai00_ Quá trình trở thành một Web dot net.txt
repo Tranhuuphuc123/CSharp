@@ -1,0 +1,31 @@
+**************************QUY TRÌNH CƠ BẢN TRỞ THÀNH MỘT DOT NET WEBSITE******************************
+## QUY TRINH GỒM CÁC NỀN TẢNG CẦN HỌC
+ # thứ nhất: cần nằm vững kiến tức .Net, C# căn bản gọi là C#/.Net core
+  -> tức các biến, vòng lặp... các lib, tính chất OOP trong ngôn ngữ C#
+  -> sử dụng thành thạo công cụ visual studio, các lib bổ trợ
+  ...
+
+ # thứ hai:  nắm vứng SQL 
+  -> sql là ột nền tảng quản trị cơ sở dữ liệu
+  -> nắm vững các mã lệnh tạo cơ sở dữ liệu: create database, create table
+  nắm vững các thaotacs truy vấn kiểu dữ liệu và cách quản lý cơ sở dữ liệu với
+  mySQL, SQL server....
+
+ # thứ ba: nắm vững kiến thức front end:
+  -> Html, css
+  -> nắm vững Js, Ts
+  -> hiểu rõ các ứng dụng xây dựng giao diện: ReactJs, AngularJS, NodeJS...
+  ...
+
+ # thứ tư: Nm vững kiến thức về phát triển wensite với dot net: 
+  -> Nắm vững kiến thức về ASP.Net
+  -> hiểu rõ về mô hình MVC
+  -> triển khai code server để build đc project web dot net
+  -> quản lý source code tốt giữa các file jsp(code front end), js, css
+  với code back end với C#/.Net
+
+ # thứ năm: Rành một framework 
+  -> cụ thể hãy tìm hiểu về Enity Framework, một framework phát triển 
+  website với C#/.Net.
+
+

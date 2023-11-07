@@ -33,8 +33,49 @@
 
 
 
+   ++ mẫu code chuẩn:
+      
+          using System;
 
-   ++ ví dụ code:
+          public class Person
+          {
+             //properties
+              private string _fullName;
+          
+              // contructor
+              public Person(string fullName)
+              {
+                  FullName = fullName;
+              }
+
+              // get and set
+              public string FullName
+              {
+                  get { return _fullName; }
+                  set { _fullName = value; }
+              }
+
+              // xây dựng method
+              public void SayHello()
+              {
+                  Console.WriteLine($"Hello, my name is {FullName}.");
+              }
+          }
+
+          class Program
+          {
+              static void Main()
+              {
+                // khởi tạo class
+                  Person person = new Person("John Doe");
+                // truy cập method
+                  person.SayHello();
+              }
+          }
+
+
+ ==========================================
+   ++ ví dụ code thực tiễn bài tập:
                     using System;
                     using System.Collections.Generic;
                     using System.Linq;

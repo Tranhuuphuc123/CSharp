@@ -84,6 +84,50 @@ lập(set) thuộc tính.
 
           
 
+   + vidu demo syntax:
+
+         using System;
+
+          public class Person
+          {
+             //properties
+              private string _fullName;
+          
+              // contructor
+              public Person(string fullName)
+              {
+                  FullName = fullName;
+              }
+
+              // get and set
+              public string FullName
+              {
+                  get { return _fullName; }
+                  set { _fullName = value; }
+              }
+
+              // xây dựng method
+              public void SayHello()
+              {
+                  Console.WriteLine($"Hello, my name is {FullName}.");
+              }
+          }
+
+          class Program
+          {
+              static void Main()
+              {
+                // khởi tạo class
+                  Person person = new Person("John Doe");
+                // truy cập method
+                  person.SayHello();
+              }
+          }
+
+
+
+
+
    #### Categories of Properties:
      ##Read-Only:
      - Read-Only thuôc tính cho phép chỉ nhận giá trị trường private. Nó khởi tạo chỉ giá trị đọc hay nhận trả về, nên được 

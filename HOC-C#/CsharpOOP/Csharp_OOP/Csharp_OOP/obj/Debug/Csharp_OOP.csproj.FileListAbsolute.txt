@@ -1,0 +1,7 @@
+G:\PRATICE_CODE\CSharp\HOC-C#\CsharpOOP\Csharp_OOP\Csharp_OOP\bin\Debug\Csharp_OOP.exe.config
+G:\PRATICE_CODE\CSharp\HOC-C#\CsharpOOP\Csharp_OOP\Csharp_OOP\bin\Debug\Csharp_OOP.exe
+G:\PRATICE_CODE\CSharp\HOC-C#\CsharpOOP\Csharp_OOP\Csharp_OOP\bin\Debug\Csharp_OOP.pdb
+G:\PRATICE_CODE\CSharp\HOC-C#\CsharpOOP\Csharp_OOP\Csharp_OOP\obj\Debug\Csharp_OOP.csproj.AssemblyReference.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\CsharpOOP\Csharp_OOP\Csharp_OOP\obj\Debug\Csharp_OOP.csproj.CoreCompileInputs.cache
+G:\PRATICE_CODE\CSharp\HOC-C#\CsharpOOP\Csharp_OOP\Csharp_OOP\obj\Debug\Csharp_OOP.exe
+G:\PRATICE_CODE\CSharp\HOC-C#\CsharpOOP\Csharp_OOP\Csharp_OOP\obj\Debug\Csharp_OOP.pdb
