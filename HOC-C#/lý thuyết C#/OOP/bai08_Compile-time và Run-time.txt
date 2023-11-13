@@ -12,7 +12,9 @@
  |-------------------------------------------------------------------------------------------------|
     Được thực thi tại thòi điểm biên dịch vì trình   |  Được thực thi trong thời gian chạy vì trình   
     biên dịch biết phương thức nào sẽ thực thi       |biên dịch không biết phương thức sẽ chạy được 
-    tùy thuộc vào số lượng ham số và kiểu dữ liệu    |Thục thi, cho dù đó là method của lớp cơ sở đc gọi hay lớp dẫn xuất 
+    tùy thuộc vào số lượng ham số và kiểu dữ liệu    |Thục thi, cho dù đó là method của lớp cơ sở đc 
+                                                     |gọi hay lớp dẫn xuất 
  |-------------------------------------------------------------------------------------------------|
     Được gọi là đa hình tĩnh                         |    Được gọi là đa hình động.
- |-------------------------------------------------------------------------------------------------|
+ |-------------------------------------------------------------------------------------------------:w
+ |

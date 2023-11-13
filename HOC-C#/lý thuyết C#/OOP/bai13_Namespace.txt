@@ -1,7 +1,10 @@
 **************************NAMESPACE TRONG C#*********************
 >> Khái niệm:
- - Một Namespace trong C# được thiết kế để cung cấp một cách để giữa một tập hợp các tên được phân biệt riêng rẽ với nhau: vd như Tên class...
- --> các tên Class được khai  báo trong một namespace không xung đột với cùng tên class như thế khi được khai báo trong một namespace khác..
+ - Một Namespace trong C# được thiết kế để cung cấp một cách để giữa một tập hợp các tên được phân
+ biệt riêng rẽ với nhau: 
+  + vd như Tên class...
+ --> các tên Class được khai  báo trong một namespace không xung đột với cùng tên class như thế khi
+ được khai báo trong một namespace khác..
 
  - Syntax: Một định nghĩa Namespace trong C# bắt đầu với từ khóa namespace:
      namespace <tên namespace>{
@@ -16,18 +19,25 @@
      Console.WriteLine("// nội dung");
      -> chúng ta có thể viết đầy đủ:
      System.console.WriteLine("// nội dung ");
-     ===> Với việc khai báo namespace: using System, chỉ thị này nói cho compiler rằng phần code tiếp theo đang sử dụng các tên namespace System đã được xác định nên ta có thể tối giản không cần thêm System. ,,, nó cũng tượng tự với các namespace khác khi được khai báo rõ ràng.
+     ===> Với việc khai báo namespace: using System, chỉ thị này nói cho compiler rằng phần code tiếp 
+     theo đang sử dụng các tên namespace System đã được xác định nên ta có thể tối giản không cần thêm 
+     System. ,,, nó cũng tượng tự với các namespace khác khi được khai báo rõ ràng.
 
 
 >>>> Nested Namespace:
- - là khái niệm namespace lồng trong một namespace khác-> nó vẫn hoạt động bt(nghĩa là vẫn gọi và thực thi các class trong các namespace đó dễ dàng)
+ - là khái niệm namespace lồng trong một namespace khác-> nó vẫn hoạt động bt(nghĩa là vẫn gọi và thực 
+ thi các class trong các namespace đó dễ dàng)
  - cần khai báo với using các namespace nested bằng dot(.)
 
    ++ ví dụ:
           using System;
           using first_namespace;
           using first_namespace.second_namespace;
-           namespace trong C#
+          namespace trong C#
+
+
+
+
 Vi du minh hoa cach su dung cua namespace
 ------------------------------------------
 Ben trong namespace thu nhat!
@@ -51,7 +61,9 @@ Ben trong namespace thu hai!
                       }
                   }
               }
-          }class TestCsharp
+          }
+
+          class TestCsharp
           {
               static void Main(string[] args)
               {

@@ -3,7 +3,8 @@
  - mảng là:
   + Tập hợp các đối tượng có cùng kiểu dữ liệu.
   + Mỗi đối tượng trong mảng được gọi là một phần tử.
-  + Các phần tử phân biệt với nhau bằng chỉ số phần tử. Trong C# chỉ số phần tử là các số nguyên không âm và bắt đầu từ 0 1 2 3…
+  + Các phần tử phân biệt với nhau bằng chỉ số phần tử. Trong C# chỉ số phần tử là các số nguyên không 
+  âm và bắt đầu từ 0 1 2 3…
 
  - đặc điểm của mảng là: 
   + các Phần tử trong mảng dùng chung một tên và đc truy xuất thông qua chỉ số phần tử.
@@ -12,14 +13,16 @@
   + vị trí ô nhớ của các phần tử trong mảng đc cấp phát phải liền kề nhau.
 
 - Mục đích(Purpose) khi dùng mảng:
-  vd: để tạo một biến chưa 10 sv chẳng hạn  thì nếu khai báo biến bt ta cần tới 10 tên biến để chứa 10 vaue của sv.
-  mảng chỉ cần 1.
-  ==> nếu sl lớn hơn 10 thì vấn đề lưu trữ sẽ rất rắc rối, với mảng có thể dễ dàng lưu trữ đc sl lớn và chỉ cần khai báo 1 mảng là đủ,
-  rõ ràng là tiện ích và giảm tải code hơn rất nhiều nếu muốn lưu trữ sl value lớn.
+  vd: để tạo một biến chưa 10 sv chẳng hạn  thì nếu khai báo biến bt ta cần tới 10 tên biến để chứa 10 
+  value của sv.mảng chỉ cần 1.
+  ==> nếu sl lớn hơn 10 thì vấn đề lưu trữ sẽ rất rắc rối, với mảng có thể dễ dàng lưu trữ đc sl lớn và 
+  chỉ cần khai báo 1 mảng là đủ, rõ ràng là tiện ích và giảm tải code hơn rất nhiều nếu muốn lưu trữ sl
+  value lớn.
 
-  >> chugn quy lại lợi ích của mảng là:
+  >> chung quy lại lợi ích của mảng là:
    + gom nhóm các đối tượng có chung tính chất lại với nhau giúp code gọn gàng hơn.
-   + để thao tác, dễ quản lý, nâng cấp sữa chữa. Vì lúc này việc thay đổi sl chỉ nằm ở việc tăng kích thuyowcs mảng là đc.
+   + để thao tác, dễ quản lý, nâng cấp sữa chữa. Vì lúc này việc thay đổi sl chỉ nằm ở việc tăng kích 
+   thước mảng là đc.
    + dễ dàng áp dụng cấu trúc lặp để xử lý dữ liệu.
    
 

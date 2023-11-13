@@ -1,9 +1,10 @@
 *******************************************INDEXER TRONG C#***********************************
 >>>>>> khái niệm:
- - Indexer trong C# là một tính năng cho phép các đối tượng được truy cập như một mảng bằng cách sử dụng các chỉ mục.
- Indexer cho phép truy cập các thành phần của một đối tượng giống như truy cập các phần tử của một mảng
- - Indexer tương ứng về mặt cú pháp với Property(nghĩa là cũng có get an set..), nhưng khác ở chỗ nó chấp nhận một hoặc nhiều 
- tham số cùng lúc.
+ - Indexer trong C# là một tính năng cho phép các đối tượng được truy cập như một mảng bằng cách sử 
+ dụng các chỉ mục. Indexer cho phép truy cập các thành phần của một đối tượng giống như truy cập các 
+ phần tử của một mảng
+ - Indexer tương ứng về mặt cú pháp với Property(nghĩa là cũng có get an set..), nhưng khác ở chỗ nó 
+ chấp nhận một hoặc nhiều tham số cùng lúc.
 
  ## Mục đích của Indexer được tạo ra là gì:
     - ví dụ:

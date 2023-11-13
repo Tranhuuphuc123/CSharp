@@ -5,3 +5,21 @@
  #b03: tick vào các ô show Scrollbar Horizontal...
   => tùy chỉnh này bật chức năng scoll cho mục mini map giúp ta theo doi code
   thuận tiện như  extension visual studio code vậy
+
+
+
+================================================================
+>>>>>CÁCH CHẠY CÁC FILE RIÊNG LẺ TRONG MỘT PROJECT CỦA MICROSOFT VISUAL STUDIO
+ => ta có thể tạo nhiều file nhiều namespace trong cùng một Project, tuy nhiên với
+ Microsoft Studio thì nó chỉ cho biên dịch một file lần lượt một, File đó là file 
+ duy nhất chứa hàm main các file còn lại không đc chứa hàm main -> nếu chứa hàm main
+ thì cần vô hiệu quá nó chỉ giữ lại 1 file thui
+ => để khắc phục lỗi biên dịch trên ta làm như sau:
+  #b1: 1 là xấy dựng các file khác là các class rồi gọi lại nó trong file chứa hàm Main
+  #b2: Nếu vẫn kiên quyết tách biệt thì ta tiến hành vô hiệu quá(Disabled) các file khác 
+  và giữ lại file cần chạy:
+   + Chọn file cần Disabled -> R-Click file đó -> hộp thoại mở ra 
+   + Chọn thuộc tính Properties
+   + trong hộp thoại Properties> chú ý chỗ Advanced 
+   + trong mục Advanced> chọn chỗ Build Action: chọn none 
+   (tức khóa lại cái file đó)

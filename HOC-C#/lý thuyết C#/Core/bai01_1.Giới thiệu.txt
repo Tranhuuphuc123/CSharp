@@ -1,16 +1,18 @@
 *************************TIỀM HIỂU SƠ LƯỢC VỀ C#***************************
 >>>GIỚI THIẾU CƠ BẢN VỀ C#:
  ## NỀN TẢNG .NET:
-  - .Net là một frameWork phần mềm phát triển bởi Microsoft.NET, cung cấp một nền tảng để xây dựng các ứng dụng của Windowns và web đượ hiệu quả hơn, 
-  bằng cách cung cấp các thư viện lớp, các ngôn ngữ llaajp trình và công cụ phát triển .
+  - .Net là một frameWork phần mềm phát triển bởi Microsoft.NET, cung cấp một nền tảng để 
+  xây dựng các ứng dụng của Windowns và web được hiệu quả hơn, bằng cách cung cấp các thư 
+  viện lớp, các ngôn ngữ lập trình và công cụ phát triển.
   - C# là một trong những ngôn ngữ lập trình chính của .NET, các ứng dụng của .NET gồm C#, VB.NET, ...
-  ===>tóm lại .NET FrameWork là một nền tảng phát triển ứng dụng phổ biến cho nhiều loại ứng dụng  khác nhau,
-  chủ yếu thế mạnh của .NET là phát triển ứng dụng cho nền tảng hệ điều hành Windown.
+  ===>tóm lại .NET FrameWork là một nền tảng phát triển ứng dụng phổ biến cho nhiều loại ứng dụng 
+  khác nhau, chủ yếu thế mạnh của .NET là phát triển ứng dụng cho nền tảng hệ điều hành Windown.
 
  ## GIỚI THIỆU VỀ C#:
   - C# là ngôn ngữ thuần OOP của Microsoft phát triển. Nó ra đời năm 2000 bởi Anders Hejlsberg.
-  - nó phát triển từ 2 ngôn ngữ lập trình phổ biến trước đó là C+ vfa java.
-  - C# là ngôn ngữ cấp cao mạnh mẽ của nền tảng .NET FrameWork có thể ứng dụng ở các lĩnh vực: Game, Winform,... trở nên dễ dàng.
+  - nó phát triển từ 2 ngôn ngữ lập trình phổ biến trước đó là C++ và java.
+  - C# là ngôn ngữ cấp cao mạnh mẽ của nền tảng .NET FrameWork có thể ứng dụng ở các lĩnh vực: 
+  Game, Winform(Desktop App), Web(ASP.NET, Enity FrameWork)... trở nên dễ dàng.
 
   ========================================================================
 
@@ -38,22 +40,23 @@
                ++ namespace <tên namespace>{
                  // ....
                }   
-               ----> báo cho trình biên dịch biết rằng các chtrinh đang chạy ở namespace(gói package nào), nó bao gồm
-               các thành phần bên trong (class, method, object...)
+               ----> báo cho trình biên dịch biết rằng các chtrinh đang chạy ở namespace(gói package nào),
+               nó bao gồm các thành phần bên trong (class, method, object...)
 
                ++ class <classname>{
                   /// nội dung
                }
-               ----> báo cho trình biên dịch biết chtrinh đang chạy là class nào và các thành phần bên trong và phương thức bên trong.
+               ----> báo cho trình biên dịch biết chtrinh đang chạy là class nào và các thành phần bên trong
+               và phương thức bên trong.
 
                ++ Static void Main(String[] args){
                   // nội dung
                }
-              ------------->hàm cính của toàn chương trình, mỗi khi trình biên dịch dịch chương trình ra sẽ đi vào hàm Main đầu tiền để
-              bắt đầu vòng đời của chương trình.
+              ------------->hàm chính của toàn chương trình, mỗi khi trình biên dịch dịch chương trình ra sẽ 
+              đi vào hàm Main đầu tiền để bắt đầu vòng đời của chương trình.
 
 
-  ## coment ghi chú trong C#:
+  ## comment ghi chú trong C#:
    - ta có thể dùng:
     + //: ghi chú cho đoạn ngắn
     + /**/: ghi chú nhiều dòng.

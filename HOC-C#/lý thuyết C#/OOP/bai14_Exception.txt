@@ -1,8 +1,11 @@
 **********************EXCEPTION TRONG C#*******************
 >>> Khái niệm:
- - Xử lý ngoại lệ trong C#, tức là xử lý các lỗi có thể xảy ra, giúp chương trình không bị gián đoạn. Một Exception trong  C# là một phản hồi về tình huống ngoại lệ phát xin lỗi trong một chương trình đang chạy cần đước bắt lỗi chẩn đoán xử lý.
+ - Xử lý ngoại lệ trong C#, tức là xử lý các lỗi có thể xảy ra, giúp chương trình không bị gián đoạn. 
+ Một Exception trong  C# là một phản hồi về tình huống ngoại lệ phát xin lỗi trong một chương trình 
+ đang chạy cần đước bắt lỗi chẩn đoán xử lý.
  - Exception trong C# xây dựng trên 4 từ khóa: try, catch, finally, throw
-  + try: Một khối try nhận diện một khối code mà ở đó các exception cụ thể được kích hoạt. Nó được theo sau bởi một hoặc nhiều khối catch. 
+  + try: Một khối try nhận diện một khối code mà ở đó các exception cụ thể được kích hoạt. Nó được theo sau
+  bởi một hoặc nhiều khối catch. 
 
   + catch:Từ khóa catch trong C# chỉ dẫn việc bắt một exception.
 
@@ -116,9 +119,10 @@
 
  >>>> User-Defined Exception trong C#:
   - với kiểu Exception tự định nghĩa thì cũng tương tự java:
-   + khi khai báo Exception tự định nghĩa thì cần ké thừa lớp ApplicationException
+   + khi khai báo Exception tự định nghĩa thì cần kế thừa lớp ApplicationException
     + trong contructor của Exception tự định nghĩa thì cũng kế thừa: base giống super() bên java
-    + sử dụng gọi cái Exception tự định nghĩa thì dùng throw để ném nó ra(lưu ý đi chung với new để khổi tạo giá trị).
+    + sử dụng gọi cái Exception tự định nghĩa thì dùng throw để ném nó ra(lưu ý đi chung với new để khổi
+    tạo giá trị).
 
     ++ ví dụ code:
       ++tự tạo myException:

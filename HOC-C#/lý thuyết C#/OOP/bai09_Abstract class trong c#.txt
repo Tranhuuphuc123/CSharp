@@ -1,10 +1,12 @@
 ******************ABSTRACT CLASS LỚP TRỪU TUOWNGJT RONG C#***************
 >>> kHÁI NIỆM:
  - Abstract là từ khóa dùng để khai báo 1 lớp trừu tượng hoặc một phương thức thuần ảo.
- - Trừu tượng hóa là thuộc tính mà ở đó chỉ những chi tiêt thiết yếu mới được hiển thị cho người dùng. Trừu tượng cũng đc định nghĩa
-  là quá trình xá định các đặc điểm cần thiết của đối tượng bỏ qua các chi tiết không liên quan hay ít cần thiết.
-  --> ví dụ: một người lái xe thì không cần chuyên moon cao về vật lý, hay động cơ học cái a ta có thể làm là biết lái xe, phanh, hay tắng tốc
-mà không cần quá hiểu biết về chuyên môn, nguyên tác vật lý, hay cấu tạo xe nhưng vẫn đk xe đc.. đó đc gọi là trừu tượng.
+ - Trừu tượng hóa là thuộc tính mà ở đó chỉ những chi tiêt thiết yếu mới được hiển thị cho người dùng. 
+ Trừu tượng cũng đc định nghĩa là quá trình xáx định các đặc điểm cần thiết của đối tượng bỏ qua các 
+ chi tiết không liên quan hay ít cần thiết.
+  --> ví dụ: một người lái xe thì không cần chuyên moon cao về vật lý, hay động cơ học cái a ta có thể
+  làm là biết lái xe, phanh, hay tắng tốc mà không cần quá hiểu biết về chuyên môn, nguyên tác vật lý, 
+  hay cấu tạo xe nhưng vẫn đk xe đc.. đó đc gọi là trừu tượng.
 
 
 >>>> Lớp trừu tượng và method của nó:
@@ -15,8 +17,8 @@ mà không cần quá hiểu biết về chuyên môn, nguyên tác vật lý, h
         public abstract class Animal;
         public abstract double tinhdientich();
 
- - một lớp  abstract đc xây dựng phải đc định nghĩa lại tức Overriding lại trong class chile(lớp con). việc ghi đè trở thành bắt buộc để
- đạt được tính trừu tượng hóa.
+ - một lớp  abstract đc xây dựng phải đc định nghĩa lại tức Overriding lại trong class chile(lớp con). việc 
+ ghi đè trở thành bắt buộc để đạt được tính trừu tượng hóa.
 
    ++ ví dụ code:
 

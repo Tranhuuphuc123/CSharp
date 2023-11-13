@@ -10,10 +10,12 @@
   - Đọc 1 ký tự từ bàn phím và trả về kiểu số nguyên.
 
     ex:
-       Console.WriteLine(Console.Read()); // đọc 1 ký tự từ bàn phím bằng lệnh Console.Read() sau đó in ra ký tự vừa đọc được.
+        // đọc 1 ký tự từ bàn phím bằng lệnh Console.Read() sau đó in ra ký tự vừa đọc được.
+         Console.WriteLine(Console.Read()); 
 
  >> Console.ReadLine():
-  -  Đọc dữ liệu từ bàn phím cho đến khi gặp ký tự xuống dòng thì dừng (Nói cách khác là đọc cho đến khi mình nhấn enter thì dừng) và giá trị đọc được luôn là một chuỗi.
+  -  Đọc dữ liệu từ bàn phím cho đến khi gặp ký tự xuống dòng thì dừng (Nói cách khác là đọc cho đến khi
+  mình nhấn enter thì dừng) và giá trị đọc được luôn là một chuỗi.
 
  >> Console.ReadKey();
   - dừng màn hình để  xem chương trình tránh tắt console chương trình đột ngột

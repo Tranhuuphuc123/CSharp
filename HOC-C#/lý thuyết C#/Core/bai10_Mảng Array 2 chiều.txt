@@ -1,8 +1,8 @@
 ***************************MẢNG ARRAY 2 CHIỀU***************************
 >>>>> Khái niệm:
  - Mảng 2 chiều được hình dung như một bảng có m dòng và n cột với một số đặc trưng sau:
-   + Mảng 2 chiều mang những đặc trưng cơ bản của một mảng bình thường (đặc trưng về mảng đã trình bày trong bài MẢNG 
-1 CHIỀU TRONG C#)
+   + Mảng 2 chiều mang những đặc trưng cơ bản của một mảng bình thường (đặc trưng về mảng đã trình bày 
+   trong bài MẢNG 1 CHIỀU TRONG C#)
    + Các phần tử trong mảng 2 chiều được truy xuất thông qua 2 chỉ số phần tử (tạm gọi là chỉ số dòng và chỉ số cột)
 
 >>>> Cú pháp:

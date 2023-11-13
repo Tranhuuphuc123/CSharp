@@ -42,9 +42,10 @@
    ========================================================================
    ============================Các dạng phương thức hỗ trợ ép kiểu===========================================
    >>> Parse():
-    - khái niệm: Phương thức Parse là phương thức được sử dụng khá phổ biến khi chúng ta muốn chuyển đổi một chuỗi sang một kiểu dữ 
-    liệu tương ứng.
-    ---> Mỗi kiểu dữ liệu cơ bản trong C# đều có phương thức Parse để chuyển đổi sang kiểu dữ liệu đó. Ta có:
+    - khái niệm: Phương thức Parse là phương thức được sử dụng khá phổ biến khi chúng ta muốn chuyển đổi một 
+    chuỗi sang một kiểu dữ liệu tương ứng.
+    ---> Mỗi kiểu dữ liệu cơ bản trong C# đều có phương thức Parse để chuyển đổi sang kiểu dữ liệu đó.
+    ---> Ta có:
        + Boolean.Parse dùng để chuyển về kiểu Boolean.
        + Int32.Parse dùng để chuyển về kiểu Int 32
        + Double.Parse dùng để chuyển chuỗi về kiểu Double .v.v…
@@ -57,23 +58,46 @@
 
 
   >>> Try Parse():
-   - Khái niệm: Giống như Parse, TryParse cũng là phương thức được tích hợp sẵn trong các lớp kiểu dữ liệu cơ bản của C#. Tuy nhiên, 
-   cú pháp của TryParse có phần khác với Parse. Cụ thể, tham số thứ nhất của TryParse là chuỗi cần chuyển đổi và tham số thứ hai là 
-   biến sẽ chứa giá trị đã được chuyển đổi, biến thứ hai này phải được đánh dấu là out (để cho biết biến khai báo sẽ được truyền tham chiếu).
+   - Khái niệm: Giống như Parse, TryParse cũng là phương thức được tích hợp sẵn trong các lớp kiểu dữ 
+   liệu cơ bản của C#. Tuy nhiên, cú pháp của TryParse có phần khác với Parse. 
+   - Cụ thể, tham số thứ nhất của TryParse là chuỗi cần chuyển đổi và tham số thứ hai là biến sẽ chứa 
+   giá trị đã được chuyển đổi, biến thứ hai này phải được đánh dấu là out (để cho biết biến khai báo 
+   sẽ được truyền tham chiếu).
 
         vd:      
-                int length;
-                Console.Write("Nhap do dai canh cua tam giac: ");
-                while (!int.TryParse(Console.ReadLine(), out length))
+                using System;
+                class Program
                 {
-                    Console.Write("Vui long nhap mot so nguyen duong: ");
-                } 
-          ---> kiểm tra biến nhập vào có giá trị âm không?
+                    static void Main()
+                    {
+                        string input = "123"; // 123 nhưng nó lại là chuỗi 123
+
+                        // Khai báo biến để chứa giá trị sau khi chuyển đổi
+                        int result;
+
+                        // Sử dụng TryParse để chuyển đổi và kiểm tra -> chuỗi "123" thanh số nguyên 123
+                        if (int.TryParse(input, out result))
+                        {
+                            // Nếu chuyển đổi thành công, in giá trị
+                            Console.WriteLine("Chuyển đổi thành công. Giá trị là: " + result);
+                        }
+                        else
+                        {
+                            // Nếu chuyển đổi không thành công, thông báo lỗi
+                            Console.WriteLine("Không thể chuyển đổi chuỗi thành số nguyên.");
+                        }
+                    }
+                }
+        
+        => kW: thành công giá trị là: 123
+
 
 
   >>> Convert():
-   - Khái niệm: Lớp Convert là một lớp tiện ích trong C# cung cấp cho chúng ta rất nhiều phương thức tĩnh khác nhau để chuyển đổi từ 
-   một kiểu dữ liệu này sang kiểu dữ liệu khác. Tham số mà các phương thức trong Convert nhận không nhất thiết phải là chuỗi mà có 
+   - Khái niệm: 
+    + Lớp Convert là một lớp tiện ích trong C# cung cấp cho chúng ta rất nhiều phương thức tĩnh 
+   khác nhau để chuyển đổi từ một kiểu dữ liệu này sang kiểu dữ liệu khác. 
+    + Tham số mà các phương thức trong Convert nhận không nhất thiết phải là chuỗi mà có 
    thể ở nhiều kiểu dữ liệu khác nhau (int, bool, double…).        
 
         vd:
@@ -81,8 +105,9 @@
             bool b = Convert.ToBoolean(27); //chuyển số 27 sang kiểu bool
 
 
-   - Các phương thức trong lớp Convert sẽ trả về giá trị mặc định nếu như tham số truyền vào là null. Còn trong các trường hợp sai định
-    dạng hoặc vượt quá giới hạn thì các phương thức đó sẽ ném ra các ngoại lệ tương tự như phương thức Parse.     
+   - Các phương thức trong lớp Convert sẽ trả về giá trị mặc định nếu như tham số truyền vào là null. 
+   Còn trong các trường hợp sai định dạng hoặc vượt quá giới hạn thì các phương thức đó sẽ ném ra các 
+   ngoại lệ tương tự như phương thức Parse.     
 
       ==> vd:
              

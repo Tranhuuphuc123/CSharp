@@ -136,7 +136,8 @@
 
                                 //method toString
                                 public override String ToString(){
-                                    return ("dien tich Area: " + this.chieudai + " * " + this.chieurong + " = " + (this.chieurong * this.chieurong));
+                                    return ("dien tich Area: " + this.chieudai + " * " + this.chieurong + 
+                                    " = " + (this.chieurong * this.chieurong));
                                 }
 
                             }

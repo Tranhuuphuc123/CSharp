@@ -130,8 +130,8 @@ lập(set) thuộc tính.
 
    #### Categories of Properties:
      ##Read-Only:
-     - Read-Only thuôc tính cho phép chỉ nhận giá trị trường private. Nó khởi tạo chỉ giá trị đọc hay nhận trả về, nên được 
-     định nghĩa vói Accessor là get.
+     - Read-Only thuôc tính cho phép chỉ nhận giá trị trường private. Nó khởi tạo chỉ giá trị đọc hay nhận 
+     trả về, nên được định nghĩa vói Accessor là get.
      ==> nghĩa là khi khai báo thuộc tính Read-Only thì chỉ cần phương thức get thui.
      - Syntax:
                     <Access Modifiers> <return type><property_Name>{
@@ -141,8 +141,8 @@ lập(set) thuộc tính.
                     }
 
      ## Write-Only: 
-     - Write-Only thuôc tính cho phép chỉ nhận giá trị trường private. Nó khởi tạo chỉ giá trị đọc hay nhận trả về, nên được 
-     định nghĩa vói Accessor là set.
+     - Write-Only thuôc tính cho phép chỉ nhận giá trị trường private. Nó khởi tạo chỉ giá trị đọc hay nhận 
+     trả về, nên được định nghĩa vói Accessor là set.
      ==> nghĩa là khi khai báo thuộc tính Write-Only thì chỉ cần phương thức set thui.
      - Syntax:
                         <Access Modifiers> <return type><property_Name>{
@@ -173,7 +173,8 @@ lập(set) thuộc tính.
     - thuộc tính này chỉ nằm trong lớp trừu tượng
     - thuộc tính này chỉ đc sử dụng trong lớp abstract và interface thui.
     - nó chỉ định nghĩa tên, kiểu dữ liệu và method truy cập mà hông định nghĩa thân hàm
-    - thuộc tính tt khi khai báo chỉ có thể lf set or get mà khong trả về cái gì hết, hayb truyên gì vào cả, không có thân hàm.
+    - thuộc tính tt khi khai báo chỉ có thể lf set or get mà khong trả về cái gì hết, hayb truyên gì vào cả, không
+    có thân hàm.
 
 
 

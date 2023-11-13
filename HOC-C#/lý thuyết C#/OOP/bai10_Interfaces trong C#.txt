@@ -6,23 +6,25 @@
   + Phương thức: lưu ý method không có thân hàm, không cần thực thi để class con tự ghi đè và bổ sung
   + tiềm hiểu thêm về Properties-events-Indexers...
 
-  ==> một Interface được hiểu là một khuôn mẫu mà mọi lớp thực thi nó đều phải tuân theo. Interface sẽ định nghĩa phần "làm gì 
-  tiếp theo", và những lớp thực thi Interface này sẽ định nghĩa phần "làm nhứ thế nào tiếp theo"(định nghĩa nội dung) tương ứng.
+  ==> một Interface được hiểu là một khuôn mẫu mà mọi lớp thực thi nó đều phải tuân theo. Interface sẽ định 
+  nghĩa phần "làm gì tiếp theo", và những lớp thực thi Interface này sẽ định nghĩa phần "làm nhứ thế nào tiếp
+  theo"(định nghĩa nội dung) tương ứng.
 
   >>>> ĐẶC ĐIỂM MỘT INTERFACES:
    - Chỉ chứa khai báo không chứa hần định nghĩa, thân hàm, mặc định method đã là một abstract method rồi.
    - việc ghi đè 1 thành phần  trong Interface không cần dùng từ override.
    - không thể khai báo phạm vi truy cập cho các thành phần bên trong Interface, các thành phần này mặc định làm
    "public".
-   - Interface không có constructor cũng không có destructor( hủy contructor, được khai báo với kiểu: ~ contructor tức là hủy xóa bỏ đi contructor).
+   - Interface không có constructor cũng không có destructor( hủy contructor, được khai báo với kiểu: ~ contructor
+   tức là hủy xóa bỏ đi contructor).
    - các lớp có thể thực thi nhiều Interface cùng 1 lúc, có thể đa kế thừa với Interface.
 
 
 >>>>>> MỤC ĐÍCH(PURPPOSE):
  - Vì C# không hỗ trợ đa kế thừa nên Interface ra đời như một giải pháp
- - Trong hệ thống việc trao đổi thông tin giữa các thành phần cần được đồng bộ và có những thống nhất chung. Vì thế dùng Interface
- sẽ giúp đữa ra những quy tắc chung mà bắt buộc các thành phần trong hệ thống này phải làm theo mới có 
- thể trao đỏi với nhau được.
+ - Trong hệ thống việc trao đổi thông tin giữa các thành phần cần được đồng bộ và có những thống nhất chung. 
+ Vì thế dùng Interface sẽ giúp đữa ra những quy tắc chung mà bắt buộc các thành phần trong hệ thống này phải
+ làm theo mới có thể trao đỏi với nhau được.
 
 
  ==================================================
@@ -40,8 +42,8 @@
    - kế thừa interface trong C# khác với java không dùn Implement mà chỉ cần : như với lớp trừu tượng Abstract.
       vd class A: <interface_Name>   
 
-   - lưu ý khi ghi đè override method trong Implement thì không cần ghi override chỉ cần ghi lại method bt, và method cha cho ghi đè cũng
-   không cần có virtual   
+   - lưu ý khi ghi đè override method trong Implement thì không cần ghi override chỉ cần ghi lại method bt, và method
+   cha cho ghi đè cũng không cần có virtual   
 
   ===========================================================
   >>>>> So sánh Interface với Abstract:
@@ -164,8 +166,10 @@
                                     Console.WriteLine("Bat can fly as Birth ");
                                 }
 
-                                //tới thừa kế hai method Interface là eat, tuy nhiên để phân biêt là eat() của IAnimal hay IBirth
+                                /*tới thừa kế hai method Interface là eat, tuy nhiên để phân biêt là eat() 
+                                của IAnimal hay IBirth*/
                                 //-> ta làm như sau:
+
                                 void IAnimal.eat(){
                                     Console.WriteLine("Bat eat mosquito");    
                                 }
@@ -190,11 +194,16 @@
                                     eagle.fly();
 
 
-                                    // lớp Bat vừa là động vật vừa là chim nó sẽ gặp trở ngại và triển khai method eat() như thế nào để không bị nhầm
+                                    /* lớp Bat vừa là động vật vừa là chim nó sẽ gặp trở ngại và triển khai method
+                                    eat() như thế nào để không bị nhầm*/
+
                                     Bat bat = new Bat("gogo");
                                     bat.run();
                                     bat.fly();
-                                    //hai thuộc tính trên dễ dàng phân biệt cho các lớp interfcae nhưng với eat()thì cần khai báo cụ thể nếu không sẽ lỗi
+
+                                    /*hai thuộc tính trên dễ dàng phân biệt cho các lớp interfcae nhưng với eat()
+                                    thì cần khai báo cụ thể nếu không sẽ lỗi*/
+
                                     ((IAnimal)bat).eat();
                                     ((IBirth)bat).eat();
                                 }
