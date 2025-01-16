@@ -1,7 +1,0 @@
-G:\PRATICE_CODE\CSharp\HOC-C#\OntapCSharp\CSharp_Core\CSharp_Core\obj\Debug\CSharp_Core.csproj.AssemblyReference.cache
-G:\PRATICE_CODE\CSharp\HOC-C#\OntapCSharp\CSharp_Core\CSharp_Core\obj\Debug\CSharp_Core.csproj.CoreCompileInputs.cache
-G:\PRATICE_CODE\CSharp\HOC-C#\OntapCSharp\CSharp_Core\CSharp_Core\bin\Debug\CSharp_Core.exe.config
-G:\PRATICE_CODE\CSharp\HOC-C#\OntapCSharp\CSharp_Core\CSharp_Core\bin\Debug\CSharp_Core.exe
-G:\PRATICE_CODE\CSharp\HOC-C#\OntapCSharp\CSharp_Core\CSharp_Core\bin\Debug\CSharp_Core.pdb
-G:\PRATICE_CODE\CSharp\HOC-C#\OntapCSharp\CSharp_Core\CSharp_Core\obj\Debug\CSharp_Core.exe
-G:\PRATICE_CODE\CSharp\HOC-C#\OntapCSharp\CSharp_Core\CSharp_Core\obj\Debug\CSharp_Core.pdb

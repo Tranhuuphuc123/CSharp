@@ -19,3 +19,70 @@
 
  >> Console.ReadKey();
   - dừng màn hình để  xem chương trình tránh tắt console chương trình đột ngột
+
+
+
+===> demo code:
+
+              using System;
+
+              class Program
+              {
+                  static void Main()
+                  {
+                      // Nhập số a
+                      Console.Write("Nhập số a: ");
+                      int a = Convert.ToInt32(Console.ReadLine());
+
+                      // Nhập số b
+                      Console.Write("Nhập số b: ");
+                      int b = Convert.ToInt32(Console.ReadLine());
+
+                      // Tính toán
+                      int tong = a + b;
+                      int hieu = a - b;
+                      int tich = a * b;
+                      double thuong = b != 0 ? (double)a / b : double.NaN; // Chuyển đổi sang double để có kết quả chính xác
+
+                      // Xuất kết quả
+                      Console.WriteLine("Tổng của a và b: " + tong);
+                      Console.WriteLine("Hiệu của a và b: " + hieu);
+                      Console.WriteLine("Tích của a và b: " + tich);
+                      Console.WriteLine("Thương của a và b: " + (b != 0 ? thuong.ToString() : "Không thể chia cho 0"));
+                  }
+              }
+
+
+
+
+<=> neu a b la kieu double
+
+            using System;
+
+              class Program
+              {
+                  static void Main()
+                  {
+                      // Nhập số a
+                      Console.Write("Nhập số a: ");
+                      double a = Convert.ToDouble(Console.ReadLine());
+
+                      // Nhập số b
+                      Console.Write("Nhập số b: ");
+                      double b = Convert.ToDouble(Console.ReadLine());
+
+                      // Tính toán
+                      double tong = a + b;
+                      double hieu = a - b;
+                      double tich = a * b;
+                      double thuong = b != 0 ? a / b : double.NaN; // Kiểm tra tránh chia cho 0
+
+                      // Xuất kết quả
+                      Console.WriteLine("Tổng của a và b: " + tong);
+                      Console.WriteLine("Hiệu của a và b: " + hieu);
+                      Console.WriteLine("Tích của a và b: " + tich);
+                      Console.WriteLine("Thương của a và b: " + (b != 0 ? thuong.ToString() : "Không thể chia cho 0"));
+                  }
+              }
+
+......

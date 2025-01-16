@@ -29,6 +29,9 @@
  - khi kế thừa từ mọt class nào đó, khi khai báo contructor hay kế thừa đem các method hay 
  thuộc tính có sẵn qua sub-class, thì ta dùng từ khóa base. nó cũng tương tự như từ khóa super()
  trong java.
+ ==> Từ khóa virtual trong C# có ý nghĩa là phương thức có thể được ghi đè (override) bởi các lớp con 
+(derived classes). Khi bạn khai báo một phương thức với từ khóa virtual, bạn đang cho phép các lớp kế 
+thừa phương thức này thay đổi cách thực thi của nó.
 
 
     ++ ví dụ code thông qua bài tập sau:
@@ -113,7 +116,7 @@
                                             else
                                             {
                                                 return 1;
-                                            }:w
+                                            }
                                             
 
                                         }
@@ -156,7 +159,7 @@
 
                                         //contrucotr
                                         public Employee() { }
-                                        public Employee(String fullname, DateTime birthday, DateTime joindate) : base(fullname, birthday)
+                                        public Employee(String fullname, DateTime birthday, DateTime joindate) :  base(fullname, birthday)
                                         {
                                             this.JoinDate = joindate;
                                         }

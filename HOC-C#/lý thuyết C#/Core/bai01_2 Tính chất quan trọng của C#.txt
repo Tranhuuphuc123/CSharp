@@ -52,11 +52,13 @@
         + cho phép một lớp ẩn các biến thành viên và các hàm thành viên của nó với các hàm và đối tượng khác.
         + Chỉ có các hàm trong cùng lớp đó có thể truy cập tới các thành viên private. Ngay cả khi một Instance 
         của một lớp cũng không thể truy cập các thành viên private của nó.
+        ==> tóm lại: Chỉ truy cập được trong cùng class.
 
      - PROTECTED:
         + cho phép một lớp con truy cập các biến thành viên và các hàm thành viên của lớp cơ sở của nó.
          -->  Cách này giúp triển khai tính kế thừa(tức phải extend kế thừa thì mới dùng đc trình bao có
          Protected).
+         ==> tóm lại: Truy cập được trong cùng class và các class kế thừa (subclasses).
 
      - INTERNAL: 
         + cho phép một lớp trưng bày các biến thành viên và các hàm thành viên của nó tới các hàm và đối 
@@ -70,6 +72,7 @@
           + Tạo 1 project mới với dạng bất ký như console, asp.net,...
           + add file dll vừa tạo vào dự án này và bạn có thể thấy các method loại internal sẽ không thể 
           truy cập ở đây.
+          ==> tóm lại: Truy cập được trong cùng assembly (thường là cùng project).
                   
      - PROTECTED INTERNAL:
          + cho phép một lớp ẩn các biến thành viên và các hàm thành viên của nó với các hàm và đối tượng khác, 
@@ -77,9 +80,11 @@
          kế thừa trong C#.
          + Truy cập bị giới hạn trong phạm vi Assembly hiện tại và trong class định nghĩa hoặc các class con,
          nó đơn giản chỉ là sự kết hợp của protected và internal
+         ==> tóm lại: Truy cập được trong cùng assembly(cùng project) hoặc từ các class kế thừa.
 
      - PUBLIC:
          + Không có bất kỳ giới hạn nào khi truy cập vào các thành viên công khai (public)
+         ==> tóm lại: Truy cập được từ bất kỳ đâu.
 
 
 
@@ -143,6 +148,9 @@
       + Khi tạo một lớp, thay vì viết toàn bộ các thành viên dữ liệu và các hàm thành viên mới, lập trình
       viên có thể kế thừa các thành viên của một lớp đang tồn tại. Lớp đang tồn tại này được gọi là Base Class
       - lớp cơ sở, và lớp mới được xem như là Derived Class – lớp thừa kế.
+      => Từ khóa virtual trong C# có ý nghĩa là phương thức có thể được ghi đè (override) bởi các lớp con 
+      (derived classes). Khi bạn khai báo một phương thức với từ khóa virtual, bạn đang cho phép các lớp kế 
+      thừa phương thức này thay đổi cách thực thi của nó.
 
 
          ++ ví dụ code:
@@ -240,7 +248,8 @@
            Draw của lớp cha. Khi tạo ra một đối tượng Shape, ta có thể sử dụng đối tượng đó để vẽ một hình
            tròn hoặc hình chữ nhật. Điều này cho thấy tính đa hình trong lập trình hướng đối tượng, vì đối 
            tượng của lớp cơ bản (Shape) có thể được sử dụng để thực hiện một số hành động khác nhau   
-           ====> ngoài kế thừa thì tính đa hình còn thể hiện tronng việc Overloading, overiding..... 
+           ====> ngoài kế thừa thì tính đa hình còn thể hiện tronng việc Overloading(Nạp chồng mehod), 
+           overiding(ghi đè method)..... 
 
   >>ĐA HÌNH STATIC:?
     

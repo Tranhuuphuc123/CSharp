@@ -9,9 +9,11 @@
 
   + catch:Từ khóa catch trong C# chỉ dẫn việc bắt một exception.
 
-  + finally: Một khối finally được sử dụng để thực thi một tập hợp lệnh đã cho, khối lệnh finally luôn luôn được thực thi dù có hay không một exception đươc ném hoặc không được ném.
+  + finally: Một khối finally được sử dụng để thực thi một tập hợp lệnh đã cho, khối lệnh finally luôn luôn
+  được thực thi dù có hay không một exception đươc ném hoặc không được ném.
 
-  + throw: Một chương trình ném một exception khi có một vấn đề xuất hiện. Điều này được thực hiện bởi sử dụng từ khóa throw trong C#. 
+  + throw: Một chương trình ném một exception khi có một vấn đề xuất hiện. Điều này được thực hiện bởi sử 
+  dụng từ khóa throw trong C#. 
 
 
 ===============================================================================
@@ -116,7 +118,7 @@
         } 
         
 
-
+=================================================================================================
  >>>> User-Defined Exception trong C#:
   - với kiểu Exception tự định nghĩa thì cũng tương tự java:
    + khi khai báo Exception tự định nghĩa thì cần kế thừa lớp ApplicationException
@@ -194,4 +196,21 @@
               
 
           => cần luyện tập thêm bài tập để hiểu cốt lỗi
+
+
+
+
+
+
+=================================================================================================
+>>>>> VÍ DỤ THỰC TIỄN DỄ HIỂU<<<<<
+ => Bắt lỗi try-catch, finally
+ + Ex:
+    
+
+
+=============================
+ => Bắt lỗi tự định nghĩa:
+ + Ex:
+  
 

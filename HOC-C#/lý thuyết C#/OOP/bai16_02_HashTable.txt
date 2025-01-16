@@ -58,7 +58,7 @@
         {
             // xây dựng class Myhash để gán key-value-> xuất ra
             class Myhash
-            {
+            { 
                 public static void Main(String[] args)
                 {
                     // khởi tạo hashtable

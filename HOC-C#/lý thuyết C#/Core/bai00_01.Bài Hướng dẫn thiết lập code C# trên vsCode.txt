@@ -28,7 +28,11 @@
   => Gõ tao project dotnet:
      
          dotnet new console -o MyApp -f net7.0
+         
 
+          ++trong đó
+            -> MyApp: là tên project có thể đặt tên tuỳ ý 
+            -> net7.0: phiên bản .net đang dùng có thể thay thế net8.0...
 
   => truy cập đến project đó
      + Gõ: 

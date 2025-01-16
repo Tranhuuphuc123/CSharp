@@ -70,7 +70,7 @@
           Stack           | - Lớp cho phép lưu và thao tác dữ liệu theo cấu trúc LIFO
                           |(Last in First Out).
                           |==> LIFO: phần tử thêm vào cúi cùng sẽ được truy cập đầu
-                          | tiên. Trong thuật ngữ ngăn xếp thêm đc gọi là Pushing còn                   
+                          | tiên. Trong thuật ngữ ngăn xếp thêm đc gọi  là Pushing còn                   
                           | gỡ bỏ được gọi là Poping
         |============================================================================|
           Queue           | - Lớp cho phép lưu trữ và thao tác dl theo cấu truc FIFO
@@ -82,6 +82,6 @@
                           | bit 1 và false biểu thị cho bit 0
                           | - Ngoài ra BitArray còn hỗ trợ phương thức tính toán trên  bit
         |============================================================================|
-
+                                
         |============================================================================|
 

@@ -32,7 +32,7 @@
                             {
                                 public override string Name => "Dog";
 
-                                // ghi đè override llaij method abstract
+                                // ghi đè override lại method abstract
                                 public override void MakeSound(){
                                     Console.WriteLine("Woof!");
                                 } 

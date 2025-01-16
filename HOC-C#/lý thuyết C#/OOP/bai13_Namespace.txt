@@ -1,6 +1,6 @@
 **************************NAMESPACE TRONG C#*********************
 >> Khái niệm:
- - Một Namespace trong C# được thiết kế để cung cấp một cách để giữa một tập hợp các tên được phân
+ - Một Namespace trong C# được thiết kế để cung cấp một cách để giữ một tập hợp các tên được phân
  biệt riêng rẽ với nhau: 
   + vd như Tên class...
  --> các tên Class được khai  báo trong một namespace không xung đột với cùng tên class như thế khi

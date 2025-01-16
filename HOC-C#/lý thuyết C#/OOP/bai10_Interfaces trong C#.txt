@@ -11,7 +11,7 @@
   theo"(định nghĩa nội dung) tương ứng.
 
   >>>> ĐẶC ĐIỂM MỘT INTERFACES:
-   - Chỉ chứa khai báo không chứa hần định nghĩa, thân hàm, mặc định method đã là một abstract method rồi.
+   - Chỉ chứa khai báo không chứa cần định nghĩa, thân hàm, mặc định method đã là một abstract method rồi.
    - việc ghi đè 1 thành phần  trong Interface không cần dùng từ override.
    - không thể khai báo phạm vi truy cập cho các thành phần bên trong Interface, các thành phần này mặc định làm
    "public".

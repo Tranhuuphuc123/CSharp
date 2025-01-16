@@ -16,11 +16,13 @@ có thể ghi đè đc.
 
 
  >>>Triển khai:
-  - khi mún ghi đè Override lại method có khai báo virtual ở class cha thì trong C# khác java  nhưu sau:
+  - khi mún ghi đè Override lại method thì cần khai báo với từ virtual ở method của class cha
+  hoặc dùng từ abstract như sau:
   - Syntax:
 
-          class cha:
+        class cha:
              public virtual void method1(){}
+
         class con muốn ghi đè:
              public override void method1(){}
 

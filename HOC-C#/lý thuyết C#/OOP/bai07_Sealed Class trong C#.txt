@@ -12,7 +12,7 @@ vì nó không thể được thừa kế vởi bất kỳ lớp nào khác, n�
 >>>> Đặc điểm của Sealed Class:
   - Không thể kế thừa
   - Không thể ghi đè phương thức, thuộc tính hặc sự kiện của class
-  - Có thể kế thừa từ một lớp trừ tượng (abstract class).
+  - Có thể kế thừa từ một lớp trừu tượng (abstract class).
 
 
      ví dụ code:
@@ -29,7 +29,7 @@ vì nó không thể được thừa kế vởi bất kỳ lớp nào khác, n�
                 {
                 }
 
-                abstract class MyAbstractClass : MyAbstractClass // có thể kế thừa từ MySealedClass
+                abstract class MyAbstractClass : MySealedClass // không thể kế thừa từ MySealedClass
                 {
                     public abstract void MyAbstractMethod();
                 }

@@ -1,0 +1,14 @@
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\bin\Debug\net8.0\MySharp1.exe
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\bin\Debug\net8.0\MySharp1.deps.json
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\bin\Debug\net8.0\MySharp1.runtimeconfig.json
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\bin\Debug\net8.0\MySharp1.dll
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\bin\Debug\net8.0\MySharp1.pdb
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\MySharp1.GeneratedMSBuildEditorConfig.editorconfig
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\MySharp1.AssemblyInfoInputs.cache
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\MySharp1.AssemblyInfo.cs
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\MySharp1.csproj.CoreCompileInputs.cache
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\MySharp1.dll
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\refint\MySharp1.dll
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\MySharp1.pdb
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\MySharp1.genruntimeconfig.cache
+E:\PRATICE_CODE\CSharp\HOC-C#\SourceCode\OntapCSharpVSCode\MySharp1\obj\Debug\net8.0\ref\MySharp1.dll

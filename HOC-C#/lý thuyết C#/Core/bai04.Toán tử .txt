@@ -70,7 +70,7 @@
         &            AND (num1 & num2)       1101 & 1110              1100 đối với toán tử & thì 1 với 1 là 1 
                                                                   còn lại 0vs1 hoặc 1vs0 đều là 0
 					                                                                                                                                                                                                                                                             
-        ^	           XOR (num1 ^ num2)       1101 ^ 1110              0011 đối với ^ (XOR) thì 1vs1 la 0 còn
+        ^	     XOR (num1 ^ num2)       1101 ^ 1110              0011 đối với ^ (XOR) thì 1vs1 la 0 còn
                                                                    0vs1 hoặc 1vs0 đều bằng 1.
 
         |            OR (num1 | num2)        1101 | 1110              1111 đối với | (OR của toán hạng bit)
@@ -198,13 +198,13 @@
 
      Tính nhân	  	                       * / %					                       từ trái sang phải
 
-     Tính cộng trừ		                       + -		     			                   từ trái ang phải
+     Tính cộng trừ		                 + -		     			                   từ trái ang phải
 
-     Dịch chuyển		                       << >>					                       từ trái sang phải
+     Dịch chuyển		                << >>					                       từ trái sang phải
 
-     Quan hệ	                           < <= > >=				                       từ trái sang phải
+     Quan hệ	                              < <= > >=				                       từ trái sang phải
 
-     Cân bằng		                         ==  !=(#)		                           từ trái sang phải
+     Cân bằng		                       ==  !=(#)		                           từ trái sang phải
 
      Phép AND của bit	                       &     
 
